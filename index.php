@@ -17,7 +17,9 @@
  
 	<!-- op de home pagina wat enthousiaste tekst over het bedrijf en de producten -->
  	<main>	
-		  <img class="centreer" src="images/plaatje050.jpg" alt="main page image" width="1000px" height="500px"> 
+		 <a href="https://play.pokemonshowdown.com/">
+		  <img class="centreer" src="images/homepagefotoappelsap.nl.jpg" alt="main page image" width="1000px" height="600px"> 
+		  </a>
 		  <p> Welkom op de website van company. Wij vormen een jong en enthousiast bedrijf, 
 			  waarmee wij u graag van dienst willen zijn met fantastische producten.</p> 
 		  <p>
