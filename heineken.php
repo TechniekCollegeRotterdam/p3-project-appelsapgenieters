@@ -22,7 +22,7 @@
              <article>
                  <img src="images/heineken.jpg" alt="bier" width="450" height="450">
                  <br>
-                 <p class="colorp">€13,99</p>
+                 <p>€13,99</p>
                  <h2>Omschrijving</h2>
                  <p>Heineken is een goudgele lager met 100% natuurlijke ingrediënten en<br>
                   een belangrijke toevoeging: Heineken's A-Gist. Deze unieke gist creëert een volle smaak met de typerende fruitige tonen.</p>

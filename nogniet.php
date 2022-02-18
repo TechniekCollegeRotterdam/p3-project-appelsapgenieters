@@ -8,6 +8,7 @@
 
 <body>  
 	<header>
+		<img src="images/Logo.jpg" alt="logo">
 		<h1>Company</h1>
 		<!-- hieronder wordt het menu opgehaald. -->
 		<?php

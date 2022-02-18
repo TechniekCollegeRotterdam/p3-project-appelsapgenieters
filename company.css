@@ -107,6 +107,20 @@ button{
 	cursor: pointer;
 }
 
+button:hover {
+	background-color: darkred;
+	animation-name: colorchange;
+	animation-duration: 0.5s;
+	display:inline;
+}
+
+@keyframes colorchange {
+	from {background-color: #ff641e;}
+	to {background-color: darkred;}
+  }
+
+
+
 .colorp{
 	display: inline-block;
 	background-color: #ff641e;
