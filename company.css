@@ -13,9 +13,9 @@ article, aside, footer, header, main, nav, section {
 body {
 	width:90%;
 	margin: 0 auto;
-	background-color:lightgrey;
+	background-color:cornsilk;
 	font-family: Arial;
-	color: darkblue; 
+	color: black; 
 } 
 
 header{
@@ -48,7 +48,7 @@ nav ul li {
 	float: left;
 	width: 150px;
 	height: 30px;
-	background-color: purple;
+	background-color: #ff641e;
 	line-height: 30px;
 	text-align: center;
 	font-size: 18px;
@@ -63,7 +63,7 @@ nav ul li a {
 }
 
 nav ul li:hover {
-	background-color: blue;
+	background-color: darkred;
 }
 
 nav ul li ul li { 
@@ -77,4 +77,58 @@ nav ul li:hover ul li {
 
 .centreer {
 	text-align: center;
+}
+
+.linkcolorp{
+	color: black;
+}
+
+
+/*This is for responsive image*/
+img {
+	max-width: 100%;
+	height: auto;
+  }
+
+/*This is for the table*/
+table, th, td {
+	border: 1px solid;
+	background-color: white;
+
+  }
+
+
+/*This is for the button*/
+button{
+	border: none;
+	text-align: center;
+	padding: 10px;
+	border-radius: 8%;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: darkred;
+	animation-name: colorchange;
+	animation-duration: 0.5s;
+	display:inline;
+}
+
+@keyframes colorchange {
+	from {background-color: #ff641e;}
+	to {background-color: darkred;}
+  }
+
+
+
+.colorp{
+	display: inline-block;
+	background-color: #ff641e;
+    width: 6vw;
+}
+
+.colorb{
+	display: inline-block;
+	background-color: #ff641e;
+    width: 6vw;
 }
