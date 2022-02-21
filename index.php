@@ -17,7 +17,7 @@
  
 	<!-- op de home pagina wat enthousiaste tekst over het bedrijf en de producten -->
  	<main>	
-		 <a href="https://play.pokemonshowdown.com/">
+		 <a href="producten.php">
 		  <img class="centreer" src="images/homepagefotoappelsap.nl.jpg" alt="main page image" width="1000px" height="600px"> 
 		  </a>
 		  <p> Welkom op de website van company. Wij vormen een jong en enthousiast bedrijf, 
