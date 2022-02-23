@@ -83,10 +83,7 @@ nav ul li:hover ul li {
 	color: black;
 }
 
-h1{
-	margin-bottom: 40px;
-	padding-right: 100%;
-}
+
 
 footer{
 	clear: both;
@@ -116,6 +113,28 @@ table, th, td {
 	background-color: white;
 
   }
+
+/*This is for the submit button*/
+input{
+height: 25px;
+width: 500px;
+}
+
+.submit{
+   background-color: #ff641e;
+   height: 30px;
+   width: 500px;
+   border: none;
+   border-radius: 1%;
+   cursor: pointer;
+}
+
+.submit:hover{
+	background-color: darkred;
+	animation-name: colorchange;
+	animation-duration: 0.5s;
+	display:inline;
+}
 
 
 /*This is for the button*/

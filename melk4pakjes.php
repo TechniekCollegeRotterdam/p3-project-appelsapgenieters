@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>AH Biologisch Halfvolle melk</title>
+    <title>Campina Langlekker Melk Halfvol voordeel 4 x 1L</title>
     <link rel="stylesheet" type="text/css" href="company.css">
 </head>
 
@@ -18,17 +18,17 @@
 
     <!-- op de home pagina wat enthousiaste tekst over het bedrijf en de producten -->
     <main>
-        <h1>AH Biologisch Halfvolle melk</h1>
+        <h1>Campina Langlekker Melk Halfvol voordeel 4 x 1L</h1>
         <section>
             <article>
-                <img src="images/Biologischemelk.jpg" alt="melk" width="450" height="450">
+                <img src="images/melk4pakjes.jpg" alt="melk" width="450" height="450">
                 <br>
-                <p>€2.09</p>
+                <p>€4.79</p>
                 <button class="colorb buttonposition">toevoegen</button>
                 <h2>Omschrijving</h2>
-                <p>Biologische halfvolle melk in een handige 2 liter kan.<br>
-                 Niet alleen is deze Nederlandse melk biologisch, ook de kan, dop en wikkel zijn van biobased materiaal gemaakt.<br>
-                 Nederlandse biologische melk Kan, dop en wikkel van biobased materiaal Eerste biobased melkkan op de Nederlandse markt Handige 2 liter kan, makkelijk uitschenkbaar</p>
+                <p>Campina langlekker is gekoeld net zo lekker als verse melk maar wel ongeopend buiten de koelkast te bewaren.<br>
+                 Het bevat van nature voedingsstoffen die je dagelijks nodig hebt zoals calcium en proteine.<br>
+                Van nature rijk aan calcium, proteine, vitamine b2 en b12 Gemaakt van Nederlandse weidemelk</p>
 
             </article>
         </section>

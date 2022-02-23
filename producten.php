@@ -170,7 +170,7 @@
                         <td>
                             <img src="images/melk4pakjes.jpg" alt="melk" width="450" height="450">
                             <p>AH Biologisch Halfvolle melk</p>
-                            <a href="ahbiologisch.php">
+                            <a href="melk4pakjes.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
@@ -179,7 +179,7 @@
                         <td>
                             <img src="images/Biologischemelk.jpg" alt="melk" width="450" height="450">
                             <p>AH Biologische Halfvolle Melk</p>
-                            <a href="heineken.php">
+                            <a href="ahbiologisch.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
@@ -197,7 +197,7 @@
                         <td>
                             <img src="images/Rivella1.jpg" alt="frisdrank" width="450" height="450">
                             <p>Rivella Original Fles 1L</p>
-                            <a href="heineken.php">
+                            <a href="rivellaoriginal.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
