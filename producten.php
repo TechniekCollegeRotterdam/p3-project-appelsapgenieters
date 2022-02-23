@@ -30,28 +30,28 @@
                         <td>
                             <img src="images/ArrogantFrogSingleBier02.jpg" alt="wijn">
                             <p>Arrogant Frog Single Vineyard Cabernet Sayvigon Les Calades 2020 75cl</p>
-                            <a href="heineken.php">
+                            <a href="arrogant.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€7.98</p>
                         </td>
                         <td>
                             <img src="images/CantinaDiVeronaBier.jpg" alt="wijn">
                             <p>Cantina Di Verone ValPolicella Ripasso 2020 75cl</p>
-                            <a href="heineken.php">
+                            <a href="cantina.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€10.65</p>
                         </td>
                         <td>
                             <img src="images/Lindeman'sWijn.jpg" alt="wijn">
                             <p>Lindeman's South Africa Sauvignon Blanc Chardonnay</p>
-                            <a href="heineken.php">
+                            <a href="Lindeman.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€5.29</p>
                         </td>
                     </tr>
@@ -67,29 +67,47 @@
                         <td>
                             <img src="images/POMMERYBRUTROYALChampagne.jpg" alt="champagne">
                             <p>Pommery Brut Royale 75cl</p>
-                            <a href="heineken.php">
+                            <a href="prommery.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€34.99</p>
                         </td>
                         <td>
                             <img src="images/PiperScheidziek.jpg" alt="champagne" width="450" height="450">
                             <p>Piper Heidsieck Brut Champagne</p>
-                            <a href="heineken.php">
+                            <a href="piper.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€35.99</p>
                         </td>
                         <td>
                             <img src="images/BollingChampagne.jpg" alt="champagne" width="450" height="450">
                             <p>Bollinger Champagne special cuvée</p>
-                            <a href="heineken.php">
+                            <a href="bolinger.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€62.00</p>
+                        </td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <table>
+                    <tr>
+                        <td>
+                        <img src="images/RDeRuinart.jpg" alt="champagne" width="200" height="200">
+                            <p>R De Ruinart 75cl</p>
+                            <a href="RDERuinart.php">
+                                <button class="colorp">bekijken</button>
+                            </a>
+                            <button class="colorb">toevoegen</button>
+                            <p>€59.00</p>  
                         </td>
                     </tr>
                 </table>
@@ -109,25 +127,25 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€13.99</p>
                         </td>
                         <td>
                             <img src="images/HertogJan.jpg" alt="bier" width="450" height="450">
                             <p>Hertog Jan Natuurzuiver bier krat 30cl</p>
-                            <a href="heineken.php">
+                            <a href="hertogjan.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€17.99</p>
                         </td>
                         <td>
                             <img src="images/ExtraCorona.jpg" alt="bier" width="450" height="450">
                             <p>Corona Extra pils 6-pack</p>
-                            <a href="heineken.php">
+                            <a href="corona.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€8.99</p>
                         </td>
                     </tr>
@@ -143,29 +161,29 @@
                         <td>
                             <img src="images/campinaopjemel.jpg" alt="melk" width="450" height="450">
                             <p>Campina Halfvolle melk</p>
-                            <a href="heineken.php">
+                            <a href="campinahalf.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€2.45</p>
                         </td>
                         <td>
-                            <img src="images/chocolaOpjeMel.jpg" alt="melk" width="450" height="450">
-                            <p>Chocolademelk vol 1L</p>
-                            <a href="heineken.php">
+                            <img src="images/melk4pakjes.jpg" alt="melk" width="450" height="450">
+                            <p>AH Biologisch Halfvolle melk</p>
+                            <a href="ahbiologisch.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
-                            <p>€1.87</p>
+                            <button class="colorb">toevoegen</button>
+                            <p>€4.79</p>
                         </td>
                         <td>
-                            <img src="images/yakultoriginal.jpg" alt="melk" width="450" height="450">
-                            <p>Yakult Drink Original</p>
+                            <img src="images/Biologischemelk.jpg" alt="melk" width="450" height="450">
+                            <p>AH Biologische Halfvolle Melk</p>
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
-                            <p>€3.25</p>
+                            <button class="colorb">toevoegen</button>
+                            <p>€2.09</p>
                         </td>
                     </tr>
                 </table>
@@ -182,7 +200,7 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€1.85</p>
                         </td>
                         <td>
@@ -191,7 +209,7 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€2.03</p>
                         </td>
                         <td>
@@ -200,7 +218,7 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€2.29</p>
                         </td>
                     </tr>
@@ -213,7 +231,7 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€2.59</p>
                         </td>
                         <td>
@@ -222,7 +240,7 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€2.79</p>
                         </td>
                         <td>
@@ -231,7 +249,7 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€2.79</p>
                         </td>
                     </tr>
@@ -244,7 +262,7 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€1.63</p>
                         </td>
                         <td>
@@ -253,7 +271,7 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€1.63</p>
                         </td>
                         <td>
@@ -262,7 +280,7 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€1.63</p>
                         </td>
                     </tr>
@@ -275,7 +293,7 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€1.67</p>
                         </td>
                         <td>
@@ -284,7 +302,7 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€1.73</p>
                         </td>
                         <td>
@@ -293,7 +311,7 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€1.73</p>
                         </td>
                     </tr>
@@ -306,7 +324,7 @@
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
-                            <button class="colorb">aantal</button>
+                            <button class="colorb">toevoegen</button>
                             <p>€2.03</p>
                         </td>
                     </tr>
@@ -349,7 +367,7 @@
                 </table>
                 <table>
                     <tr>
-                    <td>
+                        <td>
                             <img src="images/Spamineraalwater6x.jpg" alt="water" width="450" height="450">
                             <p>Spa mineraalwater 6x</p>
                             <a href="heineken.php">
@@ -368,34 +386,71 @@
                 <table>
                     <tr>
                         <td>
-                            <img src="images/Spamineraalwater.jpg" alt="water" width="450" height="450">
-                            <p>Spa Mineraalwater reine</p>
+                            <img src="images/yakultoriginal.jpg" alt="zuiveldrank" width="450" height="450">
+                            <p>Yakult Drink Original</p>
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">aantal</button>
-                            <p>€0.99</p>
+                            <p>€3.25</p>
                         </td>
                         <td>
-                            <img src="images/SpaIntense.jpg" alt="water" width="450" height="450">
-                            <p>Spa Intense</p>
+                            <img src="images/OpIsOptimel.jpg" alt="zuiveldrank" width="450" height="450">
+                            <p>Optimel Drink framboos 0% vet</p>
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">aantal</button>
-                            <p>€1.09</p>
+                            <p>€1.45</p>
                         </td>
                         <td>
-                            <img src="images/spafinesse.jpg" alt="water" width="450" height="450">
-                            <p>Spa Finesse</p>
+                            <img src="images/chocolaOpjeMel.jpg" alt="melk" width="450" height="450">
+                            <p>Chocolademelk vol 1L</p>
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">aantal</button>
-                            <p>€1.05</p>
+                            <p>€1.87</p>
                         </td>
                     </tr>
                 </table>
+
+                <h2>Vruchtensap</h2>
+                <section>
+                    <article>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="images/TaksiTropischFruit.jpg" alt="vruchtensap" width="450" height="450">
+                                    <p>Taksi Tropisch fruit</p>
+                                    <a href="heineken.php">
+                                        <button class="colorp">bekijken</button>
+                                    </a>
+                                    <button class="colorb">aantal</button>
+                                    <p>€1.45</p>
+                                </td>
+                                <td>
+                                    <img src="images/IceTeaLemon.jpg" alt="vruchtensap" width="450" height="450">
+                                    <p>Ice tea Lemon</p>
+                                    <a href="heineken.php">
+                                        <button class="colorp">bekijken</button>
+                                    </a>
+                                    <button class="colorb">aantal</button>
+                                    <p>€1.99</p>
+                                </td>
+                                <td>
+                                    <img src="images/IceTeaPeach.jpg" alt="vruchtensap" width="450" height="450">
+                                    <p>Ice tea Peach</p>
+                                    <a href="heineken.php">
+                                        <button class="colorp">bekijken</button>
+                                    </a>
+                                    <button class="colorb">aantal</button>
+                                    <p>€1.99</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                </section>
 
     </main>
 </body>

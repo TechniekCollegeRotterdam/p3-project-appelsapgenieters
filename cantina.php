@@ -2,7 +2,7 @@
 <html lang="nl"> 
 <head>
 	 <meta charset="UTF-8">
-	 <title>Heineken 30cl</title>
+	 <title>Cantina Di Verone ValPolicella Ripasso 2020 75cl</title>
 	 <link rel="stylesheet" type="text/css" href="company.css">  
 </head>
 
@@ -17,16 +17,15 @@
  
 	<!-- op de home pagina wat enthousiaste tekst over het bedrijf en de producten -->
  	<main>
-         <h1>Heineken 30cl</h1>
+         <h1>Cantina Di Verone ValPolicella Ripasso 2020 75cl</h1>
          <section>
              <article>
-                 <img src="images/heineken.jpg" alt="bier" width="450" height="450">
+                 <img src="images/CantinaDiVeronaBier.jpg" alt="wijn" width="150" height="150">
                  <br>
-                 <p>€13,99</p>
-				 <button class="colorb buttonposition">toevoegen</button>
+                 <p>€10,65</p>
+                 <button class="colorb buttonposition">toevoegen</button>
                  <h2>Omschrijving</h2>
-                 <p>Heineken is een goudgele lager met 100% natuurlijke ingrediënten en<br>
-                  een belangrijke toevoeging: Heineken's A-Gist. Deze unieke gist creëert een volle smaak met de typerende fruitige tonen.</p>
+                 <p>Met natuurlijke ingrediënten. Licht sprankelend, lekker verfrissend. Gekoeld het lekkerst.</p>
 
              </article>
          </section>	
