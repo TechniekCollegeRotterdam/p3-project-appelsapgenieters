@@ -18,13 +18,10 @@
 
     <main>	
 		  <img class="centreer" src="images/oudewinkel.jpg" alt="main page image" width="900px" height="500px"> 
-		  <p> Welkom op de website van company. Wij vormen een jong en enthousiast bedrijf, 
-			  waarmee wij u graag van dienst willen zijn met fantastische producten.</p> 
-		  <p>
-			  Om producten te kunnen bestellen, moet u zich registreren als klant. Dat kunt u 
-			  via het menu doen. Wanneer u inlogt, krijgt u de mogelijkheid om producten te 
-			  bestellen. Daardoor hoeft u ook niet steeds uw adresinformatie in te voeren.
-		  </p>
+		  <p>Appelsap is opgericht in 1969 midden in het centrum van Rotterdam. Destijds verkochten we alleen appelsap. <br> Nu 53 jaar later is ons bedrijf enorm gegroeid en verbeterd. We verkopen nu andere soorten drank dan alleen appelsap en we bezitten een sterk team. U kunt onze werknemers zien op de werknemerspagina en alle producten op de productpagina.     </p> 
+           <br>
+		  <img class="centreer" src="images/nieuwewinkel.jpg" alt="main page image" width="900px" height="500px">
+		  <p>Dit is de winkel nu. Door ons grote succes heeft de baas een Lamborghini kunnen kopen. Ook is het pand aan de linkerkant na 53 jaar eindelijk verkocht.</p>
 		   
 	</main>
 </body>
