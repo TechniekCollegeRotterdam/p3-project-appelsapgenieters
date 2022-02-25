@@ -19,7 +19,7 @@
     // verbinding maken database shabu //
     require_once ("dbconnect.php");
     //  alle gegevens ophalen uit de tabel: product
-        $query = $db ->prepare("SELECT AVG(price) FROM product;");
+        $query = $db ->prepare("SELECT price, AVG(price) FROM product;");
         $query-> execute();
         $resultq = $query->fetchALL (PDO::FETCH_ASSOC);
         if ($query ->RowCount()>0) {
