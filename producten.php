@@ -213,7 +213,7 @@
                             <p>€2.03</p>
                         </td>
                         <td>
-                            <img src="images/rivella3.jpg" alt="melk" width="450" height="450">
+                            <img src="images/rivella3.jpg" alt="frisdrank" width="450" height="450">
                             <p>Rivella Green Tea Fles 1,5L</p>
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
@@ -225,14 +225,14 @@
                 </table>
                 <table>
                     <tr>
-                        <td>
-                            <img src="images/Liptonicetea1.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Lipton Ice Tea Green Original 1,5L</p>
+                    <td>
+                            <img src="images/fantacassis1.jpg" alt="frisdrank" width="450" height="450">
+                            <p>Fanta Cassis 1,5L</p>
                             <a href="heineken.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
-                            <p>€2.59</p>
+                            <p>€2.03</p>
                         </td>
                         <td>
                             <img src="images/Liptonicetea2.jpg" alt="frisdrank" width="450" height="450">
@@ -313,19 +313,6 @@
                             </a>
                             <button class="colorb">toevoegen</button>
                             <p>€1.73</p>
-                        </td>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <td>
-                            <img src="images/fantacassis1.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Fanta Cassis 1,5L</p>
-                            <a href="heineken.php">
-                                <button class="colorp">bekijken</button>
-                            </a>
-                            <button class="colorb">toevoegen</button>
-                            <p>€2.03</p>
                         </td>
                     </tr>
                 </table>
@@ -447,6 +434,19 @@
                                     <button class="colorb">aantal</button>
                                     <p>€1.99</p>
                                 </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                            <td>
+                            <img src="images/Liptonicetea1.jpg" alt="vruchtensap" width="450" height="450">
+                            <p>Lipton Ice Tea Green Original 1,5L</p>
+                            <a href="heineken.php">
+                                <button class="colorp">bekijken</button>
+                            </a>
+                            <button class="colorb">toevoegen</button>
+                            <p>€2.59</p>
+                        </td>
                             </tr>
                         </table>
                     </article>
