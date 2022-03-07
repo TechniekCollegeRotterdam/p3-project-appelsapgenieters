@@ -206,7 +206,7 @@
                         <td>
                             <img src="images/rivella2.jpg" alt="frisdrank" width="450" height="450">
                             <p>Rivella Cranberry Fles 1,5L</p>
-                            <a href="heineken.php">
+                            <a href="rivellacranberry.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
@@ -215,7 +215,7 @@
                         <td>
                             <img src="images/rivella3.jpg" alt="frisdrank" width="450" height="450">
                             <p>Rivella Green Tea Fles 1,5L</p>
-                            <a href="heineken.php">
+                            <a href="rivellagreentea.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
@@ -228,7 +228,7 @@
                     <td>
                             <img src="images/fantacassis1.jpg" alt="frisdrank" width="450" height="450">
                             <p>Fanta Cassis 1,5L</p>
-                            <a href="heineken.php">
+                            <a href="fantacassis.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
@@ -237,7 +237,7 @@
                         <td>
                             <img src="images/Liptonicetea2.jpg" alt="frisdrank" width="450" height="450">
                             <p>Lipton Ice Tea Green Original 1,5L</p>
-                            <a href="heineken.php">
+                            <a href="liptongreen.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
@@ -246,7 +246,7 @@
                         <td>
                             <img src="images/Liptonicetea3.jpg" alt="frisdrank" width="450" height="450">
                             <p>Lipton Ice Tea Sparkling Original 1,5L</p>
-                            <a href="heineken.php">
+                            <a href="liptonsparkling.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
@@ -259,7 +259,7 @@
                         <td>
                             <img src="images/CrystalClear1.jpg" alt="frisdrank" width="450" height="450">
                             <p>Crystal Clear Sparkling Lemon 1,5L</p>
-                            <a href="heineken.php">
+                            <a href="crystallemon.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
@@ -268,7 +268,7 @@
                         <td>
                             <img src="images/CrystalClear2.jpg" alt="frisdrank" width="450" height="450">
                             <p>Crystal Clear Sparkling Peach Fles 1,5L</p>
-                            <a href="heineken.php">
+                            <a href="crystalpeach.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
@@ -277,7 +277,7 @@
                         <td>
                             <img src="images/Crystalclear3.jpg" alt="frisdrank" width="450" height="450">
                             <p>Crystal Clear Sparkling Cranberry Fles 1,5L</p>
-                            <a href="heineken.php">
+                            <a href="crystalcranberry.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
@@ -290,7 +290,7 @@
                         <td>
                             <img src="images/CrystalClear4.jpg" alt="frisdrank" width="450" height="450">
                             <p>Crystal Clear Sparkling Lemon Cactus Fles 1,5L</p>
-                            <a href="heineken.php">
+                            <a href="crystalcactus.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
@@ -299,7 +299,7 @@
                         <td>
                             <img src="images/herocassis1.jpg" alt="frisdrank" width="450" height="450">
                             <p>Hero Cassis Zero 1,25L</p>
-                            <a href="heineken.php">
+                            <a href="herocassiszero.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
@@ -308,7 +308,7 @@
                         <td>
                             <img src="images/herocassis2.jpg" alt="frisdrank" width="450" height="450">
                             <p>Hero Cassis 1,25L</p>
-                            <a href="heineken.php">
+                            <a href="herocassis.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
@@ -326,7 +326,7 @@
                         <td>
                             <img src="images/Spamineraalwater.jpg" alt="water" width="450" height="450">
                             <p>Spa Mineraalwater reine</p>
-                            <a href="heineken.php">
+                            <a href="spamineraal.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">aantal</button>
@@ -335,7 +335,7 @@
                         <td>
                             <img src="images/SpaIntense.jpg" alt="water" width="450" height="450">
                             <p>Spa Intense</p>
-                            <a href="heineken.php">
+                            <a href="spaintense.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">aantal</button>
@@ -344,7 +344,7 @@
                         <td>
                             <img src="images/spafinesse.jpg" alt="water" width="450" height="450">
                             <p>Spa Finesse</p>
-                            <a href="heineken.php">
+                            <a href="spafinesse.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">aantal</button>
@@ -357,7 +357,7 @@
                         <td>
                             <img src="images/Spamineraalwater6x.jpg" alt="water" width="450" height="450">
                             <p>Spa mineraalwater 6x</p>
-                            <a href="heineken.php">
+                            <a href="spamineraalzes.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">aantal</button>
