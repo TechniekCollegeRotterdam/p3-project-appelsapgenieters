@@ -15,47 +15,57 @@
 			include "nav.html";
 		?>
 	</header>
-    <?php 
 
-
-    if(isset($POST["registreer"])){
- 
-        $ww=password_hash($_POST['wachtwoord1'],PASSWORD_DEFAULT);
-        
-        if($_POST['wachtwoord1']==$_POST['wachtwoord2']){
-            echo "Uw klantnummer is 4";
-        } else{
-            echo "wachtwoord 1 is niet gelijk aan wachtwoord2.";
-        }
-
-    } 
-    ?>
     <br>
     <br>
     <br>
+    <!-- This is for the registerfield in html -->
     <h1>Registreren</h1>
-    <form method="POST" action="">
+    <form method="POST" action="registratieverwerk.php">
 
     <label class="label">Voornaam*</label><br><br>
-    <input required type="text" name="voornaam" value="">
+    <input required type="text" name="givenname" value="">
     <br><br>
     <label class="label">Achternaam*</label><br><br>
-    <input required type="text" name="achternaam" value="">
+    <input required type="text" name="surname" value="">
     <br><br>
-    <label class="label">Woonplaats*</label><br><br>
-    <input required type="text" name="woonplaats" value="">
+    <label class="label">Tussenvoegsel*</label><br><br>
+    <input type="text" name="middleinitial" value="">
+    <br><br>
+    <label class="label">Titel*</label><br><br>
+    <input type="text" name="title" value="">
+    <br><br>
+    <label class="label">Geslacht*</label><br><br>
+    <input required type="radio" name="gender" value="man">
+    <input required type="radio" name="gender" value="vrouw">
+    <input required type="radio" name="gender" value="anders">
+    <br><br>
+    <label class="label">Straatadres*</label><br><br>
+    <input type="text" name="streetadres" value="">
+    <br><br>
+    <label class="label">Stad*</label><br><br>
+    <input required type="text" name="city" value="">
+    <br><br>
+    <label class="label">Postcode*</label><br><br>
+    <input required type="text" name="zipcode" value="">
     <br><br>
     <label class="label">E-mail*</label><br><br>
-    <input required type="text" name="email" value="">
+    <input required type="email" name="email" value="">
+    <br><br>
+    <label class="label">Telefoonnummer*</label><br><br>
+    <input required type="phone" name="telephonenumber" value="">
     <br><br>
         <label class="label">Geboortedatum*</label><br><br>
-        <input type="date" name="geboortedatum"></input>
+        <input type="date" name="birthday"></input>
+        <br><br>
+        <label class="label">beroep*</label><br><br>
+        <input type="text" name="occupation"></input>
         <br><br>
         <label class="label">Wachtwoord*</label><br><br>
-    <input required type="PASSWORD" name="wachtwoord1" value="">
+    <input required type="PASSWORD" name="password1" value="">
     <br><br>
     <label class="label">Herhaal wachtwoord*</label><br><br>
-    <input required type="PASSWORD" name="wachtwoord2" value="">
+    <input required type="PASSWORD" name="password2" value="">
         <br>
         <br>
         <input type="submit" class="submit" name="registreer" value="registreren"></input>
