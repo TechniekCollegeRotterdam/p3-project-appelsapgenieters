@@ -17,13 +17,27 @@
  
 	<!-- op deze pagina de informatie overzichten van de tabel product -->
  	<main>
-        <p></p><a href="infprod.php">Overzicht producten</a>
-        <p></p><a href="infprodlaagprijs.php">Producten lage prijs</a>
-        <p></p><a href="infprodbestelling.php">Producten - bestellingen</a>
-        <p></p><a href="infprodgnbestelling.php">Producten zonder bestellingen</a>
-        <p></p><a href="infprodgemprijs.php">Producten gem prijs</a>
-        <p></p><a href="infprodbestelomzet.php">Producten - bestelomzet</a>
-        <p></p><a href="infprodtype.php">Producten - type</a>
+        <p>Een overzicht van al onze producten.<br>
+			Per product wordt getoond: productnaam, productomschrijving, voorraad en prijs.<br>
+			<a href="infprod.php">Overzicht producten</a></p>
+        <p>Een overzicht van alle producten met een prijs lager dan &euro; 5,--.<br>
+			Per product wordt getoond: product id, productnaam, type-id en prijs.<br>
+			<a href="infprodlaagprijs.php">Producten lage prijs</a></p>
+        <p>Een overzicht van producten met hun bestellingen.<br>
+			Per product wordt getoond: productnaam, bestelling id, bestelde hoeveelheid<br>
+			<a href="infprodbestelling.php">Producten - bestellingen</a></p>
+        <p>Een overzicht van de producten die nog nooit besteld zijn.<br>
+			Per product wordt getoond: product-id, voorraad, prijs en productnaam.<br>
+			<a href="infprodgnbestelling.php">Producten zonder bestellingen</a></p>
+        <p>De gemiddelde prijs van al onze producten.<br>
+			Er wordt getoond: gemiddelde prijs.<br>
+			<a href="infprodgemprijs.php">Producten gem prijs</a></p>
+        <p>Een overzicht van de gerealiseerde omzet per product.<br>
+			Per product wordt getoond: id product, productnaam, gerealiseerde omzet (een optelling van de berekening per bestelregel van aantal * prijs).<br>
+			<a href="infprodbestelomzet.php">Producten - bestelomzet</a></p>
+        <p>Een overzicht van al onze producten en het bijbehorende type.<br>
+			Per product wordt getoond: productnaam, productomschrijving, idtype en type naam.<br>
+			<a href="infprodtype.php">Producten - type</a></p>
     </main>
 	
 </body>
