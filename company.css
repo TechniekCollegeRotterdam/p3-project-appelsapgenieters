@@ -145,11 +145,11 @@ width: 500px;
 
 /*This is for the button*/
 button{
-	background-color: #ff641e;
 	border: none;
 	text-align: center;
 	padding: 10px;
 	border-radius: 8%;
+	font-size: 15px;
 	cursor: pointer;
 }
 

@@ -2,7 +2,7 @@
 <html lang="nl"> 
 <head>
 	 <meta charset="UTF-8">
-	 <title>Cantina Di Verone ValPolicella Ripasso 2020 75cl</title>
+	 <title>Lipton Ice Tea Sparkling Original 1,5L</title>
 	 <link rel="stylesheet" type="text/css" href="company.css">  
 </head>
 
@@ -17,15 +17,17 @@
  
 	<!-- op de home pagina wat enthousiaste tekst over het bedrijf en de producten -->
  	<main>
-         <h1>Cantina Di Verone ValPolicella Ripasso 2020 75cl</h1>
+         <h1>Lipton Ice Tea Sparkling Original 1,5L</h1>
          <section>
              <article>
-                 <img src="images/CantinaDiVeronaBier.jpg" alt="wijn" width="150" height="150">
+             <img src="images/Liptonicetea3.jpg" alt="frisdrank" width="450" height="450">
                  <br>
-                 <p>€10,65</p>
+                 <p>€2.79</p>
                  <button class="colorb buttonposition">toevoegen</button>
                  <h2>Omschrijving</h2>
-                 <p>Ripasso vergist voor een tweede keer op de droesem van Amarone wijn. Hierdoor krijgt de wijn extra veel smaak.</p>
+                 <p>Frisse, levendige, fijne en delicate champagne.<br>
+                  De geur van citrusvruchten en witte bloemen gecombineerd met de geur van kleine rode vruchten. De wijn is rond, uitgebreid, delicaat en langdurig.<br>
+                  De smaak is zuiver zonder droog te zijn.  Winnaar van een gouden medaille op de International Wine Challenge.  </p>
 
              </article>
          </section>	
