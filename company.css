@@ -136,6 +136,12 @@ width: 500px;
 	display:inline;
 }
 
+  /*This is for the radio button*/
+  .container input:hover {	  
+	  cursor: pointer;
+  }
+  
+
 
 /*This is for the button*/
 button{
