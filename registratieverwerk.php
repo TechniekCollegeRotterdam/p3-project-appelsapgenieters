@@ -8,54 +8,51 @@
     <link rel="stylesheet" type="text/css" href="company.css">  
 </head>
 <body>
-<!-- This is for the clientnumber -->
+<header>
+	<img src="images/Logo.jpg" alt="logo">
+		<!-- hieronder wordt het menu opgehaald. -->
+	</header>
+<!-- This is for the registersystem -->
 
 <?php 
+if(isset($POST["registreer"])) {
+        /*This is for the phpmyadmin table client*/
+        $givenname=$_POST['givenname'];
+        $surname=$_POST['surname'];
+        $middleinitial=$_POST['middleinitial'];
+        $title=$_POST['title'];
+        $gender=$_POST['gender'];
+        $streetadress=$_POST['streetadress'];
+        $city=$_POST['city'];
+        $zipcode=$_POST['zipcode'];
+        $emailadress=$_POST['emailadress'];
+        $telephonenumber=$_POST['telephonenumber'];
+        $birthday=$_POST['birthday'];
+        $occupation=$_POST['occupation'];
+        $password1=$_POST['password1'];
+        $password2=$_POST['password2'];
 
-require('dbconnect.php');
-session_start();
-if(isset($POST["registreer"])){
-    /*This is for the phpmyadmin table client*/
-    $givenname=$_POST['givenname'];
-    $surname=$_POST['surname'];
-    $middleinitial=$_POST['middleinitial'];
-    $title=$_POST['title'];
-    $gender=$_POST['gender'];
-    $streetadres=$_POST['streetadres'];
-    $city=$_POST['city'];
-    $zipcode=$_POST['zipcode'];
-    $email=$_POST['email'];
-    $telephonenumber=$_POST['telephonenumber'];
-    $birthday=$_POST['birthday'];
-    $occupation=$_POST['occupation'];
-    $password1=$_POST['password1'];
-    $password2=$_POST['password2'];
-    $query = "INSERT into `clients` (givenname, surname, middleinitial, title, gender, streetadres, city,
-     zipcode, email, telephonenumber, birthday, occupation, password1, password2)
-     VALUES('$givenname', '" . md5($password1) . "" . md5($password2) . "' , '$surname'  , '$middleinitial'  , '$title' , '$gender' , '$streetadres' , '$city' , '$zipcode' , '$email' , '$telephonenumber'  , '$birthday' , '$occupation' , '$password1', '$password2')";
- 
- /*Here starts the registersystem*/
-    if($_POST['password1']==$_POST['password2']){
-        $ww=password_hash($_POST['password1'],
-        PASSWORD_DEFAULT);
-        "INSERT INTO client; (givenname, ) VALUES(:givenname,)";
+        require_once 'dbconnect.php';
+
+        if($_POST['password1']==$_POST['password2']){
+        $ww=password_hash($_POST['password1'],PASSWORD_DEFAULT);
+        "INSERT INTO client(idclient, givenname, surname, middleinitial, title, gender, streetadress, city, zipcode, emailadress, telephonenumber, birthday, occupation, password1, password2)
+        VALUES('idclient', ':givenname', 'surname', 'middleinitial', 'title', 'gender', 'streetadress', 'city', 'zipcode', 'emailadress', 'telephonenumber', 'birthday', 'occupation', 'password1, password2')";
         $query->bindValue(':givenname', $_POST['givenname']);
         $query->execute();
-        echo"Beste $givenname, uw registratie is succesvol";
+        echo "U bent succesvolgeregistreerd";
         
-    } else{
-        $givenname="";
-        echo "wachtwoord 1 is niet gelijk aan wachtwoord2.";
-        header('Refresh: 1; url=registratie.php');	
-        exit();
-} 
 
-}    else{
-    $givenname="";
-     echo "U zult eerst uw gegevens moeten invullen.";
-     header('Refresh: 1; url=registratie.php');	
-       
+        } else{
+            echo "Wachtwoord1 en Wachtwoord2 is niet aan elkaar gelijk";
+            header('Refresh: 1; url=registratie.php');	
+            exit(); 
+        }
+}   else{
+    echo "U zult eerst uw gegevens moeten invullen";
+    header('Refresh: 1; url=registratie.php');	
+    exit(); 
 }
 ?>
 
-<?php echo 'Klantnummer is'.$db->lastInsertId() ?>
+

@@ -54,7 +54,7 @@
     </label>
     <br><br>
     <label class="label">Straatadres*</label><br><br>
-    <input type="text" name="streetadres" value="">
+    <input type="text" name="streetadress" value="">
     <br><br>
 
     <label class="label">Stad*</label><br><br>
@@ -66,7 +66,7 @@
     <br><br>
 
     <label class="label">E-mail*</label><br><br>
-    <input required type="email" name="email" value="">
+    <input required type="email" name="emailadress" value="">
     <br><br>
 
     <label class="label">Telefoonnummer*</label><br><br>
