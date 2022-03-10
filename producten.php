@@ -375,7 +375,7 @@
                         <td>
                             <img src="images/yakultoriginal.jpg" alt="zuiveldrank" width="450" height="450">
                             <p>Yakult Drink Original</p>
-                            <a href="heineken.php">
+                            <a href="yakult.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">aantal</button>
@@ -384,7 +384,7 @@
                         <td>
                             <img src="images/OpIsOptimel.jpg" alt="zuiveldrank" width="450" height="450">
                             <p>Optimel Drink framboos 0% vet</p>
-                            <a href="heineken.php">
+                            <a href="optimelframboos.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">aantal</button>
@@ -393,7 +393,7 @@
                         <td>
                             <img src="images/chocolaOpjeMel.jpg" alt="melk" width="450" height="450">
                             <p>Chocolademelk vol 1L</p>
-                            <a href="heineken.php">
+                            <a href="chocolademelk.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">aantal</button>
@@ -410,7 +410,7 @@
                                 <td>
                                     <img src="images/TaksiTropischFruit.jpg" alt="vruchtensap" width="450" height="450">
                                     <p>Taksi Tropisch fruit</p>
-                                    <a href="heineken.php">
+                                    <a href="taksifruit.php">
                                         <button class="colorp">bekijken</button>
                                     </a>
                                     <button class="colorb">aantal</button>
@@ -419,7 +419,7 @@
                                 <td>
                                     <img src="images/IceTeaLemon.jpg" alt="vruchtensap" width="450" height="450">
                                     <p>Ice tea Lemon</p>
-                                    <a href="heineken.php">
+                                    <a href="icetealemon.php">
                                         <button class="colorp">bekijken</button>
                                     </a>
                                     <button class="colorb">aantal</button>
@@ -428,7 +428,7 @@
                                 <td>
                                     <img src="images/IceTeaPeach.jpg" alt="vruchtensap" width="450" height="450">
                                     <p>Ice tea Peach</p>
-                                    <a href="heineken.php">
+                                    <a href="iceteapeach.php">
                                         <button class="colorp">bekijken</button>
                                     </a>
                                     <button class="colorb">aantal</button>
@@ -441,7 +441,7 @@
                             <td>
                             <img src="images/Liptonicetea1.jpg" alt="vruchtensap" width="450" height="450">
                             <p>Lipton Ice Tea Green Original 1,5L</p>
-                            <a href="heineken.php">
+                            <a href="iceteagreen.php">
                                 <button class="colorp">bekijken</button>
                             </a>
                             <button class="colorb">toevoegen</button>
