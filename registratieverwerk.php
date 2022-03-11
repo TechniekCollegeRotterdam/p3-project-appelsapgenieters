@@ -36,8 +36,8 @@ if(isset($_POST["registreer"])) {
 
         if($_POST['password1']==$_POST['password2']){
         $ww=password_hash($_POST['password1'],PASSWORD_DEFAULT);
-        "INSERT INTO client(idclient, givenname, surname, middleinitial, title, gender, streetadress, city, zipcode, emailadress, telephonenumber, birthday, occupation, password1, password2)
-        VALUES('idclient', ':givenname', 'surname', 'middleinitial', 'title', 'gender', 'streetadress', 'city', 'zipcode', 'emailadress', 'telephonenumber', 'birthday', 'occupation', 'password1, password2')";
+        "INSERT INTO client(givenname, surname, middleinitial, title, gender, streetadress, city, zipcode, emailadress, telephonenumber, birthday, occupation, password1, password2)
+        VALUES(':givenname', 'surname', 'middleinitial', 'title', 'gender', 'streetadress', 'city', 'zipcode', 'emailadress', 'telephonenumber', 'birthday', 'occupation', 'password1, password2')";
         $query->bindValue(':givenname', $_POST['givenname']);
         $query->execute();
         echo "U bent succesvol geregistreerd.";
