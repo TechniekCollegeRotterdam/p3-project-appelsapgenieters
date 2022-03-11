@@ -15,7 +15,7 @@
 <!-- This is for the registersystem -->
 
 <?php 
-if(isset($POST["registreer"])) {
+if(isset($_POST["registreer"])) {
         /*This is for the phpmyadmin table client*/
         $givenname=$_POST['givenname'];
         $surname=$_POST['surname'];
@@ -40,16 +40,16 @@ if(isset($POST["registreer"])) {
         VALUES('idclient', ':givenname', 'surname', 'middleinitial', 'title', 'gender', 'streetadress', 'city', 'zipcode', 'emailadress', 'telephonenumber', 'birthday', 'occupation', 'password1, password2')";
         $query->bindValue(':givenname', $_POST['givenname']);
         $query->execute();
-        echo "U bent succesvolgeregistreerd";
+        echo "U bent succesvol geregistreerd.";
         
 
         } else{
-            echo "Wachtwoord1 en Wachtwoord2 is niet aan elkaar gelijk";
+            echo "Wachtwoord1 en Wachtwoord2 zijn niet aan elkaar gelijk.";
             header('Refresh: 1; url=registratie.php');	
             exit(); 
         }
 }   else{
-    echo "U zult eerst uw gegevens moeten invullen";
+    echo "U zult eerst uw gegevens moeten invullen.";
     header('Refresh: 1; url=registratie.php');	
     exit(); 
 }
