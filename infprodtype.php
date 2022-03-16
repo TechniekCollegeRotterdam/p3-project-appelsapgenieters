@@ -19,7 +19,7 @@
     // verbinding maken database shabu //
     require_once ("dbconnect.php");
     //  alle gegevens ophalen uit de tabel: product
-        $query = $db ->prepare("SELECT prodname, price, 'name' FROM product INNER JOIN type ON typeid = idtype;");
+        $query = $db ->prepare("SELECT prodname, price, 'name' FROM `product` INNER JOIN type ON typeid = idtype;");
         $query-> execute();
         $resultq = $query->fetchALL (PDO::FETCH_ASSOC);
         if ($query ->RowCount()>0) {
@@ -32,7 +32,13 @@
           foreach ($resultq as &$data) {
             echo "<tr>";
             echo "<td>";
+            echo " " . $data['prodname'];
+            echo "</td>";
+            echo "<td>";
             echo " " . $data['price'];
+            echo "</td>";
+            echo "<td>";
+            echo " " . $data['name'];
             echo "</td>";
             echo "</tr>";
 
