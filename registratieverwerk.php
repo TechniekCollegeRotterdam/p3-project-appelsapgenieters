@@ -1,4 +1,4 @@
-p<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,8 +22,8 @@ if(! isset($_POST['registreer']))
     $errorfree = false;
     echo "<div class='container'>";
     echo "<div class='panel panel-primary'>";
-    echo "<div class='panel-heading'>Helaas, registratie is niet gelukt</div>";
-    echo "<div class='panel-body'>U zult eerst (al) uw gegevens moeten invullen</div>";
+    echo "<div class='panel-heading'><br><br>Helaas, registratie is niet gelukt</div>";
+    echo "<div class='panel-body'><br>U zult eerst (al) uw gegevens moeten invullen</div>";
     echo "</div>";
     echo "</div>";
     exit();
@@ -34,8 +34,8 @@ if($errorfree && $_POST['password1']!==$_POST['password2'])
     $errorfree = false;
     echo "<div class='container'>";
     echo "<div class='panel panel-primary'>";
-    echo "<div class='panel-heading'>Helaas, registratie is niet gelukt</div>";
-    echo "<div class='panel-body'>de beide wachtwoorden moeten aan elkaar gelijk zijn</div>";
+    echo "<div class='panel-heading'><br><br>Helaas, registratie is niet gelukt</div>";
+    echo "<div class='panel-body'><br>de beide wachtwoorden moeten aan elkaar gelijk zijn</div>";
     echo "</div>";
     echo "</div>";
 }
@@ -52,8 +52,8 @@ if($errorfree)
         $errorfree = false;
         echo "<div class='container'>";
         echo "<div class='panel panel-primary'>";
-        echo "<div class='panel-heading'>Helaas, registratie is niet gelukt</div>";
-        echo "<div class='panel-body'>Het gekozen email-adres is al in gebruik.</div>";
+        echo "<div class='panel-heading'><br><br>Helaas, registratie is niet gelukt</div>";
+        echo "<div class='panel-body'><br>Het gekozen email-adres is al in gebruik.</div>";
         echo "</div>";
         echo "</div>";
     }
@@ -81,7 +81,7 @@ if($errorfree)
 
         $query = $db->prepare("INSERT INTO client(surname, givenname, middleinitial,
          title, gender, streetadress, telephonenumber,
-         birthday, occupation, password)
+         birthday, occupation, passwrd)
          VALUES (:achternaam, :voornaam, :initial, :ttl, :gndr, :addrss, :woonplaats,
          :zip, :cntry, :email, :phonenr, :geboortedatum, :occup, :wachtwoord)");
          $query->bindValue(':voornaam', $gn);
@@ -101,8 +101,8 @@ if($errorfree)
          $query->execute();
          echo "<div class='container'>";
          echo "<div class='panel panel-primary'>";
-         echo "<div class='panel-heading'>Beste ".$gn." ".$sn.", uw registratie is succesvol</div>";
-         echo "<div class='panel-body'>Uw klantnummer is: ".$db->lastInsertId()."</div>";
+         echo "<div class='panel-heading'><br><br>Beste ".$gn." ".$sn.", uw registratie is succesvol</div>";
+         echo "<div class='panel-body'><br>Uw klantnummer is: ".$db->lastInsertId()."</div>";
          echo "</div>";
          echo "</div>";
     }
