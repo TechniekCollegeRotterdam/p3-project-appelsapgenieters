@@ -12,8 +12,15 @@
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
 		<?php
-			include "nav.html";
+        require_once "dbconnect.php";
+		include "nav.html";
+        // Hier worden de gegevens van de landentabel opgehaald voor het formulier
+        $query = $db->prepare("SELECT * FROM country");
+        $query->execute();
+        $result=$query->fetchAll(PDO::FETCH_ASSOC);
+
 		?>
+        
 	</header>
 
     <br>
@@ -64,6 +71,18 @@
     <label class="label">Postcode*</label><br><br>
     <input required type="text" name="zipcode" value="">
     <br><br>
+
+    <label for="country">Selecteer uw land:</label> 
+    <select class="form-control" id="country" name="country" required>
+        <?php
+        foreach($result as $rij)
+        {
+            echo '<option value="'.$rij['idcountry'].'">';
+            echo $rij['code'].' - '.$rij['name'];
+            echo '</option>';
+        }
+        ?>
+    </select> <br><br>
 
     <label class="label">E-mail*</label><br><br>
     <input required type="email" name="emailadress" value="">
