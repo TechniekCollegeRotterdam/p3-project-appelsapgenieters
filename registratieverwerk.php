@@ -32,12 +32,19 @@ if(isset($_POST["registreer"])) {
         $password1=$_POST['password1'];
         $password2=$_POST['password2'];
 
-        require_once 'dbconnect.php';
 
         if($_POST['password1']==$_POST['password2']){
-        $ww=password_hash($_POST['password1'],PASSWORD_DEFAULT);
-        "INSERT INTO client(givenname, surname, middleinitial, title, gender, streetadress, city, zipcode, emailadress, telephonenumber, birthday, occupation, password1, password2)
-        VALUES(':givenname', 'surname', 'middleinitial', 'title', 'gender', 'streetadress', 'city', 'zipcode', 'emailadress', 'telephonenumber', 'birthday', 'occupation', 'password1, password2')";
+        $ww=password_hash($_POST['password1'], PASSWORD_DEFAULT);
+        
+        /*This is for the login email. We need it later*/
+        require_once 'dbconnect.php';
+        $eml = filter_var($_POST["emailadress"], FILTER_SANITIZE_STRING);
+        $query = $db->prepare("SELECT * FROM client WHERE emailadress = :eml");
+        $query->bindValue(':eml', $eml);
+        $query->execute();
+        if($query->rowCount()<>0) {
+        $query = $db->prepare("INSERT INTO client(givenname, surname, middleinitial, title, gender, streetadress, city, zipcode, emailadress, telephonenumber, birthday, occupation, password1, password2)
+        VALUES(':givenname', 'surname', 'middleinitial', 'title', 'gender', 'streetadress', 'city', 'zipcode', 'emailadress', 'telephonenumber', 'birthday', 'occupation', 'password1, password2'");
         $query->bindValue(':givenname', $_POST['givenname']);
         $query->execute();
         echo "U bent succesvol geregistreerd.";
@@ -48,11 +55,12 @@ if(isset($_POST["registreer"])) {
             header('Refresh: 1; url=registratie.php');	
             exit(); 
         }
-}   else{
+    } else{
     echo "U zult eerst uw gegevens moeten invullen.";
     header('Refresh: 1; url=registratie.php');	
     exit(); 
 }
+} 
 ?>
 
 
