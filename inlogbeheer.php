@@ -26,7 +26,7 @@
      	<label>Wachtwoord</label>
      	<input type="password" name="password" placeholder="vul hier uw wachtwoord in"><br>
 
-     	<button type="submit">Inloggen</button>
+     	<button class="colorp" type="submit">Inloggen</button>
      </form>
 </body>
 </html>
