@@ -13,10 +13,10 @@
 		<!-- hieronder wordt het menu opgehaald. -->
 	</header>
 <!-- This is for the registersystem -->
-<main>
 <?php
 include 'nav.html';
 $errorfree = true;
+echo "<br><main>";
 if(! isset($_POST['registreer']))
 {
     $errorfree = false;
@@ -63,8 +63,8 @@ if($errorfree)
 {
     try
     {
-        $gn = filter_var($_POST["givenname"], FILTER_SANITIZE_STRING);
-        $sn = filter_var($_POST["surname"], FILTER_SANITIZE_STRING);
+        $gn = filter_var($_POST["surname"], FILTER_SANITIZE_STRING);
+        $sn = filter_var($_POST["givenname"], FILTER_SANITIZE_STRING);
         $initl = filter_var($_POST["middleinitial"], FILTER_SANITIZE_STRING);
         $ttl = filter_var($_POST["title"], FILTER_SANITIZE_STRING);
         // veld "gender" hoeft niet geschoond te worden, omdat waarde door formulier wordt gevuld
@@ -80,24 +80,24 @@ if($errorfree)
         $pw=password_hash($_POST["password1"], PASSWORD_DEFAULT);
 
         $query = $db->prepare("INSERT INTO client(surname, givenname, middleinitial,
-         title, gender, streetadress, telephonenumber,
+         title, gender, streetadress, city, zipcode, countryid, emailadress, telephonenumber,
          birthday, occupation, passwrd)
-         VALUES (:achternaam, :voornaam, :initial, :ttl, :gndr, :addrss, :woonplaats,
-         :zip, :cntry, :email, :phonenr, :geboortedatum, :occup, :wachtwoord)");
-         $query->bindValue(':voornaam', $gn);
-         $query->bindValue(':achternaam', $sn);
-         $query->bindValue(':initial', $initl);
-         $query->bindValue(':ttl', $ttl);
-         $query->bindValue(':gndr', $_POST['gender']);
-         $query->bindValue(':addrss', $stradr);
-         $query->bindValue(':woonplaats', $cty);
-         $query->bindValue(':zip', $zip);
-         $query->bindValue(':cntry', $_POST['country']);
-         $query->bindValue(':email', $eml);
-         $query->bindValue(':phonenr', $phone);
-         $query->bindValue(':geboortedatum', $_POST['birthday']);
-         $query->bindValue(':occup', $occ);
-         $query->bindValue(':wachtwoord', $pw);
+         VALUES (:surname, :givenname, :middleinitial, :title, :gender, :streetadress, :city,
+         :zipcode, :countryid, :emailadress, :telephonenumber, :birthday, :occupation, :passwrd)");
+         $query->bindValue(':surname', $sn);
+         $query->bindValue(':givenname', $gn);
+         $query->bindValue(':middleinitial', $initl);
+         $query->bindValue(':title', $ttl);
+         $query->bindValue(':gender', $_POST['gender']);
+         $query->bindValue(':streetadress', $stradr);
+         $query->bindValue(':city', $cty);
+         $query->bindValue(':zipcode', $zip);
+         $query->bindValue(':countryid', $_POST['country']);
+         $query->bindValue(':emailadress', $eml);
+         $query->bindValue(':telephonenumber', $phone);
+         $query->bindValue(':birthday', $_POST['birthday']);
+         $query->bindValue(':occupation', $occ);
+         $query->bindValue(':passwrd', $pw);
          $query->execute();
          echo "<div class='container'>";
          echo "<div class='panel panel-primary'>";
@@ -108,11 +108,11 @@ if($errorfree)
     }
     catch(PDOException $e)
     {
-        $sMsg = "<p>
+        $sMsg = '<p>
         Regelnummer: '.$e->getLine().'<br />
         Bestand: '.$e->getFile().'<br />
         Foutmelding: '.$e->getMessage().'
-        </p>";
+        </p>';
         trigger_error($sMsg);
 }
 }

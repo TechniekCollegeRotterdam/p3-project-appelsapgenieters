@@ -29,47 +29,55 @@
     <!-- This is for the registerfield in html -->
     <h1>Registreren</h1>
     <form method="POST" action="registratieverwerk.php">
-
-    <label class="label">Voornaam*</label><br><br>
-    <input required type="text" name="givenname" value="">
+        <fieldset>
+            <legend><h2>Klantnummer</h2></legend>
+            <input type="text" name="idClient"
+            placeholder="Klantnummer wordt automatisch bepaald" disabled>
+            
+        </fieldset>
+<fieldset>
+    <label for="givenname">Voornaam*</label><br><br>
+    <input type="text" name="givenname" placeholder="voornaam" required autofocus>
+  
     <br><br>
 
-    <label class="label">Achternaam*</label><br><br>
-    <input required type="text" name="surname" value="">
+    <label for="surname">Achternaam*</label><br><br>
+    <input type="text" name="surname" placeholder="achternaam" required>
     <br><br>
 
-    <label class="label">Tussenvoegsel</label><br><br>
-    <input type="text" name="middleinitial" value="">
+    <label for="middleinitial">Overige Initialen</label><br><br>
+    <input type="text" name="middleinitial" placeholder="Overige Initialen">
     <br><br>
 
-    <label class="label">Titel</label><br><br>
-    <input type="text" name="title" value="">
+    <label for="title">Titel</label><br><br>
+    <input type="text" name="title" placeholder="Titel">
+    <br><br>
+    </fieldset>
+
+    <fieldset>
+    <legend>Geslacht*</legend><br><br>
+    <label for="female"> Vrouw:</label>
+    <input type="radio" name="gender" id="female" value="female" checked>
+    <br><br>
+    <label for="male"> &nbsp; &nbsp; &nbsp; &nbsp;  Man:</label>
+    <input type="radio" name="gender" id="male" value="male" checked>
+    <br><br>
+    <label for="other">&nbsp; &nbsp; &nbsp; &nbsp; Anders:</label>
+    <input type="radio" name="gender" id="other" value="other" checked>
+    </fieldset>
     <br><br>
 
-    <label class="label">Geslacht*</label><br><br>
-    <br>
-    <label class="container">
-    <input required type="radio" name="gender" checked="checked" value="">man
-    </label>
-    <br>
-    <label class="container">
-    <input required type="radio" name="gender" checked="checked" value="">vrouw
-    </label>
-    <br>
-    <label class="container">
-    <input required type="radio" name="gender" checked="checked" value="">anders
-    </label>
-    <br><br>
-    <label class="label">Straatadres*</label><br><br>
-    <input type="text" name="streetadress" value="">
+    <fieldset>
+    <label for="streetadres">Straatadres*</label><br><br>
+    <input type="text" name="streetadress" placeholder="Adres" required>
     <br><br>
 
-    <label class="label">Stad*</label><br><br>
-    <input required type="text" name="city" value="">
+    <label for="city">Stad*</label><br><br>
+    <input required type="text" name="city" placeholder="Woonplaats" required>
     <br><br>
 
-    <label class="label">Postcode*</label><br><br>
-    <input required type="text" name="zipcode" value="">
+    <label for="zipcode">Postcode*</label><br><br>
+    <input type="text" name="zipcode" placeholder="Postcode" required>
     <br><br>
 
     <label for="country">Selecteer uw land:</label> 
@@ -82,35 +90,40 @@
             echo '</option>';
         }
         ?>
-    </select> <br><br>
+    </select>
+    </fieldset>
+     <br><br>
 
-    <label class="label">E-mail*</label><br><br>
-    <input required type="email" name="emailadress" value="">
+     <fieldset>
+    <label for="emailadress">E-mail*</label><br><br>
+    <input required type="email" name="emailadress" placeholder="Email" required>
     <br><br>
 
-    <label class="label">Telefoonnummer*</label><br><br>
-    <input required type="phone" name="telephonenumber" value="">
+    <label for="telephonenumber">Telefoonnummer*</label><br><br>
+    <input required type="phone" name="telephonenumber" placeholder="Telefoonnummer" required>
     <br><br>
 
-        <label class="label">Geboortedatum*</label><br><br>
+        <label for="birthday">Geboortedatum*</label><br><br>
         <input type="date" name="birthday"></input>
         <br><br>
 
-        <label class="label">beroep*</label><br><br>
-        <input type="text" name="occupation"></input>
+        <label for="occupation">beroep*</label><br><br>
+        <input type="text" name="occupation" placeholder="Beroep"></input>
         <br><br>
 
-        <label class="label">Wachtwoord*</label><br><br>
-    <input required type="PASSWORD" name="password1" value="">
+        <label for="password1">Wachtwoord*</label><br><br>
+    <input type="PASSWORD" name="password1" placeholder="Wachtwoord" required>
     <br><br>
 
-    <label class="label">Herhaal wachtwoord*</label><br><br>
-    <input required type="PASSWORD" name="password2" value="">
+    <label for="password2">Herhaal wachtwoord*</label><br><br>
+    <input type="PASSWORD" name="password2" placeholder="Herhaal wachtwoord" required>
         <br>
         <br>
+        </fieldset>
 
+        <fieldset>
         <input type="submit" class="submit" name="registreer" value="registreren"></input>
-
+        </fieldset>
     </form>
 
     
