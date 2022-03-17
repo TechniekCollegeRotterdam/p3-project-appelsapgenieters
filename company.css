@@ -140,26 +140,6 @@ width: 500px;
   .container input:hover {	  
 	  cursor: pointer;
   }
-  
-  /*This is for the registersystem*/
-  .panel-heading{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 3rem;
-  position: relative;
-  width: 400px;
-  height: 400px;
-  background-color: white;
-  border: 1px solid rgba(59,58,58,0);
-  border-radius: 20px;
-  box-shadow: -10px 5px 10px grey;
-  top: 0;
-  transition: top ease 0.5s;
-  }
-
-
 
 
 /*This is for the button*/
