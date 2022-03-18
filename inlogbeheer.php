@@ -23,7 +23,7 @@
      	<label>Wachtwoord</label>
      	<input type="password" name="passwrd" placeholder="Password"><br><br>
 
-     	<button class="colorp" type="submit" name="loginclient">Login</button>
+     	<button class="colorp" type="submit" name="loginadmin">Login</button>
      </form>
 </body>
 </html>

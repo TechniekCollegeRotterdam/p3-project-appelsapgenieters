@@ -14,8 +14,12 @@
         <img src="images/Logo.jpg" alt="logo">
         <!-- hieronder wordt het menu opgehaald. -->
         <?php
-        if()
+        if(! isset('loginadmin'=true)){
+            include "nav.html";
+        } 
+        else {
 			include "navbezoeker.html";
+        }
 		?>
     </header>
 

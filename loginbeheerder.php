@@ -4,7 +4,7 @@ include "dbconnect.php";
 $errorfree = true;
 echo "<br><main>";
 
-if (isset($_POST['loginclient']))
+if (isset($_POST['loginadmin']))
  {
 
 	function validate($data){
