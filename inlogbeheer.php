@@ -11,7 +11,7 @@
 			include "nav.html";
 		?>
 	</header>
-     <form action="login.php" method="post">
+     <form action="loginbeheerder.php" method="post">
 		 <br><br>
      	<h2>Login beheer</h2>
      	<?php if (isset($_POST['error'])) { ?>

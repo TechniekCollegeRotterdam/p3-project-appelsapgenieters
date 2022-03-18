@@ -11,9 +11,16 @@
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
 		<?php
-	include "navbezoeker.html";
+	include "nav.html";
 		?>
 	</header>
+    <?php 
+    if (!isset($_SESSION['blogin']) || $_SESSION['blogin'] == false)
+    {
+        header(string:'location: inlogbeheer.php');
+        exit();
+    }
+    ?>
  
 	<!-- op de home pagina wat enthousiaste tekst over het bedrijf en de producten -->
  	<main>	

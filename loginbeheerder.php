@@ -49,19 +49,22 @@ if (isset($_POST['loginclient']))
             	$_SESSION['givenname'] = $result['givenname'];
             	$_SESSION['surname'] = $result['surname'];
             	$_SESSION['idclient'] = $result['idclient'];
-            	header("Location: home.php");
-		        exit();
+            	header('Refresh: 3; url=beheerderpagina.php');
+				echo "<h1>Welkom</h1>", $_SESSION['givenname'];
             }else{
-				header("Location: melk4pakjes.php?error=Incorect User name or password");
+				header("Location: inlogbeheer.php?error=Incorect email name or password");
+				echo "Onjuist email of wachtwoord";
 		        exit();
 			}
 		}else{
-			header("Location: producten.php?error=Incorect User name or password");
+			header("Location: inlogbeheer.php?error=Incorect email or password");
+			echo "Onjuist email of wachtwoord";
 	        exit();
 		}
 	}
 	
 }else{
-	header("Location: https://www.serebii.net/potw-dp/379.shtml.php");
+	header("Location:  inlogbeheer.php");
+	echo "U heeft email of wachtwoord niet ingevuld";
 	exit();
 }
