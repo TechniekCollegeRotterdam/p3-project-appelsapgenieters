@@ -41,14 +41,14 @@ if (isset($_POST['loginclient']))
 		$query = $db->prepare("SELECT * FROM client WHERE emailadress = :eml");
 		$query->bindValue(':eml', $eml);
 		$query->execute();
-		$row = ($db);
+		$result = ($db);
 
 		if ($query->rowCount() == 1) {
-			$row ->fetch(fetch_style: PDO::FETCH_ASSOC);
-            if ($row['emailadress'] == $eml) {
-            	$_SESSION['givenname'] = $row['givenname'];
-            	$_SESSION['surname'] = $row['surname'];
-            	$_SESSION['idclient'] = $row['idclient'];
+			$result=$query->fetch(PDO::FETCH_ASSOC);
+            if ($result['emailadress'] == $eml) {
+            	$_SESSION['givenname'] = $result['givenname'];
+            	$_SESSION['surname'] = $result['surname'];
+            	$_SESSION['idclient'] = $result['idclient'];
             	header("Location: home.php");
 		        exit();
             }else{
