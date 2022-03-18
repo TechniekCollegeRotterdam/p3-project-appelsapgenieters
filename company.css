@@ -159,8 +159,32 @@ width: 500px;
   .container input:hover {	  
 	  cursor: pointer;
   }
-  
 
+/*This is for panels in the registersystem*/
+.panel-heading{
+	display: block;
+    margin-block-start: 1em;
+	margin-block-end: 0em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	background-color: #ff641e;
+	inline-size: 1px blue;
+	border-top-right-radius: 10%;
+	border-top-left-radius: 10%;
+	border: 1px solid black;
+}
+
+.panel-body{
+	display: block;
+	margin-block-start: 0em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	background-color: azure;
+	border-bottom-right-radius: 10%;
+	border-bottom-left-radius: 10%;
+	border: 1px solid black;
+}
 
 /*This is for the button*/
 button{
