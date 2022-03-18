@@ -14,7 +14,7 @@
 	</header>
 <!-- This is for the registersystem -->
 <?php
-include 'nav.html';
+include 'navbezoeker.html';
 $errorfree = true;
 echo "<br><main>";
 if(! isset($_POST['registreer']))

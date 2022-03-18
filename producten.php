@@ -14,7 +14,8 @@
         <img src="images/Logo.jpg" alt="logo">
         <!-- hieronder wordt het menu opgehaald. -->
         <?php
-			include "nav.html";
+        if()
+			include "navbezoeker.html";
 		?>
     </header>
 

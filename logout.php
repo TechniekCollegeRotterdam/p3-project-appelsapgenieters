@@ -4,4 +4,5 @@ session_start();
 session_unset();
 session_destroy();
 
-header("Location: index.php");
+header("Refresh: 3; index.php");
+echo "Loguit succesvol";

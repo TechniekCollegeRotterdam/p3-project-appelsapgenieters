@@ -10,7 +10,7 @@
 <body>
     <header class="banner">
         <img src="images/logo.jpg" alt="logo" width="200" height="200">
-        <?php   include 'nav.html'; ?>
+        <?php   include 'navbezoeker.html'; ?>
     </header>
     
      <br> <br> <br>

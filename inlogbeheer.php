@@ -8,7 +8,7 @@
 	<header>
 	<img src="images/Logo.jpg" alt="logo">
 		<?php 
-			include "nav.html";
+			include "navbezoeker.html";
 		?>
 	</header>
      <form action="loginbeheerder.php" method="post">

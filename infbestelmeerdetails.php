@@ -12,7 +12,7 @@
         <img src="images/Logo.jpg" alt="logo">
         <!-- hieronder wordt het menu opgehaald. -->
         <?php
-			include "nav.html";
+			include "navbezoeker.html";
 		?>
     </header>
 <br>

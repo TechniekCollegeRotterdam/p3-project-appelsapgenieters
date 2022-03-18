@@ -12,7 +12,7 @@
 		<h1>Company</h1>
 		<!-- hieronder wordt het menu opgehaald. -->
 		<?php
-			include "nav.html";
+			include "navbezoeker.html";
 		?>
 	</header>
  

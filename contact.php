@@ -11,7 +11,7 @@
     <header>
     <img src="images/Logo.jpg" alt="logo">
         <?php
-			include "nav.html";
+			include "navbezoeker.html";
             include "footer.html";
 		?>
     </header>
