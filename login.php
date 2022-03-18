@@ -31,7 +31,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             	$_SESSION['email'] = $row['email'];
             	$_SESSION['name'] = $row['name'];
             	$_SESSION['id'] = $row['id'];
-            	header("Location: index.php");
+            	header("Location: welkom.php");
 		        exit();
             }else{
 				header('Refresh: 2; url=inlogbeheer.php');
