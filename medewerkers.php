@@ -43,6 +43,30 @@
         is erg sus. Daarom is hij de nieuwe werkgever. Hij bepaalt in welk tijd de producten geïmporteerd wordt,<br>
         welke bedragen het opleverd en hoeveel tijd het kost. Hij is erg slim en goed in inversteren, maar hij is ook een beetje gierig.</p>
         </td>
+</tr>
+</table>
+
+<table>
+        <td>       
+       <img src="images/SkeletonsCard.jpg" alt="Medewerker" width="200" height="200">
+        <p><strong>Larry</strong><br>
+        is een werknemer. Hij houdt erg van dranken, dus daarom werkt hij op dit bedrijf.<br>
+        Het is onbekend hoe hij dranken drinkt en hou hij het verteerd. Hij is ook heel aardig en doet ook zijn best tijdens werk.</p>
+        </td>
+        <td>       
+       <img src="images/UsainBolt.jpg" alt="Medewerker" width="200" height="200">
+        <p><strong>Usain Bolt</strong><br>
+        is een werknemer die helpt met onze reclame. Hij drinkt vaak appelsap,<br>
+        want het geeft de grootste boost waar je sneller loopt dan de snelste auto.<br>
+        Usain Bolt heeft ook een Pokémon gevangen waar 
+        </td>
+        <td>       
+       <img src="images/snorlaxappelsap.jpg" alt="Medewerker" width="300" height="300">
+        <p><strong>Snorlax</strong><br>
+        is een werknemer die ook mee helpt met onze reclame. Hij drinkt veel te veel appelsap<br>
+        en daarom ligt die op een plek lekker rustig appelsap te drinken.<br> 
+        Hij helpt ook met importeren en het exporteren van producten.
+        </td>
         </tr>
         </table>                 
        </article>

@@ -16,6 +16,9 @@
 	</header>
  
 	<!-- op de home pagina wat enthousiaste tekst over het bedrijf en de producten -->
+ 	<main>	
+		 <a href="producten.php">
+
  	<main>
 
 <p>Login</p>
@@ -33,6 +36,7 @@
     <h1>Welkom bij de Login page voor klant!</h1>
 
 		 <a href="https://play.pokemonshowdown.com/">
+
 		  <img class="centreer" src="images/homepagefotoappelsap.nl.jpg" alt="main page image" width="1000px" height="600px"> 
 		  </a>
 		  <p> Welkom op de website van company. Wij vormen een jong en enthousiast bedrijf, 
