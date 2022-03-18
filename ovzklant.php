@@ -17,12 +17,12 @@
  
 	<!-- op deze pagina de informatie overzichten van de tabel client -->
  	<main>
-        <p>Een overzicht van al onze klanten. Per klant wordt getoond:<br>
-			Roepnaam, achternaam, woonplaats, geboortedatum.<br><a href="infklant.php">Roep dit overzicht op</a></p>
-        <p>Een overzicht van alle klanten uit Amsterdam:<br>
-			Per klant wordt getoond: Achternaam, adres, geslacht en woonplaats<br><a href="infklantwpl.php">Roep dit overzicht op</a></p>
-        <p>Een overzicht van alle klanten met hun bestellingen:<br>
-			Per klant wordt getoond: Roepnaam, Achternaam, adres, id van bestelling, besteldatum, betaaldbedrag<br><a href="infklantbestelling.php">Roep dit overzicht op</a></p>
+        <p>Een overzicht van al onze klanten hun geslacht:<br>
+		<br><a href="infklant.php">Meer mannen of vrouwen als klant?</a></p>
+        <p>Een overzicht van alle klanten hun geboortedatum:<br>
+		<br><a href="infklantwpl.php">Wat is onze gemiddelde klant?</a></p>
+        <p>Een overzicht van alle klanten en hun locatie:<br>
+		<br><a href="infklantbestelling.php">Waar komen onze klanten vandaan?</a></p>
         <p>Een overzicht van alle klanten, die geen bestelling hebben geplaatst:<br>
 			Per klant wordt getoond: ID klant, Achternaam, geboortedatum, woonplaats<br><a href="infklantgeenbestelling.php">Roep dit overzicht op</a></p>
         <p>Een overzicht van de klanten met hun grootste bestelling:<br>
@@ -35,3 +35,5 @@
 	
 </body>
 </html>
+
+
