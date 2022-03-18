@@ -140,6 +140,7 @@ width: 500px;
   .container input:hover {	  
 	  cursor: pointer;
   }
+
 /*This is for panels in the registersystem*/
 .panel-heading{
 	display: block;
