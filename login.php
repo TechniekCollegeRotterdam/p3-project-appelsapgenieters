@@ -1,8 +1,11 @@
 <?php 
 session_start(); 
 include "dbconnect.php";
+$errorfree = true;
+echo "<br><main>";
 
-if (isset($_POST['email']) && isset($_POST['password'])) {
+if (isset($_POST['loginclient']))
+ {
 
 	function validate($data){
        $data = trim($data);
@@ -11,39 +14,54 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 	   return $data;
 	}
 
-	$email = validate($_POST['email']);
-	$pass = validate($_POST['password']);
+	$eml = filter_var($_POST["emailadress"], FILTER_SANITIZE_STRING);
+	$pw = validate($_POST['passwrd']);
 
-	if (empty($email)) {
-		header('Refresh: 2; url=inlogbeheer.php');
+	if (empty($eml)) {
+        echo "<div class='container'>";
+        echo "<div class='panel panel-primary'>";
+        echo "<div class='panel-heading'><br><br>Helaas, inloggen is niet gelukt</div>";
+        echo "<div class='panel-body'><br>Uw email is onjuist</div>";
+        echo "</div>";
+        echo "</div>";
+		header("Location: inlogbeheer.php?error=email is required");
 	    exit();
-	}else if(empty($pass)){
-        header('Refresh: 2; url=inlogbeheer.php');
+	}else if(empty($pw)){
+        echo "<div class='container'>";
+        echo "<div class='panel panel-primary'>";
+        echo "<div class='panel-heading'><br><br>Helaas, inloggen is niet gelukt</div>";
+        echo "<div class='panel-body'><br>U wachtwoord is onjuist</div>";
+        echo "</div>";
+        echo "</div>";
+		header("Location: inlogbeheer.php?error=password is required");
 	    exit();
 	}else{
-		$sql = "SELECT * FROM login WHERE email ='$email' AND password='$pass'";
+		require_once "dbconnect.php";
+		$eml = filter_var($_POST["emailadress"], FILTER_SANITIZE_STRING);
+		$query = $db->prepare("SELECT * FROM client WHERE emailadress = :eml");
+		$query->bindValue(':eml', $eml);
+		$query->execute();
+		$row = ($db);
 
-		$result = mysqli_query($db, $sql);
-
-		if (mysqli_num_rows($result) === 1) {
-			$row = mysqli_fetch_assoc($result);
-            if ($row['email'] === $email && $row['password'] === $pass) {
-            	$_SESSION['email'] = $row['email'];
-            	$_SESSION['name'] = $row['name'];
-            	$_SESSION['id'] = $row['id'];
-            	header("Location: index.php");
+		if ($query->rowCount() == 1) {
+			$row ->fetch(fetch_style: PDO::FETCH_ASSOC);
+            if ($row['emailadress'] == $eml) {
+            	$_SESSION['givenname'] = $row['givenname'];
+            	$_SESSION['surname'] = $row['surname'];
+            	$_SESSION['idclient'] = $row['idclient'];
+            	header("Location: home.php");
 		        exit();
             }else{
-				header('Refresh: 2; url=inlogbeheer.php');
+				header("Location: melk4pakjes.php?error=Incorect User name or password");
 		        exit();
 			}
 		}else{
-			header('Refresh: 2; url=inlogbeheer.php');
+			header("Location: producten.php?error=Incorect User name or password");
 	        exit();
 		}
 	}
 	
 }else{
-	header("Location: index.php");
+	header("Location: https://www.serebii.net/potw-dp/379.shtml.php");
 	exit();
 }

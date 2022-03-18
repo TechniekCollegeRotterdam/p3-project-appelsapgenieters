@@ -175,8 +175,10 @@ button{
 	border-radius: 8%;
 	font-size: 15px;
 	cursor: pointer;
+	transition: width 10s;
 }
 
+/* This is for the hover effect. */
 button:hover {
 	background-color: darkred;
 	animation-name: colorchange;

@@ -4,29 +4,26 @@
 	<title>Login beheer</title>
 	<link rel="stylesheet" type="text/css" href="company.css">
 </head>
-<header>
-		<h1>Login beheer</h1>
-		<!-- hieronder wordt het menu opgehaald. -->
-		<?php
+<body>
+	<header>
+	<img src="images/Logo.jpg" alt="logo">
+		<?php 
 			include "nav.html";
 		?>
-    <br>
-    <br>
-
 	</header>
-<body>
      <form action="login.php" method="post">
-     	
-     	<?php if (isset($_GET['error'])) { ?>
-     		<p class="error"><?php echo $_GET['error']; ?></p>
+		 <br><br>
+     	<h2>Login beheer</h2>
+     	<?php if (isset($_POST['error'])) { ?>
+     		<p class="error"><?php echo $_POST['error']; ?></p>
      	<?php } ?>
-     	<label>Email</label>
-     	<input type="text" name="mail" placeholder="vul hier uw email in"><br>
+     	<label>E-mailadres</label>
+     	<input type="text" name="emailadress" placeholder="vul hier uw emailadres"><br>
 
      	<label>Wachtwoord</label>
-     	<input type="password" name="password" placeholder="vul hier uw wachtwoord in"><br>
+     	<input type="password" name="passwrd" placeholder="Password"><br><br>
 
-     	<button type="submit">Inloggen</button>
+     	<button class="colorp" type="submit" name="loginclient">Login</button>
      </form>
 </body>
 </html>
