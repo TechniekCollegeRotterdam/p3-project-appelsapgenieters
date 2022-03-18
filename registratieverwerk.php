@@ -63,8 +63,8 @@ if($errorfree)
 {
     try
     {
-        $gn = filter_var($_POST["surname"], FILTER_SANITIZE_STRING);
-        $sn = filter_var($_POST["givenname"], FILTER_SANITIZE_STRING);
+        $gn = filter_var($_POST["givenname"], FILTER_SANITIZE_STRING);
+        $sn = filter_var($_POST["surname"], FILTER_SANITIZE_STRING);
         $initl = filter_var($_POST["middleinitial"], FILTER_SANITIZE_STRING);
         $ttl = filter_var($_POST["title"], FILTER_SANITIZE_STRING);
         // veld "gender" hoeft niet geschoond te worden, omdat waarde door formulier wordt gevuld
@@ -79,13 +79,13 @@ if($errorfree)
 
         $pw=password_hash($_POST["password1"], PASSWORD_DEFAULT);
 
-        $query = $db->prepare("INSERT INTO client(surname, givenname, middleinitial,
+        $query = $db->prepare("INSERT INTO client(givenname, surname, middleinitial,
          title, gender, streetadress, city, zipcode, countryid, emailadress, telephonenumber,
          birthday, occupation, passwrd)
-         VALUES (:surname, :givenname, :middleinitial, :title, :gender, :streetadress, :city,
+         VALUES (:givenname, :surname, :middleinitial, :title, :gender, :streetadress, :city,
          :zipcode, :countryid, :emailadress, :telephonenumber, :birthday, :occupation, :passwrd)");
-         $query->bindValue(':surname', $sn);
          $query->bindValue(':givenname', $gn);
+         $query->bindValue(':surname', $sn);
          $query->bindValue(':middleinitial', $initl);
          $query->bindValue(':title', $ttl);
          $query->bindValue(':gender', $_POST['gender']);
