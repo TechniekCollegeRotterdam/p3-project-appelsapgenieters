@@ -1,6 +1,6 @@
 <?php 
 try 
-{ 
+{
     $db = new PDO('mysql:host=localhost;dbname=appelsapgenieters', 'root' ,''); 
 } 
 catch(PDOException $e) 
