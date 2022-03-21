@@ -58,7 +58,7 @@ session_start();
             {
 /* This is a php statement that is executed when the page is loaded. It is used to display the name of
 the user. */
-                echo "<ul>".$_SESSION["givenname"]." ".$_SESSION["surname"]."</ul>";
+                echo "<li>".$_SESSION["givenname"]." ".$_SESSION["surname"]."</li>";
             }?>
             </ul>
         </li>

@@ -69,7 +69,7 @@ if (isset($_POST['loginadmin']))
 				echo "</div>";
 				echo "</div>";
 
-			}else{
+			}elseif($result['admin']=="N"){
 					header('Refresh: 3; url=inlogbeheer.php?error=Geen beheerder');
 					echo "<div class='container'>";
 					echo "<div class='panel panel-primary'>";
@@ -78,6 +78,16 @@ if (isset($_POST['loginadmin']))
 					echo "</div>";
 					echo "</div>";
 					exit();	
+				}
+				else{
+					header('Refresh: 3; url=inlogbeheer.php?error=Incorect email or password');
+					echo "<div class='container'>";
+					echo "<div class='panel panel-primary'>";
+					echo "<div class='panel-heading'><br><br>Helaas, inloggen is niet gelukt</div>";
+					echo "<div class='panel-body'><br>Email of wachtwoord is onjuist</div>";
+					echo "</div>";
+					echo "</div>";
+					exit();
 				}
 
             }else{
