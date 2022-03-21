@@ -2,7 +2,7 @@
 <html lang="nl"> 
 <head>
 	 <meta charset="UTF-8">
-	 <title>Company</title>
+	 <title>beheerderpagina</title>
 	 <link rel="stylesheet" type="text/css" href="company.css">  
 </head>
 
@@ -11,7 +11,7 @@
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
 		<?php
-	include "navbezoeker.html";
+	include "navadmin.php";
 		?>
 	</header>
 

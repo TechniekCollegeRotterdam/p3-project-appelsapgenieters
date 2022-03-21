@@ -1,56 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Company</title>
-   <link rel="stylesheet" type="text/css" href="company.css">  
+	<title>Login beheer</title>
+	<link rel="stylesheet" type="text/css" href="company.css">
 </head>
 <body>
-<?php session_start();
+	<header>
+	<img src="images/Logo.jpg" alt="logo">
+		<?php 
+			include "navbezoeker.html";
+		?>
+	</header>
+     <form action="loginklant.php" method="post">
+		 <br><br>
+     	<h2>Login klant</h2>
+     	<?php if (isset($_POST['error'])) { ?>
+     		<p class="error"><?php echo $_POST['error']; ?></p>
+     	<?php } ?>
+     	<label>E-mailadres</label>
+     	<input type="text" name="emailadress" placeholder="vul hier uw emailadres"><br>
 
-include('dbconnect.php');
+     	<label>Wachtwoord</label>
+     	<input type="password" name="passwrd" placeholder="Password"><br><br>
 
-if(isset($_POST['login']));
-{
-    $user_unsafe=$_POST['username'];
-    $pass_unsafe=$_POST['password'];
-
-    $user = mysqli($con,$user_unsafe);
-    $pass = mysqli($con,$pass_unsafe);
-
-    $query=mysqli_query($con,"mysql:host=localhost;dbname=appelsapgenieters', 'root' ,'root'")or die(mysqli_error($con));
-
-    $row=mysqli_fetch_array($query);
-
-         $name=$row['username'];
-         $counter=mysqli_num_rows($query);
-         $id=$row['id'];
-
-         if ($counter == 0)
-         {
-            echo "<script type='text/javascript'>alert('Invalid Usrename or Password!');
-            document.location='login.php'</script>";
-         }
-         else
-         {
-            $_SESSION['id']=$id;
-            $_SESSION['username']=$name;
-
-            echo "<script type='text/javascript'>document.location='index.php'</script>";
-         }
-
-}
-
-include('database dbconnect .php');
-     session_destroy();
-
-     echo '<meta http-equiv="refresh" content="2;url=login.php">';
-     echo '<progress max=100><strong>Progress: 60% done.</strong></progress><br>';
-     echo '<span class="itext">Logging out please wait!...</span>';
-
-?>
-   
+     	<button class="colorp" type="submit" name="loginclient">Login</button>
+     </form>
 </body>
 </html>

@@ -17,6 +17,8 @@
  
 	<!-- op de home pagina wat enthousiaste tekst over het bedrijf en de producten -->
  	<main>	
+		 <section class="wrapper">
+			 <article>
 		 <a href="producten.php">
 		  <img class="centreer" src="images/homepagefotoappelsap.nl.jpg" alt="main page image" width="1000px" height="600px"> 
 		  </a>
@@ -37,6 +39,9 @@
 			  include "zesproducten.php";
 			  ?>
 		  </p>
+		  				 
+		  </article>
+		 </section>
 	</main>
 	
 </body>

@@ -14,7 +14,7 @@
         <img src="images/Logo.jpg" alt="logo">
         <!-- hieronder wordt het menu opgehaald. -->
         <?php
-        if(! isset('loginadmin'=true)){
+        if(isset($_POST['navadmin.html'])){
             include "nav.html";
         } 
         else {
