@@ -14,6 +14,8 @@
      <form action="loginklant.php" method="post">
 		 <br><br>
      	<h2>Login klant</h2>
+		 <p>Log hier in als u klant bent.</p>
+		 <br>
      	<?php if (isset($_POST['error'])) { ?>
      		<p class="error"><?php echo $_POST['error']; ?></p>
      	<?php } ?>

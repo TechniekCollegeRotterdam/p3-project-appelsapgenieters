@@ -55,7 +55,9 @@ if (isset($_POST['loginadmin']))
 
 		if ($query->rowCount() == 1) {
 			$result=$query->fetch(PDO::FETCH_ASSOC);
-            if ($result['emailadress'] == $eml) {
+            if (password_verify($_POST['passwrd'], $result['passwrd']))
+			 {
+				$_SESSION['bh-login'] = true;
             	$_SESSION['givenname'] = $result['givenname'];
             	$_SESSION['surname'] = $result['surname'];
             	$_SESSION['idclient'] = $result['idclient'];

@@ -59,7 +59,13 @@ if (isset($_POST['loginclient']))
             	$_SESSION['givenname'] = $result['givenname'];
             	$_SESSION['surname'] = $result['surname'];
             	$_SESSION['idclient'] = $result['idclient'];
-            	header('Refresh: 3; url=beheerderpagina.php');
+				header('Refresh: 3; url=klantpagina.php');
+				echo "<div class='container'>";
+				echo "<div class='panel panel-primary'>";
+				echo "<div class='panel-heading'><br><br><h1>Welkom</h1></div>";
+				echo "<div class='panel-body'><br>", $_SESSION['givenname'];
+				echo "</div>";
+				echo "</div>";
             }else{
             	header('Refresh: 3; url=inlogbeheer.php?error=Incorect email or password');
 				echo "<div class='container'>";

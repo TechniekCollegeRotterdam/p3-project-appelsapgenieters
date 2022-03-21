@@ -14,6 +14,8 @@
      <form action="loginbeheerder.php" method="post">
 		 <br><br>
      	<h2>Login beheer</h2>
+		 <p>Log hier in als u beheerder bent.</p>
+		 <br>
      	<?php if (isset($_POST['error'])) { ?>
      		<p class="error"><?php echo $_POST['error']; ?></p>
      	<?php } ?>
