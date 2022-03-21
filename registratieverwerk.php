@@ -81,9 +81,9 @@ if($errorfree)
 
         $query = $db->prepare("INSERT INTO client(surname, givenname, middleinitial,
          title, gender, streetadress, city, zipcode, countryid, emailadress, telephonenumber,
-         birthday, occupation, passwrd)
+         birthday, occupation, passwrd, admin)
          VALUES (:surname, :givenname, :middleinitial, :title, :gender, :streetadress, :city,
-         :zipcode, :countryid, :emailadress, :telephonenumber, :birthday, :occupation, :passwrd)");
+         :zipcode, :countryid, :emailadress, :telephonenumber, :birthday, :occupation, :passwrd, :admin)");
          $query->bindValue(':givenname', $gn);
          $query->bindValue(':surname', $sn);
          $query->bindValue(':middleinitial', $initl);
@@ -98,6 +98,7 @@ if($errorfree)
          $query->bindValue(':birthday', $_POST['birthday']);
          $query->bindValue(':occupation', $occ);
          $query->bindValue(':passwrd', $pw);
+         $query->bindValue(':admin', $am);
          $query->execute();
          echo "<div class='container'>";
          echo "<div class='panel panel-primary'>";

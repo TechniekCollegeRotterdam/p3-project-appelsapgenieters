@@ -122,6 +122,13 @@
         </fieldset>
 
         <fieldset>
+        <label for="admin">Rol</label><br><br>
+        <input name="admin" 
+         placeholder="U wordt automatisch naar klanten gezet." disabled></input>
+        <br><br>
+        </fieldset>
+
+        <fieldset>
         <input type="submit" class="submit" name="registreer" value="registreren"></input>
         </fieldset>
     </form>
