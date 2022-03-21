@@ -18,10 +18,10 @@
      		<p class="error"><?php echo $_POST['error']; ?></p>
      	<?php } ?>
      	<label>E-mailadres</label>
-     	<input type="text" name="emailadress" placeholder="vul hier uw emailadres"><br>
+     	<input type="text" name="emailadress" placeholder="vul hier uw emailadres" require><br>
 
      	<label>Wachtwoord</label>
-     	<input type="password" name="passwrd" placeholder="Password"><br><br>
+     	<input type="password" name="passwrd" placeholder="Password" require><br><br>
 
      	<button class="colorp" type="submit" name="loginadmin">Login</button>
      </form>
