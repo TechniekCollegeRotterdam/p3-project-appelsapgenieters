@@ -10,7 +10,17 @@
 <body>
     <header class="banner">
         <img src="images/logo.jpg" alt="logo" width="200" height="200">
-        <?php   include 'navbezoeker.html'; ?>
+        <?php
+        session_start();
+        if(isset($_SESSION["bh-login"]))
+        {
+            include "navadmin.php";
+        } elseif(isset($_SESSION["cl-login"]))
+        {
+            include "navclient.php";
+        } else
+			include "navbezoeker.html";
+		?>
     </header>
     
      <br> <br> <br>

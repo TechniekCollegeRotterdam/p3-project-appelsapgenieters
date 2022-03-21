@@ -10,10 +10,28 @@
 	<header>
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
-		<?php
-	include "navadmin.php";
+        <?php
+        session_start();
+        if(isset($_SESSION["bh-login"]))
+        {
+            include "navadmin.php";
+        } elseif(isset($_SESSION["cl-login"]))
+        {
+            include "navclient.php";
+        } else
+			include "navbezoeker.html";
+
 		?>
 	</header>
+
+	<?php			
+if(!isset($_SESSION['bh-login']) || $_SESSION['bh-login'] == false)
+{
+header("Refresh: 1; inlogbeheer.php");
+echo"<br>";
+echo "<div class='panel-heading'><h1>U moet eerst inloggen!</h1></div>";
+exit();
+} ?>
 
  
 	<!-- op de home pagina wat enthousiaste tekst over het bedrijf en de producten -->

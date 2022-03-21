@@ -37,17 +37,19 @@
                 <li><a href="revbereikbaar.php">Bereikbaarheid</a></li>
             </ul>
         </li>
-        <li>
-            Gegevens   
-            <ul>
-                <li><a href="logout.php">Uitloggen</a></li>
-                <?php 
-         if(isset($_SESSION["loginadmin"]) )
+        <li class="fortextcolor">
+        <?php 
+         if(isset($_SESSION["cl-login"]) )
             {
 /* This is a php statement that is executed when the page is loaded. It is used to display the name of
 the user. */
-                echo "<li>".$_SESSION["givenname"]." ".$_SESSION["surname"]."</li>";
+
+echo "<strong class='fortextcolor'>".$_SESSION["givenname"]." ".$_SESSION["surname"]."</strong>";
             }?>
+            <ul>
+
+                <li class='fortextcolor'><a href="logout.php">Uitloggen</a></li>
+    
             </ul>
         </li>
 </nav>

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>login beheerder check</title>
+	<title>login klant check</title>
 	<link rel="stylesheet" type="text/css" href="company.css">
 </head>
 <body>
@@ -34,7 +34,7 @@ if (isset($_POST['loginclient']))
         echo "<div class='panel-body'><br>Uw email is onjuist</div>";
         echo "</div>";
         echo "</div>";
-		header("Location: inlogbeheer.php?error=email is required");
+		header("Location: inlogklant.php?error=email is required");
 	    exit();
 	}else if(empty($pw)){
         echo "<div class='container'>";
@@ -43,7 +43,7 @@ if (isset($_POST['loginclient']))
         echo "<div class='panel-body'><br>U wachtwoord is onjuist</div>";
         echo "</div>";
         echo "</div>";
-		header("Location: inlogbeheer.php?error=password is required");
+		header("Location: inlogklant.php?error=password is required");
 	    exit();
 	}else{
 		require_once "dbconnect.php";
@@ -55,19 +55,23 @@ if (isset($_POST['loginclient']))
 
 		if ($query->rowCount() == 1) {
 			$result=$query->fetch(PDO::FETCH_ASSOC);
-            if ($result['emailadress'] == $eml) {
+            if (password_verify($_POST['passwrd'], $result['passwrd']))
+			 {
+				$_SESSION['cl-login'] = true;
             	$_SESSION['givenname'] = $result['givenname'];
             	$_SESSION['surname'] = $result['surname'];
             	$_SESSION['idclient'] = $result['idclient'];
-				header('Refresh: 3; url=klantpagina.php');
+            	header('Refresh: 3; url=klantpagina.php');
 				echo "<div class='container'>";
 				echo "<div class='panel panel-primary'>";
 				echo "<div class='panel-heading'><br><br><h1>Welkom</h1></div>";
 				echo "<div class='panel-body'><br>", $_SESSION['givenname'];
 				echo "</div>";
 				echo "</div>";
+
+
             }else{
-            	header('Refresh: 3; url=inlogbeheer.php?error=Incorect email or password');
+            	header('Refresh: 3; url=inlogklant.php?error=Incorect email or password');
 				echo "<div class='container'>";
 				echo "<div class='panel panel-primary'>";
 				echo "<div class='panel-heading'><br><br>Helaas, inloggen is niet gelukt</div>";
@@ -77,7 +81,7 @@ if (isset($_POST['loginclient']))
 		        exit();
 			}
 		}else{
-			header('Refresh: 3; url=inlogbeheer.php?error=Incorect email or password');
+			header('Refresh: 3; url=inlogklant.php?error=Incorect email or password');
 			echo "<div class='container'>";
 			echo "<div class='panel panel-primary'>";
 			echo "<div class='panel-heading'><br><br>Helaas, inloggen is niet gelukt</div>";
@@ -89,8 +93,7 @@ if (isset($_POST['loginclient']))
 	}
 	
 }else{
-	header('Refresh: 3; url=inlogbeheer.php?error=Incorect email or password');
-	header('Refresh: 3; url=inlogbeheer.php?error=Incorect email or password');
+	header('Refresh: 3; url=inlogklant.php?error=Incorect email or password');
 	echo "<div class='container'>";
 	echo "<div class='panel panel-primary'>";
 	echo "<div class='panel-heading'><br><br>Helaas, inloggen is niet gelukt</div>";

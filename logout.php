@@ -16,11 +16,16 @@ session_start();
 session_unset();
 session_destroy();
 
-if(!isset($_SESSION['blogin']) || $_SESSION['blogin'] == false)
+if(!isset($_SESSION['bh-login']) || $_SESSION['bh-login'] == false)
 {
 header("Refresh: 3; index.php");
 echo "<div class='panel-heading'><h1>Loguit succesvol</h1></div>";
 exit();
+} elseif(!isset($_SESSION['cl-login']) || $_SESSION['cl-login'] == false)
+{ 
+    header("Refresh: 3; index.php");
+    echo "<div class='panel-heading'><h1>Loguit succesvol</h1></div>";
+    exit();  
 }
 ?>
 </body>

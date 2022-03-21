@@ -12,6 +12,14 @@
     <img src="images/Logo.jpg" alt="logo">
         <!-- hieronder wordt het menu opgehaald. -->
         <?php
+        session_start();
+        if(isset($_SESSION["bh-login"]))
+        {
+            include "navadmin.php";
+        } elseif(isset($_SESSION["cl-login"]))
+        {
+            include "navclient.php";
+        } else
 			include "navbezoeker.html";
 		?>
     </header>
@@ -55,7 +63,7 @@
         </td>
         <td>       
        <img src="images/UsainBolt.jpg" alt="Medewerker" width="200" height="200">
-        <p><strong>Usain Bolt</strong><br>
+        <p><strong">Usain Bolt</strong><br>
         is een werknemer die helpt met onze reclame. Hij drinkt vaak appelsap,<br>
         want het geeft de grootste boost waar je sneller loopt dan de snelste auto.<br>
         Usain Bolt heeft ook een Pokémon gevangen waar 

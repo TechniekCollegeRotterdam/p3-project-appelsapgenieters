@@ -1,7 +1,3 @@
-<?php 
-session_start();
-?>
-
 <nav>
     <ul>	
         <li>
@@ -49,16 +45,17 @@ session_start();
                 <li><a href="">Toevoegen/aanpassen</a></li>
             </ul>
         </li>
-        <li>
+        <li class='fortextcolor'>
+  
             <?php 
          if(isset($_SESSION["bh-login"]) )
             {
 /* This is a php statement that is executed when the page is loaded. It is used to display the name of
 the user. */
-                echo "".$_SESSION["givenname"]." ".$_SESSION["surname"]."";
+    echo "<strong class='fortextcolor'>".$_SESSION["givenname"]." ".$_SESSION["surname"]."</strong>";
             }?>
             <ul>
-                <li><a href="logout.php">Uitloggen</a></li>
+                <li class='fortextcolor'><a href="logout.php">Uitloggen</a></li>
     
             </ul>
         </li>

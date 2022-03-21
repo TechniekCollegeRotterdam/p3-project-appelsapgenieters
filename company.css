@@ -9,7 +9,13 @@ article, aside, footer, header, main, nav, section {
 	padding: 0;
 	margin: 0;
 } 
-	
+
+
+.fortextcolor{
+color: yellow;
+width: 250px;
+}
+
 body {
 	width:90%;
 	margin: 0 auto;
@@ -52,7 +58,7 @@ nav ul {
 	
 nav ul li {
 	float: left;
-	width: 200px;
+	width: 150px;
 	height: 30px;
 	background-color: #ff641e;
 	line-height: 30px;

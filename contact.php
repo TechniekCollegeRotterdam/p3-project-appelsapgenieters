@@ -8,13 +8,21 @@
     <link rel="stylesheet" type="text/css" href="company.css">
 </head>
 <body>
-    <header>
-    <img src="images/Logo.jpg" alt="logo">
+<header>
+	<img src="images/Logo.jpg" alt="logo">
+		<!-- hieronder wordt het menu opgehaald. -->
         <?php
+        session_start();
+        if(isset($_SESSION["bh-login"]))
+        {
+            include "navadmin.php";
+        } elseif(isset($_SESSION["cl-login"]))
+        {
+            include "navclient.php";
+        } else
 			include "navbezoeker.html";
-            include "footer.html";
 		?>
-    </header>
+	</header>
 <main>
     <section>
         <h1>Contact</h1>

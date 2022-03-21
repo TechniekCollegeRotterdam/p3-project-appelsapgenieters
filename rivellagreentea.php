@@ -12,6 +12,14 @@
         <img src="images/Logo.jpg" alt="logo">
         <!-- hieronder wordt het menu opgehaald. -->
         <?php
+        session_start();
+        if(isset($_SESSION["bh-login"]))
+        {
+            include "navadmin.php";
+        } elseif(isset($_SESSION["cl-login"]))
+        {
+            include "navclient.php";
+        } else
 			include "navbezoeker.html";
 		?>
     </header>
