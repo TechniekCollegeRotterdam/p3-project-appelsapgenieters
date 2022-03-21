@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <nav>
     <ul>	
         <li>
@@ -46,11 +50,13 @@
             </ul>
         </li>
         <li>
-        <?php if(isset($_SESSION["loginadmin"]) && $_SESSION["loginadmin"])
+            
+        <?php 
+         if(isset($_SESSION["loginadmin"]) && $_SESSION["loginadmin"])
             {
 /* This is a php statement that is executed when the page is loaded. It is used to display the name of
 the user. */
-                echo "<li>"$_SESSION["givenName"]." ".["surname"]."</li>";
+                echo "<li>".$_SESSION["givenname"]." ".$_SESSION["surname"]."<li>";
             }?>
             <ul>
                 <li><a href="logout.php">Uitloggen</a></li>

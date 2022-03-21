@@ -81,6 +81,10 @@ nav ul li:hover ul li {
 	display: block;
 } 
 
+.navlong{
+	width: 200px;
+}
+
 .centreer {
 	text-align: center;
 }
