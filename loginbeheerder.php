@@ -60,7 +60,7 @@ if (isset($_POST['loginadmin']))
             	$_SESSION['surname'] = $result['surname'];
             	$_SESSION['idclient'] = $result['idclient'];
 
-				if($result['admin']=="J") { 
+				if($result['admin']=="J"){
             	header('Refresh: 3; url=beheerderpagina.php');
 				echo "<div class='container'>";
 				echo "<div class='panel panel-primary'>";
@@ -68,14 +68,24 @@ if (isset($_POST['loginadmin']))
 				echo "<div class='panel-body'><br>", $_SESSION['givenname'];
 				echo "</div>";
 				echo "</div>";
-			   }
+
+			}else{
+					header('Refresh: 3; url=inlogbeheer.php?error=Geen beheerder');
+					echo "<div class='container'>";
+					echo "<div class='panel panel-primary'>";
+					echo "<div class='panel-heading'><br><br>Helaas, inloggen is niet gelukt</div>";
+					echo "<div class='panel-body'><br>U bent geen beheerder!</div>";
+					echo "</div>";
+					echo "</div>";
+					exit();	
+				}
 
             }else{
-            	header('Refresh: 3; url=inlogbeheer.php?error=U bent geen beheerder!');
+            	header('Refresh: 3; url=inlogbeheer.php?error=Incorect email or password');
 				echo "<div class='container'>";
 				echo "<div class='panel panel-primary'>";
 				echo "<div class='panel-heading'><br><br>Helaas, inloggen is niet gelukt</div>";
-				echo "<div class='panel-body'><br>U bent geen beheerder!</div>";
+				echo "<div class='panel-body'><br>Email of wachtwoord is onjuist</div>";
 				echo "</div>";
 				echo "</div>";
 		        exit();
