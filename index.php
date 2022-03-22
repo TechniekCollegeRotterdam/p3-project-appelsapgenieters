@@ -10,8 +10,7 @@
 	<header>
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
-        <?php
-        session_start();
+		<?php
         if(isset($_SESSION["bh-login"]))
         {
             include "navadmin.php";

@@ -12,7 +12,6 @@
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
         <?php
-        session_start();
         if(isset($_SESSION["bh-login"]))
         {
             include "navadmin.php";

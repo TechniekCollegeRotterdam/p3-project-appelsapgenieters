@@ -11,11 +11,10 @@
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
         <?php
-        session_start();
-        if(isset($_SESSION["bh-login"]))
+        if(isset($_SESSION["bh-login"]= true))
         {
             include "navadmin.php";
-        } elseif(isset($_SESSION["cl-login"]))
+        } elseif(isset($_SESSION["cl-login"]= true))
         {
             include "navclient.php";
         } else

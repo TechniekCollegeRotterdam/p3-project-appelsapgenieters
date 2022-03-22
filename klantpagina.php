@@ -11,7 +11,6 @@
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
         <?php
-        session_start();
         if(isset($_SESSION["bh-login"]))
         {
             include "navadmin.php";
@@ -23,12 +22,11 @@
 		?>
 	</header>
 
-	<?php if(!isset($_SESSION['cl-login']) || $_SESSION['cl-login'] == false)
-{ 
-    header("Refresh: 1; inlogklant.php");
-	echo "<br>";
-    echo "<div class='panel-heading'><h1>U moet eerst inloggen!</h1></div>";
-    exit();  
+	<?php			
+if(!isset($_SESSION['cl-login']) || $_SESSION['cl-login'] == false)
+{
+	header('Refresh: 0; url=inlogbeheer.php?error=U moet eerst inloggen!');
+exit();
 } ?>
  
 	<!-- op de home pagina wat enthousiaste tekst over het bedrijf en de producten -->

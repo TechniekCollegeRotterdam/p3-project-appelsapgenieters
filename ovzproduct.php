@@ -10,8 +10,7 @@
 	<header>
 		<h1>Company</h1>
 	    <!-- hieronder wordt het menu opgehaald. -->
-        <?php
-        session_start();
+		<?php
         if(isset($_SESSION["bh-login"]))
         {
             include "navadmin.php";

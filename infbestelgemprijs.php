@@ -11,7 +11,6 @@
     <header class="banner">
         <img src="images/logo.jpg" alt="logo" width="200" height="200">
         <?php
-        session_start();
         if(isset($_SESSION["bh-login"]))
         {
             include "navadmin.php";

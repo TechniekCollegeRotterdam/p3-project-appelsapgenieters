@@ -11,7 +11,6 @@
 		<h1>Company</h1>
     	<!-- hieronder wordt het menu opgehaald. -->
         <?php
-        session_start();
         if(isset($_SESSION["bh-login"]))
         {
             include "navadmin.php";

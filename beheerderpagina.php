@@ -11,7 +11,6 @@
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
         <?php
-        session_start();
         if(isset($_SESSION["bh-login"]))
         {
             include "navadmin.php";
@@ -20,16 +19,13 @@
             include "navclient.php";
         } else
 			include "navbezoeker.html";
-
 		?>
 	</header>
 
 	<?php			
 if(!isset($_SESSION['bh-login']) || $_SESSION['bh-login'] == false)
 {
-header("Refresh: 1; inlogbeheer.php");
-echo"<br>";
-echo "<div class='panel-heading'><h1>U moet eerst inloggen!</h1></div>";
+	header('Refresh: 0; url=inlogbeheer.php?error=U moet eerst inloggen!');
 exit();
 } ?>
 
