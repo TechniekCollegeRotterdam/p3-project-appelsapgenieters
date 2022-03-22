@@ -72,10 +72,10 @@ if (isset($_POST['loginadmin']))
 				$_SESSION['birthday'] = $result['birthday'];
 				$_SESSION['occupation'] = $result['occupation'];
 				$_SESSION['passwrd'] = $result['passwrd'];
-				$_SESSION['admin'] = $result['admin'];
+				$_SESSION['admn'] = $result['admn'];
 
 
-				if($result['admin']=="J"){
+				if($result['admn']=="J"){
 				$_SESSION['bh-login'] = true;
             	header('Refresh: 3; url=beheerderpagina.php');
 				echo "<div class='container'>";

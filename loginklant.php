@@ -73,7 +73,7 @@ if (isset($_POST['loginclient']))
 				$_SESSION['birthday'] = $result['birthday'];
 				$_SESSION['occupation'] = $result['occupation'];
 				$_SESSION['passwrd'] = $result['passwrd'];
-				$_SESSION['admin'] = $result['admin'];
+				$_SESSION['admn'] = $result['admn'];
             	header('Refresh: 3; url=klantpagina.php');
 				echo "<div class='container'>";
 				echo "<div class='panel panel-primary'>";
