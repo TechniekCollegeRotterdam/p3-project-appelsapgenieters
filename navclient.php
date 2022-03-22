@@ -46,10 +46,27 @@ the user. */
 
 echo "<strong class='fortextcolor'>".$_SESSION["givenname"]." ".$_SESSION["surname"]."</strong>";
             }?>
-            <ul>
+                        <ul>
+                            <li class='fortextcolor'><a href="eigengegevensclient.php">Eigen gegevens</a></li>
+                        </ul>
+                        <ul>
+                            <li class='fortextcolor'><a href="">Bestellingen</a>
+                        </ul>
+                        <ul>
+                            <li class='fortextcolor'><a href="">Bestel Historie</a>
+                        </ul>
+                        <ul>
+                            <li class='fortextcolor'><a href="">Bestellingen wijzigen</a>
+                        </ul>
+                        <ul>
+                            <li class='fortextcolor'><a href="">Bestellingen</a>
+                        </ul>
+                        <ul>
+                            <li class='fortextcolor'><a href="">Wachtwoord</a>
+                        </ul>
+                        <ul>
+                            <li class='fortextcolor'><a href="logout.php">Uitloggen</a></li>
 
-                <li class='fortextcolor'><a href="logout.php">Uitloggen</a></li>
-    
-            </ul>
-        </li>
+                        </ul>
+                        </li>
 </nav>
