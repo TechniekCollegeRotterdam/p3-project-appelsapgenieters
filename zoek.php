@@ -41,7 +41,19 @@
 		</p>
 		<p>
             <h2>Zoek producten op naam</h2>
-            <form action="zkproductnaam.php"></form>
+            <form method="post" action="zkproductnaam.php">
+          <table class="elementsContainer">
+            <tr>
+              <td>
+                <input type="text" name="search" placeholder="type een productnaam">
+              </td>
+              <td>
+                <input type="submit" name="submit" class="material-icons button5" value="search">
+                </input>
+              </td>
+            </tr>
+          </table>
+        </form>
 
 		</p>
 	</main>
