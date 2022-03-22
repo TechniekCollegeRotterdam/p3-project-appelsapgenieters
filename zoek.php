@@ -36,7 +36,19 @@
         </p>
 		<p>
             <h2>Zoek producten op type</h2>
-            <form action="zkproducttype.php"></form>
+            <form method="post" action="zkproducttype.php">
+            <table class="elementsContainer">
+            <tr>
+              <td>
+                <input type="text" name="search2" placeholder="type een producttype">
+              </td>
+              <td>
+                <input type="submit" name="submit2" value="search">
+                </input>
+              </td>
+            </tr>
+          </table>
+          </form>
 
 		</p>
 		<p>
@@ -48,7 +60,7 @@
                 <input type="text" name="search" placeholder="type een productnaam">
               </td>
               <td>
-                <input type="submit" name="submit" class="material-icons button5" value="search">
+                <input type="submit" name="submit" value="search">
                 </input>
               </td>
             </tr>

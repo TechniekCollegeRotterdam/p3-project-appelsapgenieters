@@ -55,7 +55,7 @@ the user. */
     echo "<strong class='fortextcolor'>".$_SESSION["givenname"]." ".$_SESSION["surname"]."</strong>";
             }?>
                         <ul>
-                            <li class='fortextcolor'><a href="">Eigen gegevens</a></li>
+                            <li class='fortextcolor'><a href="eigengegevens.php">Eigen gegevens</a></li>
                         </ul>
                         <ul>
                             <li class='fortextcolor'><a href="">Bestellingen</a>
