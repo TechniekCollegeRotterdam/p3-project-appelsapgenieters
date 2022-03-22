@@ -23,6 +23,12 @@
 			include "navbezoeker.html";
 		?>
 	</header>
+    <?php
+    if(!isset($_SESSION['bh-login']) || $_SESSION['bh-login'] == false)
+{
+	header('Refresh: 0; url=inlogbeheerder.php?error=U moet eerst inloggen!');
+exit();
+} ?>
 <br>
 <br>
 <?php 
