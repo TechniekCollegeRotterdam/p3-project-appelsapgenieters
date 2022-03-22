@@ -11,8 +11,7 @@
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
         <?php
-		require 'loginklant.php';
-		require 'dbconnect.php';
+        session_start();
 /* This is a check to see if the user is logged in. If the user is logged in, the code will be
 executed. If not, the code will not be executed. */
         if(isset($_SESSION["bh-login"]))

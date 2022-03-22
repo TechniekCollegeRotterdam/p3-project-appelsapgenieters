@@ -12,8 +12,7 @@
 		<!-- hieronder wordt het menu opgehaald. -->
 
         <?php
-		require 'loginbeheerder.php';
-		require 'dbconnect.php';
+        session_start();
 /* This is a test to see if the user is logged in. If the user is logged in, the code will continue. If
 not, the user will be redirected to the login page. */
         if(isset($_SESSION["bh-login"]))
