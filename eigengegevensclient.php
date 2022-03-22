@@ -23,6 +23,12 @@
 			include "navbezoeker.html";
 		?>
 	</header>
+    <?php
+    if(!isset($_SESSION['cl-login']) || $_SESSION['bh-login'] == false)
+{
+	header('Refresh: 0; url=inlogklant.php?error=U moet eerst inloggen!');
+exit();
+} ?>
 <br>
 <br>
 <?php 
@@ -36,22 +42,43 @@ the user. */
     echo "<h2>Volledige naam</h2>";
     echo "<strong>".$_SESSION["title"]." ".$_SESSION["givenname"]." ".$_SESSION["surname"]."</strong>";
     echo "<br>";
+    echo "<br>";
     echo "<h2>Tussenvoegsel</h2>";
     echo "<strong>".$_SESSION["middleinitial"]."</strong>";
+    echo "<br>";
+    echo "<br>";
+    echo "<h2>Geslacht</h2>";
+    echo "<strong>".$_SESSION["gender"]."</strong>";
+    echo "<br>";
+    echo "<br>";
     echo"<h2>Email</h2>";
     echo "<strong>".$_SESSION["emailadress"]." </strong>";
+    echo "<br>";
     echo "<br>";
     echo"<h2>Geboortedatum</h2>";
     echo "<strong>".$_SESSION["birthday"]." </strong>";
     echo "<br>";
+    echo "<br>";
     echo"<h2>Woonplaats</h2>";
     echo "<strong>".$_SESSION["streetadress"]." ".$_SESSION["zipcode"]."<br>".$_SESSION["city"]."</strong>";
+    echo "<br>";
+    echo "<br>";
+    echo"<h2>Telefoonnummer</h2>";
+    echo "<strong>".$_SESSION["telephonenumber"]."</strong>";
+    echo "<br>";
+    echo "<br>";
+    echo"<h2>Beroep</h2>";
+    echo "<strong>".$_SESSION["occupation"]."</strong>";
+    echo "<br>";
     echo "<br>";
     echo"<h2>Wachtwoord</h2>";
     echo "<strong>".$_SESSION["passwrd"]."</strong>";
     echo "<br>";
+    echo "<br>";
     echo "</fieldset>";
 
             }?>
+
+
 </body>
 </html>

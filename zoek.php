@@ -40,10 +40,10 @@
             <table class="elementsContainer">
             <tr>
               <td>
-                <input type="text" name="search2" placeholder="type een producttype">
+                <input type="text" name="search" placeholder="type een producttype">
               </td>
               <td>
-                <input type="submit" name="submit2" value="search">
+                <input type="submit" name="submit" value="search">
                 </input>
               </td>
             </tr>
