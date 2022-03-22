@@ -7,7 +7,8 @@
 <body>
 	<header>
 	<img src="images/Logo.jpg" alt="logo">
-	<?php
+        <?php
+        session_start();
         if(isset($_SESSION["bh-login"]))
         {
             include "navadmin.php";
