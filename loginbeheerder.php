@@ -57,12 +57,12 @@ if (isset($_POST['loginadmin']))
 			$result=$query->fetch(PDO::FETCH_ASSOC);
             if (password_verify($_POST['passwrd'], $result['passwrd']))
 			 {
-				$_SESSION['bh-login'] = true;
             	$_SESSION['givenname'] = $result['givenname'];
             	$_SESSION['surname'] = $result['surname'];
             	$_SESSION['idclient'] = $result['idclient'];
 
 				if($result['admin']=="J"){
+				$_SESSION['bh-login'] = true;
             	header('Refresh: 3; url=beheerderpagina.php');
 				echo "<div class='container'>";
 				echo "<div class='panel panel-primary'>";

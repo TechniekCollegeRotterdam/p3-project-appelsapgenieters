@@ -26,7 +26,7 @@
 	<?php			
 if(!isset($_SESSION['cl-login']) || $_SESSION['cl-login'] == false)
 {
-	header('Refresh: 0; url=inlogbeheer.php?error=U moet eerst inloggen!');
+	header('Refresh: 0; url=inlogklant.php?error=U moet eerst inloggen!');
 exit();
 } ?>
  
