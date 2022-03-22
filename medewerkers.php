@@ -63,7 +63,7 @@
         </td>
         <td>       
        <img src="images/UsainBolt.jpg" alt="Medewerker" width="200" height="200">
-        <p><strong">Usain Bolt</strong><br>
+        <p><strong>Usain Bolt</strong><br>
         is een werknemer die helpt met onze reclame. Hij drinkt vaak appelsap,<br>
         want het geeft de grootste boost waar je sneller loopt dan de snelste auto.<br>
         Usain Bolt heeft ook een Pokémon gevangen waar 
