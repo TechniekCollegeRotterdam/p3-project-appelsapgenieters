@@ -73,7 +73,7 @@ if (isset($_POST['loginadmin']))
 
 			}
 				else{
-					header('Refresh: 3; url=inlogbeheer.php?error=Geen beheerder');
+					header('Refresh: 3; url=inlogklant.php?error=Geen beheerder');
 					echo "<div class='container'>";
 					echo "<div class='panel panel-primary'>";
 					echo "<div class='panel-heading'><br><br>Helaas, inloggen is niet gelukt</div>";
@@ -111,7 +111,7 @@ if (isset($_POST['loginadmin']))
 	echo "<div class='container'>";
 	echo "<div class='panel panel-primary'>";
 	echo "<div class='panel-heading'><br><br>Helaas, inloggen is niet gelukt</div>";
-	echo "<div class='panel-body'><br>U heeft uw email of wachtwoord niet ingevuld.</div>";
+	echo "<div class='panel-body'><br>U moet eerst inloggen!</div>";
 	echo "</div>";
 	echo "</div>";
 	exit();

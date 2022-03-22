@@ -10,8 +10,12 @@
 	<header>
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
+
         <?php
-		session_start();
+		require 'loginbeheerder.php';
+		require 'dbconnect.php';
+/* This is a test to see if the user is logged in. If the user is logged in, the code will continue. If
+not, the user will be redirected to the login page. */
         if(isset($_SESSION["bh-login"]))
         {
             include "navadmin.php";

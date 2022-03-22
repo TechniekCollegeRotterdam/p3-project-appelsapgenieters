@@ -97,7 +97,7 @@ if (isset($_POST['loginclient']))
 	echo "<div class='container'>";
 	echo "<div class='panel panel-primary'>";
 	echo "<div class='panel-heading'><br><br>Helaas, inloggen is niet gelukt</div>";
-	echo "<div class='panel-body'><br>U heeft uw email of wachtwoord niet ingevuld.</div>";
+	echo "<div class='panel-body'><br>U moet eerst inloggen!</div>";
 	echo "</div>";
 	echo "</div>";
 	exit();
