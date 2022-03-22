@@ -130,10 +130,9 @@
         </fieldset>
 
         <fieldset>
-        <label for="admin">Rol</label><br><br>
-        <input name="admin" 
-         placeholder="U wordt automatisch naar klanten gezet." disabled></input>
-        <br><br>
+    <label for="N"> Rol:</label>
+    <input type="radio" name="admn" id="admin" value="N" checked>
+    <br><br>
         </fieldset>
 
         <fieldset>
