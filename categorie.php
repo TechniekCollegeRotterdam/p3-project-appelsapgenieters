@@ -30,7 +30,33 @@
         <section>
             <article>
                 <p>We hebben 8 verschillende catogorieën van producten!<br>
-                </p>
+                <br>
+                <?php 
+        require_once ("dbconnect.php"); 
+        $query = $db->prepare("SELECT * FROM type");
+        $query->execute();
+//        var_dump($query);
+        $resultq = $query->fetchALL (PDO::FETCH_ASSOC);
+
+        if($query->rowCount() > 0){
+            echo "<table>";
+            echo "<thead>";
+            echo "<th>Categorieën</th>";
+            echo "</thead><tbody>";
+            foreach($resultq as $data) {
+                echo "<tr>";
+                echo "<td>";
+                echo "" . $data['name'];
+                echo "</td>";
+                echo "</tr>";
+              }
+              echo "</tbody></table>";
+        }
+        else {
+            echo "<h2>Helaas .... geen resultaten gevonden</h2>";
+        }
+?>
+
             </article>
         </section>
     </main>

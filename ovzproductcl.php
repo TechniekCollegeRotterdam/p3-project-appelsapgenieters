@@ -41,9 +41,6 @@
         <p>De gemiddelde prijs van al onze producten.<br>
 			Er wordt getoond: gemiddelde prijs.<br>
 			<a href="infprodgemprijs.php">Producten gem prijs</a></p>
-        <p>Een overzicht van de gerealiseerde omzet per product.<br>
-			Per product wordt getoond: id product, productnaam, gerealiseerde omzet (een optelling van de berekening per bestelregel van aantal * prijs).<br>
-			<a href="infprodbestelomzet.php">Producten - bestelomzet</a></p>
         <p>Een overzicht van al onze producten en het bijbehorende type.<br>
 			Per product wordt getoond: productnaam, productomschrijving, idtype en type naam.<br>
 			<a href="infprodtype.php">Producten - type</a></p>

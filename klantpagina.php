@@ -36,7 +36,7 @@ exit();
  	<main>	
 		 <section class="wrapper">
 			 <article>
-		 <a href="producten.php">
+				 <a href="producten.php">
 		  <img class="centreer" src="images/homepagefotoappelsap.nl.jpg" alt="main page image" width="1000px" height="600px"> 
 		  </a>
 		  <p> Welkom op de website van company. Wij vormen een jong en enthousiast bedrijf, 

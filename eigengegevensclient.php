@@ -71,10 +71,6 @@ the user. */
     echo "<strong>".$_SESSION["occupation"]."</strong>";
     echo "<br>";
     echo "<br>";
-    echo"<h2>Wachtwoord</h2>";
-    echo "<strong>".$_SESSION["passwrd"]."</strong>";
-    echo "<br>";
-    echo "<br>";
     echo "</fieldset>";
 
             }?>

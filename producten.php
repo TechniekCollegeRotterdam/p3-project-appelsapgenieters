@@ -27,8 +27,9 @@
     </header>
 
     <main>
-        <h1>Ons producten</h1>
+        <h1>Onze producten</h1>
         <h2>Wijn</h2>
+
 
         <!-- We using tables for the products. -->
         <section>

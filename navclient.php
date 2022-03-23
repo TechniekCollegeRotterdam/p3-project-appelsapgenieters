@@ -1,7 +1,7 @@
 <nav>
     <ul>	
         <li>
-            <a href="index.php">Home</a>
+            <a href="klantpagina.php">Home</a>
         </li>	
         <li>
             Bedrijf
@@ -15,9 +15,10 @@
         <li>
             Informatie
             <ul>
+            <li><a href="ovzklantcl.php">Klanten</a></li>
                 <li><a href="ovzcategorie.php">Categorie</a></li>
-                <li><a href="ovzbestelling.php">Bestelling</a></li>
-                <li><a href="ovzproduct.php">Product</a></li>
+                <li><a href="ovzbestellingcl.php">Bestelling</a></li>
+                <li><a href="ovzproductcl.php">Product</a></li>
             </ul>
         </li>						
         <li>
@@ -56,10 +57,10 @@ echo "<strong class='fortextcolor'>".$_SESSION["givenname"]." ".$_SESSION["surna
                             <li class='fortextcolor'><a href="">Bestel Historie</a>
                         </ul>
                         <ul>
-                            <li class='fortextcolor'><a href="">Bestellingen wijzigen</a>
+                            <li class='fortextcolor'><a href="producten.php">Producten</a>
                         </ul>
                         <ul>
-                            <li class='fortextcolor'><a href="">Bestellingen</a>
+                            <li class='fortextcolor'><a href="">Producten verwijderen</a>
                         </ul>
                         <ul>
                             <li class='fortextcolor'><a href="">Wachtwoord</a>

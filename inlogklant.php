@@ -27,6 +27,7 @@
      	<?php if (isset($_POST['error'])) { ?>
      		<p class="error"><?php echo $_POST['error']; ?></p>
      	<?php } ?>
+		 <div class="container">
      	<label>E-mailadres</label>
      	<input type="text" name="emailadress" placeholder="vul hier uw emailadres"><br>
 
@@ -34,6 +35,10 @@
      	<input type="password" name="passwrd" placeholder="Password"><br><br>
 
      	<button class="colorp" type="submit" name="loginclient">Login</button>
+		 </div>
      </form>
+
+	 
 </body>
 </html>
+

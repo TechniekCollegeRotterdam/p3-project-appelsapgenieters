@@ -98,7 +98,7 @@ if($errorfree)
          $query->bindValue(':birthday', $_POST['birthday']);
          $query->bindValue(':occupation', $occ);
          $query->bindValue(':passwrd', $pw);
-         $query->bindValue(':admn', $_POST['admin']);
+         $query->bindValue(':admn', $_POST['admn']);
          $query->execute();
          echo "<div class='container'>";
          echo "<div class='panel panel-primary'>";
