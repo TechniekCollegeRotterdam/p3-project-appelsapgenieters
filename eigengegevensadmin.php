@@ -38,14 +38,39 @@ include 'dbconnect.php';
 /* This is a php statement that is executed when the page is loaded. It is used to display the name of
 the user. */
     echo "<fieldset>";
+    echo"<legend>Uw Gegevens</legend>";
     echo "<h2>Volledige naam</h2>";
     echo "<strong>".$_SESSION["title"]." ".$_SESSION["givenname"]." ".$_SESSION["surname"]."</strong>";
+    echo "<br>";
+    echo "<br>";
+    echo "<h2>Tussenvoegsel</h2>";
+    echo "<strong>".$_SESSION["middleinitial"]."</strong>";
+    echo "<br>";
+    echo "<br>";
+    echo "<h2>Geslacht</h2>";
+    echo "<strong>".$_SESSION["gender"]."</strong>";
+    echo "<br>";
+    echo "<br>";
     echo"<h2>Email</h2>";
     echo "<strong>".$_SESSION["emailadress"]." </strong>";
+    echo "<br>";
+    echo "<br>";
     echo"<h2>Geboortedatum</h2>";
     echo "<strong>".$_SESSION["birthday"]." </strong>";
+    echo "<br>";
+    echo "<br>";
     echo"<h2>Woonplaats</h2>";
     echo "<strong>".$_SESSION["streetadress"]." ".$_SESSION["zipcode"]."<br>".$_SESSION["city"]."</strong>";
+    echo "<br>";
+    echo "<br>";
+    echo"<h2>Telefoonnummer</h2>";
+    echo "<strong>".$_SESSION["telephonenumber"]."</strong>";
+    echo "<br>";
+    echo "<br>";
+    echo"<h2>Beroep</h2>";
+    echo "<strong>".$_SESSION["occupation"]."</strong>";
+    echo "<br>";
+    echo "<br>";
     echo "</fieldset>";
 
             }?>

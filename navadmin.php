@@ -61,7 +61,7 @@ the user. */
                             <li class='fortextcolor'><a href="allebeheerder.php">Alle beheerders</a>
                         </ul>
                         <ul>
-                            <li class='fortextcolor'><a href="">Bestel Historie</a>
+                            <li class='fortextcolor'><a href="beheerdermaker.php">Beheerder maker</a>
                         </ul>
                         <ul>
                             <li class='fortextcolor'><a href="">Wachtwoord</a>
