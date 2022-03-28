@@ -57,26 +57,11 @@ if (isset($_POST['loginadmin']))
 			$result=$query->fetch(PDO::FETCH_ASSOC);
             if (password_verify($_POST['passwrd'], $result['passwrd']))
 			 {
+				if($result['admn']=="J"){
+					$_SESSION['bh-login'] = true;
             	$_SESSION['idclient'] = $result['idclient'];
             	$_SESSION['givenname'] = $result['givenname'];
             	$_SESSION['surname'] = $result['surname'];
-            	$_SESSION['middleinitial'] = $result['middleinitial'];
-            	$_SESSION['title'] = $result['title'];
-				$_SESSION['gender'] = $result['gender'];
-				$_SESSION['streetadress'] = $result['streetadress'];
-				$_SESSION['city'] = $result['city'];
-				$_SESSION['zipcode'] = $result['zipcode'];
-				$_SESSION['countryid'] = $result['countryid'];
-				$_SESSION['emailadress'] = $result['emailadress'];
-				$_SESSION['telephonenumber'] = $result['telephonenumber'];
-				$_SESSION['birthday'] = $result['birthday'];
-				$_SESSION['occupation'] = $result['occupation'];
-				$_SESSION['passwrd'] = $result['passwrd'];
-				$_SESSION['admn'] = $result['admn'];
-
-
-				if($result['admn']=="J"){
-				$_SESSION['bh-login'] = true;
             	header('Refresh: 3; url=beheerderpagina.php');
 				echo "<div class='container'>";
 				echo "<div class='panel panel-primary'>";
