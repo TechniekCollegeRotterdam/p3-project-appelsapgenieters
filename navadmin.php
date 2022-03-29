@@ -3,7 +3,7 @@
         <li>
             <a href="beheerderpagina.php">Home</a>
             <ul>
-            <li class='fortextcolor'><a href="">Toevoegen/aanpassen</a></li>
+
         </ul>
         </li>	
         <li>
@@ -13,7 +13,7 @@
                 <li><a href="histdoel.php#doelst">Doelstelling</a></li>
                 <li><a href="medewerkers.php">Medewerkers</a></li>
                 <li><a href="contact.php">Contactinfo</a></li>
-                <li class='fortextcolor'><a href="">Toevoegen/aanpassen</a></li>
+                
             </ul>
         </li>
         <li>
@@ -23,7 +23,7 @@
                 <li><a href="ovzcategorie.php">Categorie</a></li>
                 <li><a href="ovzbestelling.php">Bestelling</a></li>
                 <li><a href="ovzproduct.php">Product</a></li>
-                <li class='fortextcolor'><a href="">Toevoegen/aanpassen</a></li>
+                
             </ul>
         </li>						
         <li>
@@ -42,7 +42,7 @@
                 <li><a href="revklantvriend.php">Klantvriendelijkheid</a></li>
                 <li><a href="revproduct.php">Producten</a></li>
                 <li><a href="revbereikbaar.php">Bereikbaarheid</a></li>
-                <li class='fortextcolor'><a href="">Toevoegen/aanpassen</a></li>
+                
             </ul>
         </li>
         <li class='fortextcolor'>
@@ -65,6 +65,9 @@ the user. */
                         </ul>
                         <ul>
                             <li class='fortextcolor'><a href="">Wachtwoord</a>
+                        </ul>
+                        <ul>
+                            <li class='fortextcolor'><a href="beheerderverwijderen.php">Beheerders verwijderen</a>
                         </ul>
                         <ul>
                             <li class='fortextcolor'><a href="logout.php">Uitloggen</a></li>
