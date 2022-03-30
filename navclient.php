@@ -51,7 +51,7 @@ echo "<strong class='fortextcolor'>".$_SESSION["givenname"]." ".$_SESSION["surna
                             <li class='fortextcolor'><a href="eigengegevensclient.php">Eigen gegevens</a></li>
                         </ul>
                         <ul>
-                            <li class='fortextcolor'><a href="">Bestellingen</a>
+                            <li class='fortextcolor'><a href="bestellingenclient.php">Bestellingen</a>
                         </ul>
                         <ul>
                             <li class='fortextcolor'><a href="">Bestel Historie</a>

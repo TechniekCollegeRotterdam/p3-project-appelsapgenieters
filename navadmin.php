@@ -58,10 +58,13 @@ the user. */
                             <li class='fortextcolor'><a href="eigengegevensadmin.php">Eigen gegevens</a></li>
                         </ul>
                         <ul>
-                            <li class='fortextcolor'><a href="allebeheerder.php">Alle beheerders</a>
+                            <li class='fortextcolor'><a href="allebeheerder.php">Alle beheerders wijzigen</a>
                         </ul>
                         <ul>
                             <li class='fortextcolor'><a href="beheerdermaker.php">Beheerder maker</a>
+                        </ul>
+                        <ul>
+                            <li class='fortextcolor'><a href="bestellingenadmin.php">Bestellingen van klanten</a>
                         </ul>
                         <ul>
                             <li class='fortextcolor'><a href="">Wachtwoord</a>

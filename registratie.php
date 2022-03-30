@@ -130,9 +130,8 @@
         </fieldset>
 
         <fieldset>
-    <label for="N"> Rol:</label>
-    <p>U wordt automatisch naar klanten toegevoegd.</p>
-    <input type="radio" name="admn" id="admin" value="N" checked>
+    <label for="N"> U wordt automatisch naar klanten toegevoegd.</label>
+    <input type="hidden" name="admn" id="admin" value="N" checked>
     <br><br>
         </fieldset>
 

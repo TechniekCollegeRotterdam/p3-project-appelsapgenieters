@@ -79,6 +79,8 @@ if($errorfree)
 
         $pw=password_hash($_POST["password1"], PASSWORD_DEFAULT);
 
+        
+
         $query = $db->prepare("INSERT INTO client(surname, givenname, middleinitial,
          title, gender, streetadress, city, zipcode, countryid, emailadress, telephonenumber,
          birthday, occupation, passwrd, admn)

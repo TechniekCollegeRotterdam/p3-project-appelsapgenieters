@@ -219,9 +219,21 @@ button:hover {
 	background-color: #ff641e;
     width: 100px;
 }
+
+/*This is the button where the admin can change something*/
+.adminexit{
+	background-color: red;
+	width: 100px;
+ }
+
+.adminedelete{
+   background-color: red;
+   width: 100px;
+}
 }
 
-@media screen and (min-width: 1200px) {
+
+@media screen and (min-width: 601px) {
 .colorp{
 	display: inline-block;
 	background-color: #ff641e;
@@ -233,4 +245,16 @@ button:hover {
 	background-color: #ff641e;
     width: 6vw;
 }
+
+
+/*This is the button where the admin can change something*/
+.adminchange{
+	background-color: rgb(5, 180, 180);
+	width: 6vw;
+ }
+
+ .admindelete{
+	background-color: rgb(175, 0, 0);
+	width: 100px;
+ }
 }
