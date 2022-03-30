@@ -37,7 +37,7 @@ exit();
         if(isset($_POST["verwijderen"]))
         {
             require_once ("dbconnect.php"); 
-            $query = $db->prepare("DELETE FROM purchase WHERE idpurchase LIKE '%%';");
+            $query = $db->prepare("DELETE FROM purchase WHERE idpurchase = '';");
             $query->execute();
 
            if(isset($_SESSION["bh-login"])){

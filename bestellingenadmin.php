@@ -46,7 +46,7 @@ exit();
         if($query->rowCount() > 0){
             echo "<table>";
             echo "<thead>";
-            echo "<th>id bestelling</th><th>Besteldatum</th><th>Totale bedrag</th><th>Bedrag datum</th><th>Bestuldatum</th><th>Klant ID</th><th>Verwijderen</th>";
+            echo "<th>id bestelling</th><th>Besteldatum</th><th>Totale bedrag</th><th>Bedrag datum</th><th>Besteldatum</th><th>Klant ID</th><th>Verwijderen</th>";
             echo "</thead><tbody>";
             foreach($resultq as $data) {
                 echo "<form action='bestellingenproces.php' method='POST'>";
