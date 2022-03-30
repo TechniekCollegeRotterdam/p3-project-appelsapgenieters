@@ -34,6 +34,7 @@
         <!-- We using tables for the products. -->
         <section>
             <article>
+                <form>
                 <table>
                     <tr>
                         <td>
@@ -458,6 +459,7 @@
                         </td>
                             </tr>
                         </table>
+                        </form>
                     </article>
                 </section>
 

@@ -32,24 +32,43 @@ exit();
     <main>
 
     <?php
-        // Verbinding maken met de database
-        if(isset($_POST["Verwijderen"]))
+
+   /* This is checking if the user has clicked the delete button. */
+        if(isset($_POST["verwijderen"]))
         {
             require_once ("dbconnect.php"); 
-            $query = $db->prepare("DELETE FROM purchase WHERE idpurchase = '%%';");
+            $query = $db->prepare("DELETE FROM purchase WHERE idpurchase LIKE '%%';");
             $query->execute();
 
+           if(isset($_SESSION["bh-login"])){
             echo "<div class='container'>";
             echo "<div class='panel panel-primary'>";
             echo "<div class='panel-heading'>Verwijderen is succesvol</div>";
-            echo "<div class='panel-body'>U gaat over 3 seconden naar de startpagina</div>";
+            echo "<div class='panel-body'>U gaat over 3 seconden naar de bestel pagina.</div>";
             echo "</div>";
             echo "</div>";
             header('Refresh: 3; url=bestellingenadmin.php');
+         }
 
-            else{
-                
-            }
+         else{
+            echo "<div class='container'>";
+            echo "<div class='panel panel-primary'>";
+            echo "<div class='panel-heading'>Helaas</div>";
+            echo "<div class='panel-body'>Verwijderen mislukt.</div>";
+            echo "</div>";
+            echo "</div>";
+            header('Refresh: 3; url=bestellingenadmin.php');   
+        }
+        }
+
+        else{
+            echo "<div class='container'>";
+            echo "<div class='panel panel-primary'>";
+            echo "<div class='panel-heading'>Helaas</div>";
+            echo "<div class='panel-body'>Verwijderen mislukt.</div>";
+            echo "</div>";
+            echo "</div>";
+            header('Refresh: 3; url=bestellingenadmin.php');   
         }
     ?>
     </main>
