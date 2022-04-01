@@ -15,23 +15,16 @@
         session_start();
 /* This is a test to see if the user is logged in. If the user is logged in, the code will continue. If
 not, the user will be redirected to the login page. */
-        if(isset($_SESSION["bh-login"]))
-        {
-            include "navadmin.php";
-        } elseif(isset($_SESSION["cl-login"]))
-        {
-            include "navclient.php";
-        } else
-			include "navbezoeker.html";
-		?>
-	</header>
 
-	<?php			
-if(!isset($_SESSION['bh-login']) || $_SESSION['bh-login'] == false)
+            include "navadmin.php";
+
+            if(!isset($_SESSION['bh-login']) || $_SESSION['bh-login'] == false)
 {
 	header('Refresh: 0; url=inlogbeheer.php?error=U moet eerst inloggen!');
 exit();
-} ?>
+}
+?>
+	</header>
 
  
 	<!-- op de home pagina wat enthousiaste tekst over het bedrijf en de producten -->

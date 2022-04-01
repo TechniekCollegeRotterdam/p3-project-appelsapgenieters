@@ -37,13 +37,11 @@ exit();
         if(isset($_POST["verwijderen"]))
         {               
             require_once ("dbconnect.php"); 
-            $query = $db->prepare("DELETE FROM purchase WHERE idpurchase = idpurchase");
+            /*De query Delete moet nog veranderen*/
+            $query = $db->prepare("DELETE FROM purchase WHERE $cidpurchase");
             $query->execute();
             $result = ($db);
-
-           if($query->rowCount() == 1){
             $result=$query->fetch(PDO::FETCH_ASSOC);
-
             echo "<div class='container'>";
             echo "<div class='panel panel-primary'>";
             echo "<div class='panel-heading'>Verwijderen is succesvol</div>";
@@ -51,17 +49,6 @@ exit();
             echo "</div>";
             echo "</div>";
             header('Refresh: 3; url=bestellingenadmin.php');
-         }
-
-         else{
-            echo "<div class='container'>";
-            echo "<div class='panel panel-primary'>";
-            echo "<div class='panel-heading'>Helaas</div>";
-            echo "<div class='panel-body'>Verwijderen mislukt.</div>";
-            echo "</div>";
-            echo "</div>";
-            header('Refresh: 3; url=bestellingenadmin.php');   
-        }
         }
 
         else{

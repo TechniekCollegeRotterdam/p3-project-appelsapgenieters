@@ -27,6 +27,7 @@
         require_once ("dbconnect.php"); 
         $zoek=filter_var($_POST["search"], FILTER_SANITIZE_STRING);
 //        var_dump($zoek);
+/*Hier moet je nog de iets gebruiken waar je de bindvalue kan gebruiken*/
         $query = $db->prepare("SELECT * FROM type
         WHERE name LIKE :cname");
         $query->bindValue(':cname', "%$zoek%");
