@@ -30,10 +30,15 @@
         <h1>Onze producten</h1>
         <h2>Wijn</h2>
 
+        <?php 
+        
+        
+        ?>
+
         <!-- We using tables for the products. -->
         <section>
             <article>
-                <form method="POST">
+                <form method="POST" action="">
                 <table>
                     <tr>
                         <td>

@@ -35,12 +35,15 @@ exit();
 
    /* This is checking if the user has clicked the delete button. */
         if(isset($_POST["verwijderen"]))
-        {
+        {               
             require_once ("dbconnect.php"); 
-            $query = $db->prepare("DELETE FROM purchase WHERE idpurchase = '';");
+            $query = $db->prepare("DELETE FROM purchase WHERE idpurchase = idpurchase");
             $query->execute();
+            $result = ($db);
 
-           if(isset($_SESSION["bh-login"])){
+           if($query->rowCount() == 1){
+            $result=$query->fetch(PDO::FETCH_ASSOC);
+
             echo "<div class='container'>";
             echo "<div class='panel panel-primary'>";
             echo "<div class='panel-heading'>Verwijderen is succesvol</div>";
