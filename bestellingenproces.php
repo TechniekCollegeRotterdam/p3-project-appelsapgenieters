@@ -37,8 +37,8 @@ exit();
         if(isset($_POST["verwijderen"]))
         {               
             require_once ("dbconnect.php"); 
-            /*De query Delete moet nog veranderen*/
-            $query = $db->prepare("DELETE FROM purchase WHERE $cidpurchase");
+            $query = $db->prepare("DELETE FROM purchase WHERE idpurchase = :cidpurchase");
+            $query->bindValue(':cidpurchase', $_POST["idpurchase"]);
             $query->execute();
             $result = ($db);
             $result=$query->fetch(PDO::FETCH_ASSOC);

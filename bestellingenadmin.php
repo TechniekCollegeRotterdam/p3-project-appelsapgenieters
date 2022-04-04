@@ -26,19 +26,19 @@ exit();
 
         <br>
         <br>
-        <h1>Bestellingen</h1>
+        <h1>Bestellingen verwijderen</h1>
         <p>Verwijder hier de bestellingen van de klanten.</p>
     <br>
         <br>
         <?php
         
         require_once ("dbconnect.php"); 
-        $query = $db->prepare("SELECT * FROM purchase WHERE idpurchase LIKE :cidpurchase");
-        $query->bindValue(':cidpurchase', "%$cidpurchase%");
+        $query = $db->prepare("SELECT * FROM purchase");
         $query->execute();
 //        var_dump($query);
         $resultq = $query->fetchALL (PDO::FETCH_ASSOC);
 
+        
         if($query->rowCount() > 0){
             echo "<table>";
             echo "<thead>";
@@ -48,27 +48,25 @@ exit();
                 echo "<form action='bestellingenproces.php' method='POST'>";
                 echo "<tr>";
                 echo "<td>";
-                echo "" . $data['idpurchase'];
+                echo "" . $data['idpurchase']."<input type='hidden' name='idpurchase' value =".$data["idpurchase"]."></td>";
+                echo "<td>";
+                echo "" . $data['purchasedate']."<input type='hidden' name='purchasedate' value =".$data["purchasedate"]."></td>";
                 echo "</td>";
                 echo "<td>";
-                echo "" . $data['purchasedate'];
-                echo "</td>";
-                echo "<td>";
-                echo "<p>€" . $data['paidamount'];
+                echo "<p>€" . $data['paidamount']."<input type='hidden' name='paidamount' value =".$data["paidamount"]."></td>";
                 echo "</p>";
                 echo "</td>";
                 echo "<td>";
-                echo "" . $data['paidinfulldate'];
+                echo "" . $data['paidinfulldate']."<input type='hidden' name='paidinfulldate' value =".$data["paidinfulldate"]."></td>";
                 echo "</td>";
                 echo "<td>";
-                echo "" . $data['deliverydate'];
+                echo "" . $data['deliverydate']."<input type='hidden' name='deliverydate' value =".$data["deliverydate"]."></td>";
                 echo "</td>";
                 echo "<td>";
-                echo "" . $data['clientid'];
+                echo "" . $data['clientid']."<input type='hidden' name='clientid' value =".$data["clientid"]."></td>";
                 echo "</td>";
                 echo"<td>";
-                echo"<input type='submit' name='verwijderen' class='admindelete' value='Verwijderen'></input>";
-            
+                echo"<input type='submit' name='verwijderen' class='admindelete' value='Verwijderen'></input>";       
                 echo"</td>";
                 echo "</tr></form>";
               }
