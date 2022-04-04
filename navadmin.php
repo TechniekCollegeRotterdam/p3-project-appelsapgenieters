@@ -64,7 +64,7 @@ the user. */
                             <li class='fortextcolor'><a href="beheerdermaker.php">Beheerder maker</a>
                         </ul>
                         <ul>
-                            <li class='fortextcolor'><a href="bestellingenadmin.php">Bestellingen verwijderen</a>
+                            <li class='fortextcolor'><a href="bestellingenadmin.php">Bestellingen beheren</a>
                         </ul>
                         <ul>
                             <li class='fortextcolor'><a href="">Wachtwoord</a>

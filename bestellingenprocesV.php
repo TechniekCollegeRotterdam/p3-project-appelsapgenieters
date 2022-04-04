@@ -12,27 +12,20 @@
 	    <!-- hieronder wordt het menu opgehaald. -->
         <?php
         session_start();
-        if(isset($_SESSION["bh-login"]))
-        {
+
             include "navadmin.php";
-        } elseif(isset($_SESSION["cl-login"]))
-        {
-            include "navclient.php";
-        } else
-			include "navbezoeker.html";
+            if(!isset($_SESSION['bh-login']) || $_SESSION['bh-login'] == false)
+            {
+                header('Refresh: 0; url=inlogbeheer.php?error=U moet eerst inloggen!');
+            exit();
+            }
+
 		?>
 	</header>
 
-    <?php
-    if(!isset($_SESSION['bh-login']) || $_SESSION['bh-login'] == false)
-{
-	header('Refresh: 0; url=inlogbeheer.php?error=U moet eerst inloggen!');
-exit();
-} ?>
     <main>
 
     <?php
-
    /* This is checking if the user has clicked the delete button. */
         if(isset($_POST["verwijderen"]))
         {               

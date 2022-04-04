@@ -42,10 +42,10 @@ exit();
         if($query->rowCount() > 0){
             echo "<table>";
             echo "<thead>";
-            echo "<th>id bestelling</th><th>Besteldatum</th><th>Totale bedrag</th><th>Bedrag datum</th><th>Besteldatum</th><th>Klant ID</th><th>Verwijderen</th>";
+            echo "<th>id bestelling</th><th>Besteldatum</th><th>Totale bedrag</th><th>Bedrag datum</th><th>Besteldatum</th><th>Klant ID</th><th>Beheren</th>";
             echo "</thead><tbody>";
             foreach($resultq as $data) {
-                echo "<form action='bestellingenproces.php' method='POST'>";
+                echo "<form action='bestellingenprocesV.php' method='POST'>";
                 echo "<tr>";
                 echo "<td>";
                 echo "" . $data['idpurchase']."<input type='hidden' name='idpurchase' value =".$data["idpurchase"]."></td>";
@@ -68,7 +68,13 @@ exit();
                 echo"<td>";
                 echo"<input type='submit' name='verwijderen' class='admindelete' value='Verwijderen'></input>";       
                 echo"</td>";
-                echo "</tr></form>";
+                echo "</form>";
+                echo "<form action='bestellingenwijzigen.php' method='POST'>";
+                echo"<td>";
+                echo"<input type='submit' name='wijzigen' class='admindelete' value='Wijzigen'></input>"; 
+                echo "</td>";  
+                echo "</form>";
+                echo "</tr>";
               }
               echo "</tbody></table>";
         }
