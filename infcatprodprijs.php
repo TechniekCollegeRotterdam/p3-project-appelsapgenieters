@@ -1,6 +1,57 @@
-<?php
-    echo "<h1>Redirecting request</h1>";
-	header('Refresh: 1; url=nogniet.php');	
-    exit(); 
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="company.css">  
+    <title> producten boven de $100 </title>
+</head>
+<body>
+<header>
+	<img src="images/Logo.jpg" alt="logo">
+		<!-- hieronder wordt het menu opgehaald. -->
+        <?php
+        session_start();
+        if(isset($_SESSION["bh-login"]))
+        {
+            include "navadmin.php";
+        } elseif(isset($_SESSION["cl-login"]))
+        {
+            include "navclient.php";
+        } else
+			include "navbezoeker.html";
+		?>
+	</header>
+ 
+    <main>
+    <?php
+        // Verbinding maken met de database 
+        require_once("dbconnect.php");
 
-?>
+        // producten boven de $100
+        $query = $db->prepare("SELECT type.name, proddesc, stockquantity, price
+                        FROM type
+                        INNER JOIN product ON idtype = typeid
+                        WHERE price > 100");
+        $query->execute();
+        $resultq = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        echo "<table>";
+        echo "<thead><th>Type naam</th><th>Product omschrijving</th><th>Voorraad</th><th> Prijs </th></thead>";
+        echo "<tbody>";
+
+        // Alle gegevens uit client op het scherm tonen
+        foreach ($resultq as $data) {
+            echo "<tr>";
+            echo "<td>".$data["name"]."</td>";
+            echo "<td>".$data["proddesc"]."</td>";
+            echo "<td>".$data["stockquantity"]."</td>";
+            echo "<td>".$data["price"]."</td>";
+            echo "</tr>";
+        }
+        echo "</tbody>";
+        echo "</table>";
+    ?>
+    </main>
+</body>
+</html>

@@ -35,23 +35,13 @@
 
    if(isset($_POST["verwijderen"])){
 
-    echo "<form method='POST' action='bestellingenprocesV.php'>"; 
-    echo "<div class='container'>";
-    echo "<div class='panel panel-primary'>";
-    echo "<div class='panel-heading'>Weet u het zeker?</div>";
-    echo "<div class='panel-body'>";
-    echo "<input type='submit' name='Ja' class='admindelete' value='Ja'></input>";     
-    echo "<input type='submit' name='Nee' class='admindelete' value='Nee'></input>"; 
-    echo "</div>";
-    echo "</div>";
-    echo "</div>";
     if($query->rowCount() > 0){
         echo "<table hidden>";
         echo "<thead>";
         echo "<th>id bestelling</th><th>Besteldatum</th><th>Totale bedrag</th><th>Bedrag datum</th><th>Besteldatum</th><th>Klant ID</th><th>Beheren</th>";
         echo "</thead><tbody>";
         foreach($resultq as $data) {
-            echo "<form action='bestellingenzeker.php' method='POST'>";
+            echo "<form action='bestellingenprocesV.php' method='POST'>";
             echo "<tr>";
             echo "<td>";
             echo "" . $data['idpurchase']."<input type='hidden' name='idpurchase' value =".$data["idpurchase"]."></td>";
@@ -71,6 +61,15 @@
             echo "<td>";
             echo "" . $data['clientid']."<input type='hidden' name='clientid' value =".$data["clientid"]."></td>";
             echo "</td>";
+// This system will check of you really want to delete the purchase.
+            echo "<div class='panel-heading'>Weet u het zeker dat u van idpurchase "; 
+            echo "".$data["idpurchase"].""; 
+            echo " wilt verwijderen?</div>";
+            echo "<div class='panel-body'>";
+            echo "<input type='submit' name='Ja' class='admindelete' value='Ja'></input>";     
+            echo "<input type='submit' name='Nee' class='admindelete' value='Nee'></input>"; 
+            echo "</div>";
+
             echo "</form>";
             echo "</tr>";
           }

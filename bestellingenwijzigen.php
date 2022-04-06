@@ -32,8 +32,6 @@ exit();
     $query->execute();
 //        var_dump($query);
     $resultq = $query->fetchALL(PDO::FETCH_ASSOC);
-
-    
 		?>
         
 	</header>
@@ -46,25 +44,25 @@ exit();
     <form method="POST" action="bestellingenprocesW.php">
 <fieldset>
     <label for="idpurchase">idpurchase*</label><br><br>
-    <input type="text" name="idpurchase" value="<?php echo $idpurchase ?>" disabled>
+    <input type="text" name="idpurchase" disabled>
   
     <br><br>
 
     
         <label for="purchasedate">purchasedate*</label><br><br>
-        <input type="date" name="purchasedate" value="<?php echo $pd ?>"></input>
+        <input type="date" name="purchasedate"></input>
         <br><br>
 
         <label for="paidinfulldate">paidinfulldate*</label><br><br>
-        <input type="date" name="paidinfulldate" value="<?php echo $pifd ?>"></input>
+        <input type="date" name="paidinfulldate"></input>
         <br><br>
 
         <label for="deliverydate">deliverydate*</label><br><br>
-        <input type="date" name="deliverydate" value="<?php echo $dd ?>"></input>
+        <input type="date" name="deliverydate"></input>
         <br><br>
 
         <label for="clientid">clientid*</label><br><br>
-    <input type="text" name="clientid" value="<?php echo $clientid ?>" disabled>
+    <input type="text" name="clientid" disabled>
   
     <br><br>
 

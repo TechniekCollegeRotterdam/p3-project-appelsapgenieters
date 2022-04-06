@@ -129,7 +129,7 @@
         <br>
         </fieldset>
 
-        <fieldset>
+        <fieldset hidden>
     <label for="N"> U wordt automatisch naar klanten toegevoegd.</label>
     <input type="hidden" name="admn" id="admin" value="N" checked>
     <br><br>
