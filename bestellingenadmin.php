@@ -45,7 +45,7 @@ exit();
             echo "<th>id bestelling</th><th>Besteldatum</th><th>Totale bedrag</th><th>Bedrag datum</th><th>Besteldatum</th><th>Klant ID</th><th>Beheren</th>";
             echo "</thead><tbody>";
             foreach($resultq as $data) {
-                echo "<form action='bestellingenprocesV.php' method='POST'>";
+                echo "<form action='bestellingenzeker.php' method='POST'>";
                 echo "<tr>";
                 echo "<td>";
                 echo "" . $data['idpurchase']."<input type='hidden' name='idpurchase' value =".$data["idpurchase"]."></td>";

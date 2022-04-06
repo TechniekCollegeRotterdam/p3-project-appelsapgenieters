@@ -33,12 +33,7 @@ exit();
 //        var_dump($query);
     $resultq = $query->fetchALL(PDO::FETCH_ASSOC);
 
-    foreach($resultq as $data){
-        echo "<a href='bestellingenwijzigen.php?id=".$data['idpurchase']."'>";
-        echo $data["purchasedate"] . " " . $data["paidinfulldate"];
-        echo "</a>";
-        echo "<br>";     
-    }
+    
 		?>
         
 	</header>
@@ -51,25 +46,25 @@ exit();
     <form method="POST" action="bestellingenprocesW.php">
 <fieldset>
     <label for="idpurchase">idpurchase*</label><br><br>
-    <input type="text" name="idpurchase" disabled>
+    <input type="text" name="idpurchase" value="<?php echo $idpurchase ?>" disabled>
   
     <br><br>
 
     
         <label for="purchasedate">purchasedate*</label><br><br>
-        <input type="date" name="purchasedate"></input>
+        <input type="date" name="purchasedate" value="<?php echo $pd ?>"></input>
         <br><br>
 
         <label for="paidinfulldate">paidinfulldate*</label><br><br>
-        <input type="date" name="paidinfulldate"></input>
+        <input type="date" name="paidinfulldate" value="<?php echo $pifd ?>"></input>
         <br><br>
 
         <label for="deliverydate">deliverydate*</label><br><br>
-        <input type="date" name="deliverydate"></input>
+        <input type="date" name="deliverydate" value="<?php echo $dd ?>"></input>
         <br><br>
 
         <label for="clientid">clientid*</label><br><br>
-    <input type="text" name="clientid" disabled>
+    <input type="text" name="clientid" value="<?php echo $clientid ?>" disabled>
   
     <br><br>
 

@@ -12,11 +12,16 @@
         if(isset($_SESSION["bh-login"]))
         {
             include "navadmin.php";
+			header('Refresh: 0; url=index.php?error=U bent al in gelogd!');
+            exit();
         } elseif(isset($_SESSION["cl-login"]))
         {
             include "navclient.php";
-        } else
+			header('Refresh: 0; url=index.php?error=U bent al in gelogd!');
+            exit();
+        } else {
 			include "navbezoeker.html";
+		}
 		?>
 	</header>
      <form action="loginbeheerder.php" method="post">

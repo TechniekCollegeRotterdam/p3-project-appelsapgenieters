@@ -42,9 +42,9 @@ if(! isset($_POST['wijzigen']))
 if($errorfree)
 {
     require_once "dbconnect.php";
-    $idpurchase = filter_var($_POST["idpurchase"], FILTER_SANITIZE_STRING);
-    $query = $db->prepare("DELETE FROM purchase WHERE idpurchase = :cidpurchase");
-    $query->bindValue(':cidpurchase', $idpurchase);
+    $id = filter_var($_POST["idpurchase"], FILTER_SANITIZE_STRING);
+    $query = $db->prepare("SELECT * FROM purchase WHERE idpurchase = :id");
+    $query->bindValue(':id', $id);
     $query->execute();
     if($query->rowCount()<>0)
     {
@@ -67,8 +67,8 @@ if($errorfree)
         // veld "purchasedate, paidamount, paidinfulldate en deliverydate" hoeft niet geschoond te worden, omdat waarde door formulier wordt gevuld
  
 
-        $query = $db->prepare("UPDATE purchase SET(purchasedate, paidamount, paidinfulldate, deliverydate)
-         VALUES (:purchasedate, :paidamount, :paidinfulldate, :deliverydate)
+        $query = $db->prepare("UPDATE purchase SET(purchasedate, paidinfulldate, deliverydate)
+         VALUES (:purchasedate, :paidinfulldate, :deliverydate)
          WHERE idpurchase = :cidpurchase");
          $query->bindValue(':purchasedate', $_POST['purchasedate']);
          $query->bindValue(':paidinfulldate', $_POST['paidinfulldate']);

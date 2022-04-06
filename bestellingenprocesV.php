@@ -13,7 +13,6 @@
         <?php
         session_start();
 
-            include "navadmin.php";
             if(!isset($_SESSION['bh-login']) || $_SESSION['bh-login'] == false)
             {
                 header('Refresh: 0; url=inlogbeheer.php?error=U moet eerst inloggen!');
@@ -27,9 +26,10 @@
 
     <?php
    /* This is checking if the user has clicked the delete button. */
-        if(isset($_POST["verwijderen"]))
+        if(isset($_POST["Ja"]))
         {               
-            require_once ("dbconnect.php"); 
+            if(isset($_SESSION["bh-login"])) {
+                      require_once ("dbconnect.php"); 
             $query = $db->prepare("DELETE FROM purchase WHERE idpurchase = :cidpurchase");
             $query->bindValue(':cidpurchase', $_POST["idpurchase"]);
             $query->execute();
@@ -42,16 +42,26 @@
             echo "</div>";
             echo "</div>";
             header('Refresh: 3; url=bestellingenadmin.php');
+            }
+            else{
+                echo "<div class='container'>";
+                echo "<div class='panel panel-primary'>";
+                echo "<div class='panel-heading'>Helaas</div>";
+                echo "<div class='panel-body'>Verwijderen mislukt. U bent geen beheerder!</div>";
+                echo "</div>";
+                echo "</div>";
+                header('Refresh: 3; url=index.php');   
+            }
         }
 
         else{
             echo "<div class='container'>";
             echo "<div class='panel panel-primary'>";
             echo "<div class='panel-heading'>Helaas</div>";
-            echo "<div class='panel-body'>Verwijderen mislukt.</div>";
+            echo "<div class='panel-body'>Verwijderen mislukt. Bestelling niet verwijderd!</div>";
             echo "</div>";
             echo "</div>";
-            header('Refresh: 3; url=bestellingenadmin.php');   
+            header('Refresh: 3; url=index.php');   
         }
     ?>
     </main>
