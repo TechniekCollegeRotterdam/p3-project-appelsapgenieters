@@ -12,14 +12,33 @@
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
         <?php
+        session_start();
             include "navadmin.php";
 
-        require_once "dbconnect.php";
-        // Hier worden de gegevens van de landentabel opgehaald voor het formulier
-        $query = $db->prepare("SELECT * FROM country");
-        $query->execute();
-        $result=$query->fetchAll(PDO::FETCH_ASSOC);
+            if(!isset($_SESSION['bh-login']) || $_SESSION['bh-login'] == false)
+{
+	header('Refresh: 0; url=inlogbeheer.php?error=U moet eerst inloggen!');
+exit();
+}
+            ?>
+            <br>
+            <br>
+ 
 
+<?php
+        // Hier worden de gegevens van de landentabel opgehaald voor het formulier
+    require_once ("dbconnect.php"); 
+    $query = $db->prepare("SELECT * FROM purchase");
+    $query->execute();
+//        var_dump($query);
+    $resultq = $query->fetchALL(PDO::FETCH_ASSOC);
+
+    foreach($resultq as $data){
+        echo "<a href='bestellingenwijzigen.php?id=".$data['idpurchase']."'>";
+        echo $data["purchasedate"] . " " . $data["paidinfulldate"];
+        echo "</a>";
+        echo "<br>";     
+    }
 		?>
         
 	</header>
@@ -29,32 +48,33 @@
     <br>
     <!-- This is for the registerfield in html -->
     <h1>Wijzigen hier de bestelling</h1>
-    <form method="POST" action="bestellingprocesW.php">
+    <form method="POST" action="bestellingenprocesW.php">
 <fieldset>
-    <label for="givenname">idpurchase*</label><br><br>
-    <input type="text" name="idpurchase" required autofocus>
+    <label for="idpurchase">idpurchase*</label><br><br>
+    <input type="text" name="idpurchase" disabled>
   
     <br><br>
 
-        <label for="birthday">purchasedate*</label><br><br>
-        <input type="date" name="birthday"></input>
+    
+        <label for="purchasedate">purchasedate*</label><br><br>
+        <input type="date" name="purchasedate"></input>
         <br><br>
 
-        <label for="birthday">paidinfulldate*</label><br><br>
-        <input type="date" name="birthday"></input>
+        <label for="paidinfulldate">paidinfulldate*</label><br><br>
+        <input type="date" name="paidinfulldate"></input>
         <br><br>
 
-        <label for="birthday">deliverydate*</label><br><br>
-        <input type="date" name="birthday"></input>
+        <label for="deliverydate">deliverydate*</label><br><br>
+        <input type="date" name="deliverydate"></input>
         <br><br>
 
-        <label for="givenname">clientid*</label><br><br>
-    <input type="text" name="idpurchase" required autofocus>
+        <label for="clientid">clientid*</label><br><br>
+    <input type="text" name="clientid" disabled>
   
     <br><br>
 
         <fieldset>
-        <input type="submit" class="submit" name="wijzigen" value="registreren"></input>
+        <input type="submit" class="submit" name="wijzigen" value="Wijzigen"></input>
         </fieldset>
     </form>
 

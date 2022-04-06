@@ -38,7 +38,8 @@ exit();
         <?php
         
         require_once ("dbconnect.php"); 
-        $query = $db->prepare("SELECT * FROM purchase WHERE clientid LIKE'%0%'");
+        $query = $db->prepare("SELECT * FROM purchase WHERE clientid = :clientid");
+        $query->bindValue(':clientid', "clientid");
         $query->execute();
 //        var_dump($query);
         $resultq = $query->fetchALL (PDO::FETCH_ASSOC);
@@ -75,7 +76,7 @@ exit();
               echo "</tbody></table>";
         }
         else {
-            echo "<h2>Helaas .... geen resultaten gevonden</h2>";
+            echo "<h2>U heeft nog niks besteld.</h2>";
         }
         ?>
 

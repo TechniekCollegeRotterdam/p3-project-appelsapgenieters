@@ -31,8 +31,8 @@ exit();
     <br>
         <br>
         <?php
-        
-        require_once ("dbconnect.php"); 
+              
+      require_once ("dbconnect.php"); 
         $query = $db->prepare("SELECT * FROM purchase");
         $query->execute();
 //        var_dump($query);
@@ -67,11 +67,9 @@ exit();
                 echo "</td>";
                 echo"<td>";
                 echo"<input type='submit' name='verwijderen' class='admindelete' value='Verwijderen'></input>";       
-                echo"</td>";
                 echo "</form>";
                 echo "<form action='bestellingenwijzigen.php' method='POST'>";
-                echo"<td>";
-                echo"<input type='submit' name='wijzigen' class='admindelete' value='Wijzigen'></input>"; 
+                echo"<input type='submit' name='wijzigen' class='adminchange' value='Wijzigen'></input>"; 
                 echo "</td>";  
                 echo "</form>";
                 echo "</tr>";

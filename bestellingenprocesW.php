@@ -27,9 +27,8 @@
 
 <?php
    $errorfree = true;
-elseif(! isset($_POST['wijzigen']))
-{
-    $errorfree = false;
+if(! isset($_POST['wijzigen']))
+{   $errorfree = false;
     echo "<div class='container'>";
     echo "<div class='panel panel-primary'>";
     echo "<div class='panel-heading'><br><br>Helaas, wijzigen is niet gelukt</div>";
@@ -43,9 +42,9 @@ elseif(! isset($_POST['wijzigen']))
 if($errorfree)
 {
     require_once "dbconnect.php";
-    $eml = filter_var($_POST["idpurchase"], FILTER_SANITIZE_STRING);
+    $idpurchase = filter_var($_POST["idpurchase"], FILTER_SANITIZE_STRING);
     $query = $db->prepare("DELETE FROM purchase WHERE idpurchase = :cidpurchase");
-    $query->bindValue(':cidpurchase', $_POST["idpurchase"]);
+    $query->bindValue(':cidpurchase', $idpurchase);
     $query->execute();
     if($query->rowCount()<>0)
     {
@@ -68,8 +67,8 @@ if($errorfree)
         // veld "purchasedate, paidamount, paidinfulldate en deliverydate" hoeft niet geschoond te worden, omdat waarde door formulier wordt gevuld
  
 
-        $query = $db->prepare("UPDATE purchase SET(idpurchase, purchasedate, paidamount, paidinfulldate, deliverydate, clientid)
-         VALUES (:idpurchase, :purchasedate, :paidamount, :paidinfulldate, :deliverydate, :clientid)
+        $query = $db->prepare("UPDATE purchase SET(purchasedate, paidamount, paidinfulldate, deliverydate)
+         VALUES (:purchasedate, :paidamount, :paidinfulldate, :deliverydate)
          WHERE idpurchase = :cidpurchase");
          $query->bindValue(':purchasedate', $_POST['purchasedate']);
          $query->bindValue(':paidinfulldate', $_POST['paidinfulldate']);
@@ -91,6 +90,14 @@ if($errorfree)
         </p>';
         trigger_error($sMsg);
 }
+
+} else{
+    echo "<div class='container'>";
+    echo "<div class='panel panel-primary'>";
+    echo "<div class='panel-heading'><br><br>Helaas, wijzigen is niet gelukt</div>";
+    echo "<div class='panel-body'><br>U heeft niks gewijzigt.</div>";
+    echo "</div>";
+    echo "</div>";  
 }
 
 ?>

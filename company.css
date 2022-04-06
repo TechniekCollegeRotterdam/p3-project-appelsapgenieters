@@ -250,7 +250,7 @@ button:hover {
 /*This is the button where the admin can change something*/
 .adminchange{
 	background-color: rgb(5, 180, 180);
-	width: 6vw;
+	width: 100px;
  }
 
  .admindelete{

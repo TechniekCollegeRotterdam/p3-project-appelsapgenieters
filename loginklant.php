@@ -17,6 +17,8 @@ echo "<br><main>";
 if (isset($_POST['loginclient']))
  {
 
+/* This function is used to sanitize the data that is being inputted by the user. This is done to
+prevent SQL injection. */
 	function validate($data){
        $data = trim($data);
 	   $data = stripslashes($data);
@@ -55,6 +57,9 @@ if (isset($_POST['loginclient']))
 
 		if ($query->rowCount() == 1) {
 			$result=$query->fetch(PDO::FETCH_ASSOC);
+			/*The password_verify checked of the password is equal to the password in the database.*/
+		
+
             if (password_verify($_POST['passwrd'], $result['passwrd']))
 			 {
 				$_SESSION['cl-login'] = true;
