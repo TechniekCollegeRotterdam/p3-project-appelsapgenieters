@@ -47,54 +47,6 @@
             </ul>
         </li>
     </ul>	
+
+
 </nav>
-
-<?php 
-session_start(); 
-require "dbconnect.php";
-if(isset($_POST['submit']))
-{
-    try
-    {
-        $sQuery = "SELECT * FROM login WHERE id = :id";
-        $oStmt = $db->prepare($sQuery);
-        $oStmt->bindValue(':id',$_POST['email']);
-        $oStmt->execute();
-        if($oStmt-rowCount()==1)
-        {
-            $rij = $oStmt->fetch(fetch_style: PDO::FETCH_ASSOC);
-            if(password_verify($_POST['email'],$rij['password']))
-            {
-                $_SESSION['email']=$rij['email'];
-                $_SESSION['naam']=$rij['naam'];
-
-                if($rij['beheer']=="J"){
-                 $_SESSION['bsubmit']= true;
-                 header(string:'Refresh: 3; url=index.php');
-                 echo "Login succesvol";
-                }
-                else
-                {
-                    $_SESSION['ksubmit']=true;
-                    header(string:'Refresh: 3; url=index.php');
-                    echo "Login succesvol";
-                }
-            }
-            else{
-                header(string:'Refresh: 4; url=inlogbeheer.php');
-            }
-        }
-    } catch(PDOException $e) {
-        die("  ERROR !!!! :  " . $e->getMessage());
-       } 
-
-}
-
-?>
-
-<div class="container">
-<div class="panel panel-primary">
-<div class="panel-heading">Helaas, login niet succesvol</div>
-<div class="panel-body">Deze combinatie van email en wachtwoord is niet gelijk.</div>
-</div>
-</div>
