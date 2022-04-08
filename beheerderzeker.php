@@ -42,7 +42,7 @@
         echo "<th>klant id</th><th>voornaam</th><th>achternaam</th><th>tussenvoegsels</th><th>titel</th><th>geslacht</th><th>straatnaam</th><th>stad</th><th>postcode</th><th>landcode</th><th>emailadres</th><th>telefoonnummer</th><th>geboortedatum</th><th>werk</th>";
         echo "</thead><tbody>";
         foreach($resultq as $data) {
-            echo "<form action='bestellingenprocesV.php' method='POST'>";
+            echo "<form action='beheerderprocesV.php' method='POST'>";
             echo "<tr>";
             echo "<td>";
             echo "" . $data['idclient']."<input type='hidden' name='idclient' value ='".$data["idclient"]."'></td>";
@@ -102,7 +102,7 @@
                 
     if(isset($_POST['Ja'])){
     
-                header('Refresh: 3; url=bestellingenprocesV.php');
+                header('Refresh: 3; url=beheerderprocesV.php');
                   }  
 
             }
@@ -113,7 +113,7 @@
 
 
         if(isset($_POST["Nee"])){
-            header('Refresh: 3; url=bestellingenadmin.php');
+            header('Refresh: 3; url=beheerderadmin.php');
         }
 
     }

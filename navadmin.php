@@ -58,7 +58,7 @@ the user. */
                             <li class='fortextcolor'><a href="eigengegevensadmin.php">Eigen gegevens</a></li>
                         </ul>
                         <ul>
-                            <li class='fortextcolor'><a href="allebeheerders.php">Beheerder verwijderen</a>
+                            <li class='fortextcolor'><a href="beheerderadmin.php">Beheerder verwijderen</a>
                         </ul>
                         <ul>
                             <li class='fortextcolor'><a href="beheerdermaker.php">Beheerder maker</a>

@@ -41,7 +41,7 @@
             echo "<div class='panel-body'>U gaat over 3 seconden naar de bestel pagina.</div>";
             echo "</div>";
             echo "</div>";
-            header('Refresh: 3; url=bestellingenadmin.php');
+            header('Refresh: 3; url=beheerderadmin.php');
             }
             else{
                 echo "<div class='container'>";
