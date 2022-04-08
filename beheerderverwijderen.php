@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beheerder verwijderen</title>
-    <link rel="stylesheet" href="company.css">
-    <?php
-	require 'dbconnect.php'; 
-    ?>
+    <link rel="stylesheet" type="text/css" href="company.css">  
+    <title>Alle beheerders</title>
 </head>
 <body>
-<header>
-	<img src="images/Logo.jpg" alt="logo">
-		<!-- hieronder wordt het menu opgehaald. -->
-
+    <header>
+		<h1>Beheerder verwijderen</h1>
+	    <!-- hieronder wordt het menu opgehaald. -->
         <?php
         session_start();
-/* This is a test to see if the user is logged in. If the user is logged in, the code will continue. If
-not, the user will be redirected to the login page. */
         if(isset($_SESSION["bh-login"]))
         {
             include "navadmin.php";
@@ -29,11 +22,45 @@ not, the user will be redirected to the login page. */
 			include "navbezoeker.html";
 		?>
 	</header>
-    <?php 
-		try 
-		{  
-			$query = $db->prepare("SELECT idclient, givenname, surname FROM client); ?>
+
+    <?php
+    if(!isset($_SESSION['bh-login']) || $_SESSION['bh-login'] == false)
+{
+	header('Refresh: 0; url=inlogbeheer.php?error=U moet eerst inloggen!');
+exit();
+} ?>
+    <main>
+
+    <?php
+
+   /* This is checking if the user has clicked the delete button. */
+        if(isset($_POST["verwijderen"]))
+        {               
+            require_once ("dbconnect.php"); 
+            $query = $db->prepare("DELETE FROM client WHERE admn LIKE '%J%'");
+            $query->execute();
+            $result = ($db);
+            $result=$query->fetch(PDO::FETCH_ASSOC);
+            echo "<div class='container'>";
+            echo "<div class='panel panel-primary'>";
+            echo "<div class='panel-heading'>De door u gekozen beheerder is met succes verwijderd</div>";
+            echo "<div class='panel-body'>U gaat over 3 seconden naar de homepagina.</div>";
+            echo "</div>";
+            echo "</div>";
+            header('Refresh: 3; url=index.php');
+         }
 
 
+        else{
+            echo "<div class='container'>";
+            echo "<div class='panel panel-primary'>";
+            echo "<div class='panel-heading'>Helaas</div>";
+            echo "<div class='panel-body'>De verwijdering is mislukt. probeer het nog eens.</div>";
+            echo "</div>";
+            echo "</div>";
+            header('Refresh: 3; url=allebeheerders.php');   
+        }
+    ?>
+    </main>
 </body>
 </html>

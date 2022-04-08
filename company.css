@@ -114,6 +114,13 @@ footer{
     width: 100%;
 }
 
+/* Knop voor het verwijderen van een beheerder */
+
+.admindelete {
+	background-color: red;
+	color: black;
+}
+
 
 /*This is for responsive image*/
 img {
