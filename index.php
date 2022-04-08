@@ -6,7 +6,7 @@
 	 <link rel="stylesheet" type="text/css" href="company.css">  
 </head>
 
-<body>  
+<body>
 	<header>
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
@@ -25,6 +25,8 @@
 
 <form action="inlogklant.php" method="POST">
 
+<input type="text" id="email" name="e-mail" placeholder="e-mail"/><br><br>
+<input type="text" id="phone" name="phone number" placeholder="phone number"/><br><br>
 <input type="text" id="user" name="username" placeholder="username"/><br><br>
 <input type="text" id="pass" name="password" placeholder="password"/><br><br>
 <button type="submit" id="btn" name="login" default>login</button>
@@ -59,4 +61,3 @@
 	
 </body>
 </html>
-	
