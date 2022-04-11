@@ -17,7 +17,7 @@
 include 'navadmin.php';
 $errorfree = true;
 echo "<br><main>";
-if(! isset($_POST['registreer']))
+if(! isset($_POST['toevoegen']))
 {
     $errorfree = false;
     echo "<div class='container'>";
@@ -61,12 +61,11 @@ if($errorfree)
         $pdc = filter_var($_POST["proddesc"], FILTER_SANITIZE_STRING);
 
 
-        $query = $db->prepare("INSERT INTO client(idproduct, typeid, stockquantity, price, imageref, prodname, proddesc)
+        $query = $db->prepare("INSERT INTO product(idproduct, typeid, stockquantity, price, imageref, prodname, proddesc)
          VALUES (:idproduct, :typeid, :stockquantity, :price, :imageref, :prodname, :proddesc)");
       $query->bindValue(':idproduct', $_POST['idproduct']);
        $query->bindValue(':typeid', $_POST['typeid']);
        $query->bindValue(':stockquantity', $_POST['stockquantity']);
-         $query->bindValue(':stockquantity', $sq);
          $query->bindValue(':price', $pr);
          $query->bindValue(':imageref', $image);
          $query->bindValue(':prodname', $pd);
@@ -75,7 +74,7 @@ if($errorfree)
          echo "<div class='container'>";
          echo "<div class='panel panel-primary'>";
          echo "<div class='panel-heading'><br><br>Product toevoegen is succesvol</div>";
-         echo "<div class='panel-body'><br>Uw heeft een nieuw product toegevoegd.""</div>";
+         echo "<div class='panel-body'><br>Uw heeft een nieuw product toegevoegd.</div>";
          echo "</div>";
          echo "</div>";
     }

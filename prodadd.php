@@ -22,6 +22,12 @@
         } else
 			include "navbezoeker.html";
 
+            if(!isset($_SESSION['bh-login']) || $_SESSION['bh-login'] == false)
+{
+	header('Refresh: 0; url=inlogbeheer.php?error=U moet eerst inloggen!');
+exit();
+}
+
         require_once "dbconnect.php";
         // Hier worden de gegevens van de landentabel opgehaald voor het formulier
         $query = $db->prepare("SELECT * FROM type");

@@ -32,7 +32,7 @@
                 <li><a href="categorie.php">Categorieën</a></li>
                 <li><a href="producten.php">Producten</a></li>
                 <li><a href="zoek.php">Zoekfuncties</a></li>
-                <li class='fortextcolor'><a href="prodadd.php">Toevoegen/aanpassen</a></li>
+                <li class='fortextcolor'><a href="prodadmin.php">Toevoegen/aanpassen</a></li>
             </ul>
         </li>						
         <li>

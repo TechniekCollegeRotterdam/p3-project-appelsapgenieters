@@ -7,10 +7,13 @@ article, aside, footer, header, main, nav, section {
 html, body, h1, h2, h3, ul, li, a, p,
 article, aside, footer, header, main, nav, section {
 	padding: 0;
-	margin: 0;
+	margin: 10;
 } 
 
-
+/*Dit is de vervanger van br*/
+.br{
+	margin: 10px;
+}
 
 .fortextcolor{
 color: yellow;
@@ -221,15 +224,21 @@ button:hover {
 }
 
 /*This is the button where the admin can change something*/
-.adminexit{
-	background-color: red;
+.adminchange{
+	background-color: rgb(5, 180, 180);
 	width: 100px;
  }
 
+
 .adminedelete{
-   background-color: red;
+   background-color: rgb(175, 0, 0);
    width: 100px;
 }
+
+.adminadd{
+	background-color: forestgreen;
+	width: 100px;
+ }
 }
 
 
@@ -251,10 +260,18 @@ button:hover {
 .adminchange{
 	background-color: rgb(5, 180, 180);
 	width: 100px;
+	cursor: pointer;
  }
 
  .admindelete{
 	background-color: rgb(175, 0, 0);
 	width: 100px;
+	cursor: pointer;
+ }
+
+ .adminadd{
+	background-color: forestgreen;
+	width: 100px;
+	cursor: pointer;
  }
 }
