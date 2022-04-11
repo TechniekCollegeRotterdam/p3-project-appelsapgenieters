@@ -12,6 +12,7 @@
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
         <?php
+        session_start();
         if(isset($_SESSION["bh-login"]))
         {
             include "navadmin.php";
@@ -21,9 +22,15 @@
         } else
 			include "navbezoeker.html";
 
+            if(!isset($_SESSION['bh-login']) || $_SESSION['bh-login'] == false)
+{
+	header('Refresh: 0; url=inlogbeheer.php?error=U moet eerst inloggen!');
+exit();
+}
+
         require_once "dbconnect.php";
         // Hier worden de gegevens van de landentabel opgehaald voor het formulier
-        $query = $db->prepare("SELECT * FROM product");
+        $query = $db->prepare("SELECT * FROM type");
         $query->execute();
         $result=$query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -39,29 +46,45 @@
     <form method="POST" action="productverwerk.php">
         
 <fieldset>
-    <label for="givenname">typeid</label><br><br>
-    <input type="text" name="idtype" placeholder="Het nummer van het type van het product" required autofocus>
+
+
+<label for="imageref">nummer van het product</label><br><br>
+    <input readonly type="text" name="idproduct" placeholder="De product id wordt bepaalt zodra je een nieuw product toevoegd.">
+    <br><br>
+
+
+<label for="typeid">Type id:</label> 
+    <select class="form-control" id="typeid" name="typeid" required>
+        <?php
+        foreach($result as $rij)
+        {
+            echo '<option value="'.$rij['typeid'].'">';
+            echo $rij['name'];
+            echo '</option>';
+        }
+        ?>
+    </select>
   
     <br><br>
 
-    <label for="surname">Hoeveelheid</label><br><br>
-    <input type="text" name="quantity" placeholder="Hoeveelheid van het product " required>
+    <label for="stockquantity">Hoeveelheid</label><br><br>
+    <input type="text" name="stockquantity" placeholder="Hoeveelheid van het product " required>
     <br><br>
 
-    <label for="middleinitial">Prijs</label><br><br>
-    <input type="text" name="prodprice" placeholder="Prijs van het product">
+    <label for="price">Prijs</label><br><br>
+    <input type="text" name="price" placeholder="Prijs van het product">
     <br><br>
 
-    <label for="title">naam afbeelding</label><br><br>
-    <input type="text" name="imgname" placeholder="de naam van de afbeelding. bijv: Appel.jpg">
+    <label for="imageref">naam afbeelding</label><br><br>
+    <input type="text" name="imageref" placeholder="de naam van de afbeelding. bijv: Appel.jpg">
     <br><br>
 
-    <label for="title">Naam product</label><br><br>
-    <input type="text" name="nameprod" placeholder="de naam van het product">
+    <label for="prodname">Naam product</label><br><br>
+    <input type="text" name="prodname" placeholder="de naam van het product">
     <br><br>
 
-    <label for="title">beschrijving van het Product</label><br><br>
-    <input type="text" name="descprod" placeholder="de beschrijving van het product">
+    <label for="proddesc">beschrijving van het Product</label><br><br>
+    <input type="text" name="proddesc" placeholder="de beschrijving van het product">
     <br><br>
     </fieldset>
 

@@ -7,9 +7,13 @@ article, aside, footer, header, main, nav, section {
 html, body, h1, h2, h3, ul, li, a, p,
 article, aside, footer, header, main, nav, section {
 	padding: 0;
-	margin: 0;
+	margin: 10;
 } 
 
+/*Dit is de vervanger van br*/
+.br{
+	margin: 10px;
+}
 
 .fortextcolor{
 color: yellow;
@@ -112,13 +116,6 @@ footer{
     position: fixed;
     bottom: 0px;
     width: 100%;
-}
-
-/* Knop voor het verwijderen van een beheerder */
-
-.admindelete {
-	background-color: red;
-	color: black;
 }
 
 
@@ -225,9 +222,27 @@ button:hover {
 	background-color: #ff641e;
     width: 100px;
 }
+
+/*This is the button where the admin can change something*/
+.adminchange{
+	background-color: rgb(5, 180, 180);
+	width: 100px;
+ }
+
+
+.adminedelete{
+   background-color: rgb(175, 0, 0);
+   width: 100px;
 }
 
-@media screen and (min-width: 1200px) {
+.adminadd{
+	background-color: forestgreen;
+	width: 100px;
+ }
+}
+
+
+@media screen and (min-width: 601px) {
 .colorp{
 	display: inline-block;
 	background-color: #ff641e;
@@ -239,4 +254,24 @@ button:hover {
 	background-color: #ff641e;
     width: 6vw;
 }
+
+
+/*This is the button where the admin can change something*/
+.adminchange{
+	background-color: rgb(5, 180, 180);
+	width: 100px;
+	cursor: pointer;
+ }
+
+ .admindelete{
+	background-color: rgb(175, 0, 0);
+	width: 100px;
+	cursor: pointer;
+ }
+
+ .adminadd{
+	background-color: forestgreen;
+	width: 100px;
+	cursor: pointer;
+ }
 }
