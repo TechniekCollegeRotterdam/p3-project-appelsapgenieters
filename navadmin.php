@@ -32,7 +32,7 @@
                 <li><a href="categorie.php">Categorieën</a></li>
                 <li><a href="producten.php">Producten</a></li>
                 <li><a href="zoek.php">Zoekfuncties</a></li>
-                <li class='fortextcolor'><a href="">Toevoegen/aanpassen</a></li>
+                <li class='fortextcolor'><a href="prodadd.php">Toevoegen/aanpassen</a></li>
             </ul>
         </li>						
         <li>
@@ -58,13 +58,13 @@ the user. */
                             <li class='fortextcolor'><a href="eigengegevensadmin.php">Eigen gegevens</a></li>
                         </ul>
                         <ul>
-                            <li class='fortextcolor'><a href="allebeheerder.php">Alle beheerders wijzigen</a>
+                            <li class='fortextcolor'><a href="beheerderadmin.php">Beheerder verwijderen</a>
                         </ul>
                         <ul>
                             <li class='fortextcolor'><a href="beheerdermaker.php">Beheerder maker</a>
                         </ul>
                         <ul>
-                            <li class='fortextcolor'><a href="bestellingenadmin.php">Bestellingen beheren</a>
+                            <li class='fortextcolor'><a href="bestellingenadmin.php">Bestellingen van klanten</a>
                         </ul>
                         <ul>
                             <li class='fortextcolor'><a href="">Wachtwoord</a>
