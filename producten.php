@@ -14,43 +14,55 @@
         <img src="images/Logo.jpg" alt="logo">
         <!-- hieronder wordt het menu opgehaald. -->
         <?php
-			include "nav.html";
+        session_start();
+        if(isset($_SESSION["bh-login"]))
+        {
+            include "navadmin.php";
+        } elseif(isset($_SESSION["cl-login"]))
+        {
+            include "navclient.php";
+        } else
+			include "navbezoeker.html";
 		?>
     </header>
 
     <main>
-        <h1>Ons producten</h1>
+        <h1>Onze producten</h1>
         <h2>Wijn</h2>
+
+        <?php 
+        
+        
+        ?>
 
         <!-- We using tables for the products. -->
         <section>
             <article>
+                <form method="POST" action="">
                 <table>
                     <tr>
                         <td>
+                        <a href="arrogant.php">
                             <img src="images/ArrogantFrogSingleBier02.jpg" alt="wijn">
-                            <p>Arrogant Frog Single Vineyard Cabernet Sayvigon Les Calades 2020 75cl</p>
-                            <a href="arrogant.php">
-                                <button class="colorp">bekijken</button>
                             </a>
+                            <p>Arrogant Frog Single Vineyard Cabernet Sayvigon Les Calades 2020 75cl</p>
                             <button class="colorb">toevoegen</button>
                             <p>€7.98</p>
                         </td>
                         <td>
+                        <a href="cantina.php">
                             <img src="images/CantinaDiVeronaBier.jpg" alt="wijn">
-                            <p>Cantina Di Verone ValPolicella Ripasso 2020 75cl</p>
-                            <a href="cantina.php">
-                                <button class="colorp">bekijken</button>
+                            
                             </a>
+                            <p>Cantina Di Verone ValPolicella Ripasso 2020 75cl</p>
                             <button class="colorb">toevoegen</button>
                             <p>€10.65</p>
                         </td>
                         <td>
-                            <img src="images/Lindeman'sWijn.jpg" alt="wijn">
-                            <p>Lindeman's South Africa Sauvignon Blanc Chardonnay</p>
                             <a href="Lindeman.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/Lindeman'sWijn.jpg" alt="wijn">
                             </a>
+                            <p>Lindeman's South Africa Sauvignon Blanc Chardonnay</p>
                             <button class="colorb">toevoegen</button>
                             <p>€5.29</p>
                         </td>
@@ -65,29 +77,28 @@
                 <table>
                     <tr>
                         <td>
-                            <img src="images/POMMERYBRUTROYALChampagne.jpg" alt="champagne">
-                            <p>Pommery Brut Royale 75cl</p>
+
                             <a href="prommery.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/POMMERYBRUTROYALChampagne.jpg" alt="champagne">
                             </a>
+                            <p>Pommery Brut Royale 75cl</p>
                             <button class="colorb">toevoegen</button>
                             <p>€34.99</p>
                         </td>
                         <td>
-                            <img src="images/PiperScheidziek.jpg" alt="champagne" width="450" height="450">
-                            <p>Piper Heidsieck Brut Champagne</p>
                             <a href="piper.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/PiperScheidziek.jpg" alt="champagne" width="450" height="450">
                             </a>
+                            <p>Piper Heidsieck Brut Champagne</p>
                             <button class="colorb">toevoegen</button>
                             <p>€35.99</p>
                         </td>
                         <td>
-                            <img src="images/BollingChampagne.jpg" alt="champagne" width="450" height="450">
-                            <p>Bollinger Champagne special cuvée</p>
+
                             <a href="bolinger.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/BollingChampagne.jpg" alt="champagne" width="450" height="450">
                             </a>
+                            <p>Bollinger Champagne special cuvée</p>
                             <button class="colorb">toevoegen</button>
                             <p>€62.00</p>
                         </td>
@@ -101,11 +112,10 @@
                 <table>
                     <tr>
                         <td>
-                        <img src="images/RDeRuinart.jpg" alt="champagne" width="200" height="200">
-                            <p>R De Ruinart 75cl</p>
                             <a href="RDERuinart.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/RDeRuinart.jpg" alt="champagne" width="200" height="200">
                             </a>
+                            <p>R De Ruinart 75cl</p>
                             <button class="colorb">toevoegen</button>
                             <p>€59.00</p>  
                         </td>
@@ -121,30 +131,25 @@
                     <tr>
                         <td>
                             <a href="heineken.php">
-                                <img src="images/heineken.jpg" alt="bier" width="450" height="450">
+                            <img src="images/heineken.jpg" alt="bier" width="450" height="450">
                             </a>
                             <p class="linkcolorp">heineken 30cl</p>
-                            <a href="heineken.php">
-                                <button class="colorp">bekijken</button>
-                            </a>
                             <button class="colorb">toevoegen</button>
                             <p>€13.99</p>
                         </td>
                         <td>
-                            <img src="images/HertogJan.jpg" alt="bier" width="450" height="450">
-                            <p>Hertog Jan Natuurzuiver bier krat 30cl</p>
                             <a href="hertogjan.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/HertogJan.jpg" alt="bier" width="450" height="450">
                             </a>
+                            <p>Hertog Jan Natuurzuiver bier krat 30cl</p>
                             <button class="colorb">toevoegen</button>
                             <p>€17.99</p>
                         </td>
                         <td>
-                            <img src="images/ExtraCorona.jpg" alt="bier" width="450" height="450">
-                            <p>Corona Extra pils 6-pack</p>
                             <a href="corona.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/ExtraCorona.jpg" alt="bier" width="450" height="450">
                             </a>
+                            <p>Corona Extra pils 6-pack</p>
                             <button class="colorb">toevoegen</button>
                             <p>€8.99</p>
                         </td>
@@ -159,29 +164,26 @@
                 <table>
                     <tr>
                         <td>
-                            <img src="images/campinaopjemel.jpg" alt="melk" width="450" height="450">
-                            <p>Campina Halfvolle melk</p>
                             <a href="campinahalf.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/campinaopjemel.jpg" alt="melk" width="450" height="450">
                             </a>
+                            <p>Campina Halfvolle melk</p>
                             <button class="colorb">toevoegen</button>
                             <p>€2.45</p>
                         </td>
                         <td>
-                            <img src="images/melk4pakjes.jpg" alt="melk" width="450" height="450">
-                            <p>AH Biologisch Halfvolle melk</p>
                             <a href="melk4pakjes.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/melk4pakjes.jpg" alt="melk" width="450" height="450">
                             </a>
+                            <p>AH Biologisch Halfvolle melk</p>
                             <button class="colorb">toevoegen</button>
                             <p>€4.79</p>
                         </td>
                         <td>
-                            <img src="images/Biologischemelk.jpg" alt="melk" width="450" height="450">
-                            <p>AH Biologische Halfvolle Melk</p>
                             <a href="ahbiologisch.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/Biologischemelk.jpg" alt="melk" width="450" height="450">
                             </a>
+                            <p>AH Biologische Halfvolle Melk</p>
                             <button class="colorb">toevoegen</button>
                             <p>€2.09</p>
                         </td>
@@ -195,29 +197,26 @@
                 <table>
                     <tr>
                         <td>
-                            <img src="images/Rivella1.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Rivella Original Fles 1L</p>
                             <a href="rivellaoriginal.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/Rivella1.jpg" alt="frisdrank" width="450" height="450">
                             </a>
+                            <p>Rivella Original Fles 1L</p>
                             <button class="colorb">toevoegen</button>
                             <p>€1.85</p>
                         </td>
                         <td>
-                            <img src="images/rivella2.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Rivella Cranberry Fles 1,5L</p>
                             <a href="rivellacranberry.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/rivella2.jpg" alt="frisdrank" width="450" height="450">
                             </a>
+                            <p>Rivella Cranberry Fles 1,5L</p>
                             <button class="colorb">toevoegen</button>
                             <p>€2.03</p>
                         </td>
                         <td>
-                            <img src="images/rivella3.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Rivella Green Tea Fles 1,5L</p>
                             <a href="rivellagreentea.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/rivella3.jpg" alt="frisdrank" width="450" height="450">
                             </a>
+                            <p>Rivella Green Tea Fles 1,5L</p>
                             <button class="colorb">toevoegen</button>
                             <p>€2.29</p>
                         </td>
@@ -226,29 +225,26 @@
                 <table>
                     <tr>
                     <td>
-                            <img src="images/fantacassis1.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Fanta Cassis 1,5L</p>
                             <a href="fantacassis.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/fantacassis1.jpg" alt="frisdrank" width="450" height="450">
                             </a>
+                            <p>Fanta Cassis 1,5L</p>
                             <button class="colorb">toevoegen</button>
                             <p>€2.03</p>
                         </td>
                         <td>
-                            <img src="images/Liptonicetea2.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Lipton Ice Tea Green Original 1,5L</p>
                             <a href="liptongreen.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/Liptonicetea2.jpg" alt="frisdrank" width="450" height="450">
                             </a>
+                            <p>Lipton Ice Tea Green Original 1,5L</p>
                             <button class="colorb">toevoegen</button>
                             <p>€2.79</p>
                         </td>
                         <td>
-                            <img src="images/Liptonicetea3.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Lipton Ice Tea Sparkling Original 1,5L</p>
                             <a href="liptonsparkling.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/Liptonicetea3.jpg" alt="frisdrank" width="450" height="450">
                             </a>
+                            <p>Lipton Ice Tea Sparkling Original 1,5L</p>
                             <button class="colorb">toevoegen</button>
                             <p>€2.79</p>
                         </td>
@@ -257,29 +253,26 @@
                 <table>
                     <tr>
                         <td>
-                            <img src="images/CrystalClear1.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Crystal Clear Sparkling Lemon 1,5L</p>
                             <a href="crystallemon.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/CrystalClear1.jpg" alt="frisdrank" width="450" height="450">
                             </a>
+                            <p>Crystal Clear Sparkling Lemon 1,5L</p>
                             <button class="colorb">toevoegen</button>
                             <p>€1.63</p>
                         </td>
                         <td>
-                            <img src="images/CrystalClear2.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Crystal Clear Sparkling Peach Fles 1,5L</p>
                             <a href="crystalpeach.php">
-                                <button class="colorp">bekijken</button>
-                            </a>
+                            <img src="images/CrystalClear2.jpg" alt="frisdrank" width="450" height="450">
+                            </a>                             
+                            <p>Crystal Clear Sparkling Peach Fles 1,5L</p>
                             <button class="colorb">toevoegen</button>
                             <p>€1.63</p>
                         </td>
                         <td>
-                            <img src="images/Crystalclear3.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Crystal Clear Sparkling Cranberry Fles 1,5L</p>
                             <a href="crystalcranberry.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/Crystalclear3.jpg" alt="frisdrank" width="450" height="450">
                             </a>
+                            <p>Crystal Clear Sparkling Cranberry Fles 1,5L</p>
                             <button class="colorb">toevoegen</button>
                             <p>€1.63</p>
                         </td>
@@ -288,29 +281,26 @@
                 <table>
                     <tr>
                         <td>
-                            <img src="images/CrystalClear4.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Crystal Clear Sparkling Lemon Cactus Fles 1,5L</p>
                             <a href="crystalcactus.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/CrystalClear4.jpg" alt="frisdrank" width="450" height="450">
                             </a>
+                            <p>Crystal Clear Sparkling Lemon Cactus Fles 1,5L</p>
                             <button class="colorb">toevoegen</button>
                             <p>€1.67</p>
                         </td>
                         <td>
-                            <img src="images/herocassis1.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Hero Cassis Zero 1,25L</p>
                             <a href="herocassiszero.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/herocassis1.jpg" alt="frisdrank" width="450" height="450">
                             </a>
+                            <p>Hero Cassis Zero 1,25L</p>
                             <button class="colorb">toevoegen</button>
                             <p>€1.73</p>
                         </td>
                         <td>
-                            <img src="images/herocassis2.jpg" alt="frisdrank" width="450" height="450">
-                            <p>Hero Cassis 1,25L</p>
                             <a href="herocassis.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/herocassis2.jpg" alt="frisdrank" width="450" height="450">
                             </a>
+                            <p>Hero Cassis 1,25L</p>
                             <button class="colorb">toevoegen</button>
                             <p>€1.73</p>
                         </td>
@@ -324,29 +314,27 @@
                 <table>
                     <tr>
                         <td>
-                            <img src="images/Spamineraalwater.jpg" alt="water" width="450" height="450">
-                            <p>Spa Mineraalwater reine</p>
+
                             <a href="spamineraal.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/Spamineraalwater.jpg" alt="water" width="450" height="450">
                             </a>
+                            <p>Spa Mineraalwater reine</p>
                             <button class="colorb">aantal</button>
                             <p>€0.99</p>
                         </td>
                         <td>
-                            <img src="images/SpaIntense.jpg" alt="water" width="450" height="450">
-                            <p>Spa Intense</p>
                             <a href="spaintense.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/SpaIntense.jpg" alt="water" width="450" height="450">
                             </a>
+                            <p>Spa Intense</p>
                             <button class="colorb">aantal</button>
                             <p>€1.09</p>
                         </td>
                         <td>
-                            <img src="images/spafinesse.jpg" alt="water" width="450" height="450">
-                            <p>Spa Finesse</p>
                             <a href="spafinesse.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/spafinesse.jpg" alt="water" width="450" height="450">
                             </a>
+                            <p>Spa Finesse</p>
                             <button class="colorb">aantal</button>
                             <p>€1.05</p>
                         </td>
@@ -355,11 +343,10 @@
                 <table>
                     <tr>
                         <td>
-                            <img src="images/Spamineraalwater6x.jpg" alt="water" width="450" height="450">
-                            <p>Spa mineraalwater 6x</p>
                             <a href="spamineraalzes.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/Spamineraalwater6x.jpg" alt="water" width="450" height="450">
                             </a>
+                            <p>Spa mineraalwater 6x</p>
                             <button class="colorb">aantal</button>
                             <p>€5.79</p>
                         </td>
@@ -373,29 +360,26 @@
                 <table>
                     <tr>
                         <td>
-                            <img src="images/yakultoriginal.jpg" alt="zuiveldrank" width="450" height="450">
-                            <p>Yakult Drink Original</p>
                             <a href="yakult.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/yakultoriginal.jpg" alt="zuiveldrank" width="450" height="450">
                             </a>
+                            <p>Yakult Drink Original</p>
                             <button class="colorb">aantal</button>
                             <p>€3.25</p>
                         </td>
                         <td>
-                            <img src="images/OpIsOptimel.jpg" alt="zuiveldrank" width="450" height="450">
-                            <p>Optimel Drink framboos 0% vet</p>
                             <a href="optimelframboos.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/OpIsOptimel.jpg" alt="zuiveldrank" width="450" height="450">
                             </a>
+                            <p>Optimel Drink framboos 0% vet</p>
                             <button class="colorb">aantal</button>
                             <p>€1.45</p>
                         </td>
                         <td>
-                            <img src="images/chocolaOpjeMel.jpg" alt="melk" width="450" height="450">
-                            <p>Chocolademelk vol 1L</p>
                             <a href="chocolademelk.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/chocolaOpjeMel.jpg" alt="melk" width="450" height="450">
                             </a>
+                            <p>Chocolademelk vol 1L</p>
                             <button class="colorb">aantal</button>
                             <p>€1.87</p>
                         </td>
@@ -408,29 +392,26 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img src="images/TaksiTropischFruit.jpg" alt="vruchtensap" width="450" height="450">
-                                    <p>Taksi Tropisch fruit</p>
                                     <a href="taksifruit.php">
-                                        <button class="colorp">bekijken</button>
+                                    <img src="images/TaksiTropischFruit.jpg" alt="vruchtensap" width="450" height="450">
                                     </a>
+                                    <p>Taksi Tropisch fruit</p>
                                     <button class="colorb">aantal</button>
                                     <p>€1.45</p>
                                 </td>
                                 <td>
-                                    <img src="images/IceTeaLemon.jpg" alt="vruchtensap" width="450" height="450">
-                                    <p>Ice tea Lemon</p>
                                     <a href="icetealemon.php">
-                                        <button class="colorp">bekijken</button>
+                                    <img src="images/IceTeaLemon.jpg" alt="vruchtensap" width="450" height="450">
                                     </a>
+                                    <p>Ice tea Lemon</p>
                                     <button class="colorb">aantal</button>
                                     <p>€1.99</p>
                                 </td>
-                                <td>
-                                    <img src="images/IceTeaPeach.jpg" alt="vruchtensap" width="450" height="450">
-                                    <p>Ice tea Peach</p>
+                                <td></td>
                                     <a href="iceteapeach.php">
-                                        <button class="colorp">bekijken</button>
+                                    <img src="images/IceTeaPeach.jpg" alt="vruchtensap" width="450" height="450">
                                     </a>
+                                    <p>Ice tea Peach</p>
                                     <button class="colorb">aantal</button>
                                     <p>€1.99</p>
                                 </td>
@@ -439,16 +420,17 @@
                         <table>
                             <tr>
                             <td>
-                            <img src="images/Liptonicetea1.jpg" alt="vruchtensap" width="450" height="450">
                             <p>Lipton Ice Tea Green Original 1,5L</p>
                             <a href="iceteagreen.php">
-                                <button class="colorp">bekijken</button>
+                            <img src="images/Liptonicetea1.jpg" alt="vruchtensap" width="450" height="450">
                             </a>
+                            <p>Lipton Ice Tea Green Original 1,5L</p>
                             <button class="colorb">toevoegen</button>
                             <p>€2.59</p>
                         </td>
                             </tr>
                         </table>
+                        </form>
                     </article>
                 </section>
 

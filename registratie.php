@@ -11,9 +11,17 @@
 <header>
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
-		<?php
+        <?php
+        if(isset($_SESSION["bh-login"]))
+        {
+            include "navadmin.php";
+        } elseif(isset($_SESSION["cl-login"]))
+        {
+            include "navclient.php";
+        } else
+			include "navbezoeker.html";
+
         require_once "dbconnect.php";
-		include "nav.html";
         // Hier worden de gegevens van de landentabel opgehaald voor het formulier
         $query = $db->prepare("SELECT * FROM country");
         $query->execute();
@@ -119,6 +127,12 @@
     <input type="PASSWORD" name="password2" placeholder="Herhaal wachtwoord" required>
         <br>
         <br>
+        </fieldset>
+
+        <fieldset hidden>
+    <label for="N"> U wordt automatisch naar klanten toegevoegd.</label>
+    <input type="hidden" name="admn" id="admin" value="N" checked>
+    <br><br>
         </fieldset>
 
         <fieldset>

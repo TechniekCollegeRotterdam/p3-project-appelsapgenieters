@@ -1,4 +1,4 @@
-nav>
+<nav>
      <ul>	
          <li>
              <a href="klantpagina.php">Home</a>

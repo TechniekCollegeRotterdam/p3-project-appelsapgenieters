@@ -7,9 +7,19 @@ article, aside, footer, header, main, nav, section {
 html, body, h1, h2, h3, ul, li, a, p,
 article, aside, footer, header, main, nav, section {
 	padding: 0;
-	margin: 0;
+	margin: 10;
 } 
-	
+
+/*Dit is de vervanger van br*/
+.br{
+	margin: 10px;
+}
+
+.fortextcolor{
+color: yellow;
+width: 250px;
+}
+
 body {
 	width:90%;
 	margin: 0 auto;
@@ -23,6 +33,12 @@ header{
 	margin: 0 auto;
 	padding: 10px;
 }
+
+.wrapper{
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+}
+
 
 main{
 	width: 90%;
@@ -75,6 +91,8 @@ nav ul li:hover ul li {
 	display: block;
 } 
 
+
+
 .centreer {
 	text-align: center;
 }
@@ -83,25 +101,6 @@ nav ul li:hover ul li {
 	color: black;
 }
 
-h1{
-	margin-bottom: 40px;
-	padding-right: 100%;
-}
-
-footer{
-	clear: both;
-    border: 1px groove #aaaaaa;
-    background: black;
-    color: White;
-    padding: 0;
-    text-align: center;
-    vertical-align: middle;
-    line-height: normal;
-    margin: 0;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-}
 
 
 footer{
@@ -194,8 +193,10 @@ button{
 	border-radius: 8%;
 	font-size: 15px;
 	cursor: pointer;
+	transition: width 10s;
 }
 
+/* This is for the hover effect. */
 button:hover {
 	background-color: darkred;
 	animation-name: colorchange;
@@ -221,9 +222,27 @@ button:hover {
 	background-color: #ff641e;
     width: 100px;
 }
+
+/*This is the button where the admin can change something*/
+.adminchange{
+	background-color: rgb(5, 180, 180);
+	width: 100px;
+ }
+
+
+.adminedelete{
+   background-color: rgb(175, 0, 0);
+   width: 100px;
 }
 
-@media screen and (min-width: 1200px) {
+.adminadd{
+	background-color: forestgreen;
+	width: 100px;
+ }
+}
+
+
+@media screen and (min-width: 601px) {
 .colorp{
 	display: inline-block;
 	background-color: #ff641e;
@@ -235,4 +254,24 @@ button:hover {
 	background-color: #ff641e;
     width: 6vw;
 }
+
+
+/*This is the button where the admin can change something*/
+.adminchange{
+	background-color: rgb(5, 180, 180);
+	width: 100px;
+	cursor: pointer;
+ }
+
+ .admindelete{
+	background-color: rgb(175, 0, 0);
+	width: 100px;
+	cursor: pointer;
+ }
+
+ .adminadd{
+	background-color: forestgreen;
+	width: 100px;
+	cursor: pointer;
+ }
 }

@@ -81,11 +81,12 @@ if($errorfree)
 
         
 
-        $query = $db->prepare("INSERT INTO client(surname, givenname, middleinitial,
+        $query = $db->prepare("UPDATE client SET(surname, givenname, middleinitial,
          title, gender, streetadress, city, zipcode, countryid, emailadress, telephonenumber,
          birthday, occupation, passwrd, admn)
          VALUES (:surname, :givenname, :middleinitial, :title, :gender, :streetadress, :city,
-         :zipcode, :countryid, :emailadress, :telephonenumber, :birthday, :occupation, :passwrd, :admn)");
+         :zipcode, :countryid, :emailadress, :telephonenumber, :birthday, :occupation, :passwrd, :admn)
+         WHERE idclient = :idcl");
          $query->bindValue(':givenname', $gn);
          $query->bindValue(':surname', $sn);
          $query->bindValue(':middleinitial', $initl);
@@ -124,7 +125,4 @@ if($errorfree)
 </main>
 </body>
 </html>
-
-
-
 

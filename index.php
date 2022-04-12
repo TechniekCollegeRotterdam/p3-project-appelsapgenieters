@@ -21,22 +21,6 @@
 
  	<main>
 
-<p>Login</p>
-
-<form action="inlogklant.php" method="POST">
-
-<input type="text" id="email" name="e-mail" placeholder="e-mail"/><br><br>
-<input type="text" id="phone" name="phone number" placeholder="phone number"/><br><br>
-<input type="text" id="user" name="username" placeholder="username"/><br><br>
-<input type="text" id="pass" name="password" placeholder="password"/><br><br>
-<button type="submit" id="btn" name="login" default>login</button>
-
-</form>
-
-<a href="inlogklant.php"><div style="float:right"><button>logout</button></div></a>
-
-    <h1>Welkom bij de Login page voor klant!</h1>
-
 		 <a href="https://play.pokemonshowdown.com/">
 
 		  <img class="centreer" src="images/homepagefotoappelsap.nl.jpg" alt="main page image" width="1000px" height="600px"> 
