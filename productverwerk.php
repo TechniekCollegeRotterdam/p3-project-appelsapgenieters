@@ -57,7 +57,6 @@ if($errorfree)
         $pr = filter_var($_POST["price"], FILTER_SANITIZE_STRING);
         $image = filter_var($_POST["imageref"], FILTER_SANITIZE_STRING);
         $pd = filter_var($_POST["prodname"], FILTER_SANITIZE_STRING);
-        // veld "gender" hoeft niet geschoond te worden, omdat waarde door formulier wordt gevuld
         $pdc = filter_var($_POST["proddesc"], FILTER_SANITIZE_STRING);
 
 

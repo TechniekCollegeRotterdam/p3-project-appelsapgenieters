@@ -29,7 +29,7 @@ exit();
         <h1>Producten beheren</h1>
         <p>Kies hier wat u wilt doen</p>
 
-        <h2>Kies hier om bestellingen toe te voegen</h2>
+        <h2>Kies hier om product toe te voegen</h2>
         <a href="prodadd.php">
             <input type="submit" class="adminadd" value="toevoegen">
         </a>
