@@ -44,7 +44,7 @@ if($errorfree)
         echo "<div class='container'>";
         echo "<div class='panel panel-primary'>";
         echo "<div class='panel-heading'><br><br>Helaas, product toevoegen niet gelukt</div>";
-        echo "<div class='panel-body'><br>U zult eerst (al) de productgegevens moeten invullen</div>";
+        echo "<div class='panel-body'><br>U kunt niet nog een keer dezelfde product toevoegen!</div>";
         echo "</div>";
         echo "</div>";
     }
