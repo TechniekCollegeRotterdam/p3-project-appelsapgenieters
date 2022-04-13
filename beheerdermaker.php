@@ -43,7 +43,7 @@ exit();
                         $query = $db->prepare("SELECT * FROM client WHERE admn like '%N%'");
                         $query->execute();
                 //        var_dump($query);
-                        $resultq = $query->fetchALL (PDO::FETCH_ASSOC);
+                        $resultq = $query->fetchALL(PDO::FETCH_ASSOC);
                 
                         if($query->rowCount() > 0){
                             echo "<form method='POST' action='beheerderverwerk.php'>";
@@ -54,8 +54,8 @@ exit();
                             foreach($resultq as $data) {
                                 echo "<tr>";
                                 echo "<td>";
-                                echo "<label> Rol:</label>
-                                <input type='radio' name='admn' id='admin' value='J' checked>
+                                echo "<label for='J'></label>
+                                <input type='radio' name='admn' id='admin' value='J'>
                                 <br><br>";
                                 echo "</td>";
                                 echo "<td>";

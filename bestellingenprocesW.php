@@ -94,6 +94,7 @@ if($errorfree)
          echo "<div class='panel-body'><br>U heeft de bestelling gewijzigd van aankoop nummer ".$_POST["idpurchase"].".</div>";
          echo "</div>";
          echo "</div>";
+         header('Refresh: 3; url=bestellingenadmin.php');
     }
     catch(PDOException $e)
     {
@@ -112,6 +113,7 @@ if($errorfree)
     echo "<div class='panel-body'><br>Het bestelling wijzigen van".$data["idpurchase"]." is mislukt!</div>";
     echo "</div>";
     echo "</div>";
+    exit();
 }
 
 ?>

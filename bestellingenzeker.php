@@ -26,7 +26,10 @@
 
     <?php
                 require_once ("dbconnect.php"); 
-            $query = $db->prepare("SELECT * FROM purchase WHERE idpurchase = :purid");
+            $query = $db->prepare("SELECT * FROM purchase 
+            INNER JOIN client ON purchase.clientid = client.idclient 
+            INNER JOIN purchaseline ON idpurchase 
+            WHERE idpurchase = :purid");
             $query->bindValue(':purid', $_POST["idpurchase"]);
             $query->execute();
     //        var_dump($query);
@@ -76,21 +79,11 @@
         
           echo "</tbody></table>";
                 
-    if(isset($_POST['Ja'])){
-    
-                header('Refresh: 3; url=bestellingenprocesV.php');
-                  }  
 
             }
             else {
                 echo "<h2>Helaas .... geen resultaten gevonden</h2>";
             }     
-        
-
-
-        if(isset($_POST["Nee"])){
-            header('Refresh: 3; url=bestellingenadmin.php');
-        }
 
     }
     
