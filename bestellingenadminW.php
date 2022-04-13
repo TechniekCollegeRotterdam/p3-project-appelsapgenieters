@@ -46,7 +46,7 @@ exit();
                 echo "<form action='bestellingenwijzigen.php' method='POST'>";
                 echo "<tr>";
                 echo "<td>";
-                echo "" . $data['idpurchase']."<input type='hidden' name='idpurchase' value =".$data["idpurchase"]."></td>";
+                echo "" . $data['idpurchase']."<input type='hidden' name='idpurchase' value ='".$data["idpurchase"]."' ></td>";
                 echo "<td>";
                 echo "" . $data['purchasedate']."<input type='hidden' name='purchasedate' value =".$data["purchasedate"]."></td>";
                 echo "</td>";
