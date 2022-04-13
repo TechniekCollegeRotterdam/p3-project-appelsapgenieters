@@ -31,10 +31,15 @@
             if(isset($_SESSION["bh-login"])) {
                       require_once ("dbconnect.php"); 
             $query = $db->prepare("DELETE FROM purchase WHERE idpurchase = :cidpurchase");
+            $query2 = $db->prepare("DELETE FROM purchaseline WHERE purchaseid = :cidpurchase");
             $query->bindValue(':cidpurchase', $_POST["idpurchase"]);
+            $query2->bindValue(':cidpurchase', $_POST["purchaseid"]);
             $query->execute();
+            $query2->execute();
             $result = ($db);
+            $result2 = ($db);
             $result=$query->fetch(PDO::FETCH_ASSOC);
+            $result2=$query2->fetch(PDO::FETCH_ASSOC);
             echo "<div class='container'>";
             echo "<div class='panel panel-primary'>";
             echo "<div class='panel-heading'>Verwijderen is succesvol</div>";

@@ -28,7 +28,7 @@
                 require_once ("dbconnect.php"); 
             $query = $db->prepare("SELECT * FROM purchase 
             INNER JOIN client ON purchase.clientid = client.idclient 
-            INNER JOIN purchaseline ON idpurchase 
+            INNER JOIN purchaseline ON idpurchase = purchaseid
             WHERE idpurchase = :purid");
             $query->bindValue(':purid', $_POST["idpurchase"]);
             $query->execute();
@@ -42,7 +42,7 @@
     if($query->rowCount() == 1){
         echo "<table>";
         echo "<thead>";
-        echo "<th>id bestelling</th><th>Besteldatum</th><th>Totale bedrag</th><th>Bedrag datum</th><th>Besteldatum</th><th>Klant ID</th>";
+        echo "<th>id bestelling</th><th>id bestellinglijn</th><th>Besteldatum</th><th>Totale bedrag</th><th>Bedrag datum</th><th>Besteldatum</th><th>Klant ID</th>";
         echo "</thead><tbody>";
 //        foreach($resultq as $data) {
             echo "<form action='bestellingenprocesV.php' method='POST'>";
@@ -50,6 +50,9 @@
             echo "<td>";
            echo "" . $data['idpurchase']."<input type='hidden' name='idpurchase' value ='".$data['idpurchase']."'></td>";
             echo "<td>";
+            echo "<td hidden>";
+            echo "" . $data['purchaseid']."<input type='hidden' name='purchaseid' value ='".$data['purchaseid']."'></td>";
+             echo "<td>";
             echo "" . $data['purchasedate']."<input type='hidden' name='purchasedate' value ='".$data["purchasedate"]."'></td>";
             echo "</td>";
             echo "<td>";
@@ -82,10 +85,14 @@
 
             }
             else {
-                echo "<h2>Helaas .... geen resultaten gevonden</h2>";
+                echo "<h2>Helaas .... er is in bestellinglijn geen id van bestelling gevonden</h2>";
+                header('Refresh: 3; url=index.php');   
             }     
 
-    }
+    }           else {
+        echo "<h2>Helaas .... geen resultaten gevonden</h2>";
+        header('Refresh: 3; url=index.php');   
+    }   
     
    
     ?>

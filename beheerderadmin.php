@@ -26,8 +26,8 @@ exit();
 
         <br>
         <br>
-        <h1>Bestellingen verwijderen</h1>
-        <p>Verwijder hier de bestellingen van de klanten.</p>
+        <h1>Beheerder verwijderen</h1>
+        <p>Verwijder hier de beheerders die misbruiken van macht.</p>
     <br>
         <br>
         <?php
