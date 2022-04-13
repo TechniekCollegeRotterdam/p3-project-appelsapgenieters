@@ -58,8 +58,8 @@ exit();
         <?php
         foreach($result as $rij)
         {
-            echo '<option value="'.$rij['typeid'].'">';
-            echo $rij['name'];
+            echo '<option>';
+            echo $rij['idtype'].' - '.$rij['name'];
             echo '</option>';
         }
         ?>
@@ -68,7 +68,7 @@ exit();
     <br><br>
 
     <label for="stockquantity">Hoeveelheid</label><br><br>
-    <input type="text" name="stockquantity" placeholder="Hoeveelheid van het product " required>
+    <input type="text" name="stockquantity" placeholder="Hoeveelheid van het product" required>
     <br><br>
 
     <label for="price">Prijs</label><br><br>
@@ -76,7 +76,7 @@ exit();
     <br><br>
 
     <label for="imageref">naam afbeelding</label><br><br>
-    <input type="text" name="imageref" placeholder="de naam van de afbeelding. bijv: Appel.jpg">
+    <input type="text" name="imageref" placeholder="de naam van de afbeelding. bijv: images/Appel.jpg">
     <br><br>
 
     <label for="prodname">Naam product</label><br><br>

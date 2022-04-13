@@ -35,7 +35,7 @@ exit();
         </a>
         <br>
 
-        <h2>Kies hier om bestellingen te wijzigen</h2>
+        <h2>Kies hier om bestellingen te verwijderen</h2>
         <a href="">
             <input type="submit" class="admindelete" value="verwijderen">
         </a>
@@ -43,7 +43,7 @@ exit();
         <br>
 
 
-        <h2>Kies hier om bestellingen te verwijderen</h2>
+        <h2>Kies hier om bestellingen te wijzigen</h2>
 
         <a href="">
         <input type="submit" class="adminchange" value="wijzigen">

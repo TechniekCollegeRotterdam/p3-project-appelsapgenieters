@@ -14,6 +14,7 @@
 	</header>
 <!-- This is for the registersystem -->
 <?php
+session_start();
 include 'navadmin.php';
 $errorfree = true;
 echo "<br><main>";
