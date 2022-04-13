@@ -56,6 +56,7 @@ if($errorfree)
         echo "<div class='panel panel-primary'>";
         echo "<div class='panel-heading'><br><br>Helaas, wijzigen is niet gelukt</div>";
         echo "<div class='panel-body'><br>U heeft niks gewijzigt.</div>";
+        header('Refresh: 3; url=index.php');
         echo "</div>";
         echo "</div>";
     }
@@ -68,16 +69,16 @@ if($errorfree)
         //veld "idpurchase en clientid" hoeft niet geschoond te worden, omdat de id automatisch wordt gezet.
 
         // veld "purchasedate, paidamount, paidinfulldate en deliverydate" hoeft niet geschoond te worden, omdat waarde door formulier wordt gevuld
- 
+        $query = $db->prepare("UPDATE purchase SET purchasedate = :purchasedate, 
+                        paidinfulldate = :paidinfulldate, deliverydate = :deliverydate
+                     WHERE idpurchase = :purid");
+                      
         $pudate = date("Y-m-d", strtotime($_POST['purchasedate']));
         echo "Purchase moet worden: ".$pudate."<br>";
         $pifdate = date("Y-m-d", strtotime($_POST['paidinfulldate']));
         echo "Paid in full moet worden: ".$pifdate."<br>";
         $deldate = date("Y-m-d", strtotime($_POST['deliverydate']));
         echo "Delivery moet worden: ".$deldate."<br>";
-        $query = $db->prepare("UPDATE purchase SET(purchasedate = :purchasedate, 
-                        paidinfulldate = :paidinfulldate, deliverydate = :deliverydate)
-                     WHERE purid = :purid");
          //id primary key kan niet gewijzigd worden.
          $query->bindValue(':purid', $_POST['idpurchase']);
          $query->bindValue(':purchasedate', $pudate);
@@ -87,7 +88,8 @@ if($errorfree)
          echo "<div class='container'>";
          echo "<div class='panel panel-primary'>";
          echo "<div class='panel-heading'><br><br>Wijzigen is succesvol</div>";
-         echo "<div class='panel-body'><br>U heeft de bestelling gewijzigt van.".$data["idpurchase"]."</div>";
+         echo "<div class='panel-body'><br>U heeft de bestelling gewijzigt.</div>";
+         header('Refresh: 3; url=bestellingenadmin.php');
          echo "</div>";
          echo "</div>";
     }
@@ -106,6 +108,7 @@ if($errorfree)
     echo "<div class='panel panel-primary'>";
     echo "<div class='panel-heading'><br><br>Wijzigen mislukt</div>";
     echo "<div class='panel-body'><br>Het bestelling wijzigen van".$data["idpurchase"]." is mislukt!</div>";
+    header('Refresh: 3; url=index.php');
     echo "</div>";
     echo "</div>";
 }
