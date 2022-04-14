@@ -46,7 +46,10 @@ if($errorfree)
 {
     require_once "dbconnect.php";
     $idpurchase = filter_var($_POST["idpurchase"], FILTER_SANITIZE_STRING);
-    $query = $db->prepare("SELECT * FROM purchase INNER JOIN client ON purchase.clientid = client.idclient WHERE idpurchase = :purid");
+    $query = $db->prepare("SELECT * FROM purchase
+    INNER JOIN purchaseline ON idpurchase = purchaseid
+    INNER JOIN product ON productid = idproduct
+     WHERE idpurchase = :purid");
     $query->bindValue(':purid', $idpurchase);
     $query->execute();
     if($query->rowCount()<>1)

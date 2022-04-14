@@ -38,11 +38,14 @@ exit();
         <?php
         
         require_once ("dbconnect.php"); 
-        $query = $db->prepare("SELECT * FROM purchase WHERE clientid = :clientid");
-        $query->bindValue(':clientid', "clientid");
+        $query = $db->prepare("SELECT * FROM purchase 
+        INNER JOIN client ON purchase.clientid = client.idclient 
+        INNER JOIN purchaseline ON idpurchase = purchaseid
+        WHERE idpurchase = :purid");
+        $query->bindValue(':purid', "idpurchase");
         $query->execute();
 //        var_dump($query);
-        $resultq = $query->fetchALL (PDO::FETCH_ASSOC);
+        $resultq = $query->fetch(PDO::FETCH_ASSOC);
 
         if($query->rowCount() > 0){
             echo "<table>";
@@ -52,24 +55,24 @@ exit();
             foreach($resultq as $data) {
                 echo "<tr>";
                 echo "<td>";
-                echo "" . $data['idpurchase'];
-                echo "</td>";
-                echo "<td>";
-                echo "" . $data['purchasedate'];
-                echo "</td>";
-                echo "<td>";
-                echo "<p>€" . $data['paidamount'];
-                echo "</p>";
-                echo "</td>";
-                echo "<td>";
-                echo "" . $data['paidinfulldate'];
-                echo "</td>";
-                echo "<td>";
-                echo "" . $data['deliverydate'];
-                echo "</td>";
-                echo "<td>";
-                echo "" . $data['clientid'];
-                echo "</td>";
+                echo "" . $data['idpurchase']."<input type='hidden' name='idpurchase' value ='".$data['idpurchase']."'></td>";
+                 echo "<td hidden>";
+                 echo "" . $data['purchaseid']."<input type='hidden' name='purchaseid' value ='".$data['purchaseid']."'></td>";
+                  echo "<td>";
+                 echo "" . $data['purchasedate']."<input type='hidden' name='purchasedate' value ='".$data["purchasedate"]."'></td>";
+                 echo "<td>";
+                 echo "<p>€" . $data['paidamount']."<input type='hidden' name='paidamount' value ='".$data["paidamount"]."'></td>";
+                 echo "</p>";
+                 echo "</td>";
+                 echo "<td>";
+                 echo "" . $data['paidinfulldate']."<input type='hidden' name='paidinfulldate' value ='".$data["paidinfulldate"]."'></td>";
+                 echo "</td>";
+                 echo "<td>";
+                 echo "" . $data['deliverydate']."<input type='hidden' name='deliverydate' value ='".$data["deliverydate"]."'></td>";
+                 echo "</td>";
+                 echo "<td>";
+                 echo "" . $data['clientid']."<input type='hidden' name='clientid' value ='".$data["clientid"]."'></td>";
+                 echo "</td>";
                 echo "</tr>";
 
             }
