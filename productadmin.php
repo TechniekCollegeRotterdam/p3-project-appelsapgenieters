@@ -26,24 +26,23 @@ exit();
 
     <body>
 
-        <h1>Producten beheren</h1>
+        <h1>Product beheren</h1>
         <p>Kies hier wat u wilt doen</p>
 
-        <h2>Kies hier om product toe te voegen</h2>
-        <a href="prodadd.php">
-            <input type="submit" class="adminadd" value="toevoegen">
+
+        <h2>Kies hier om bestellinge te verwijderen</h2>
+        <a href="bestellingenadminV.php">
+            <input type="submit" class="admindelete" value="verwijderen">
         </a>
+
         <br>
+
 
         <h2>Kies hier om een product te wijzigen</h2>
+
         <a href="productscherm.php">
-            <input type="submit" class="admindelete" value="wijzigen">
+        <input type="submit" class="adminchange" value="wijzigen">
         </a>
-
-        <br>
-
-
-        
 
 
     </body>
