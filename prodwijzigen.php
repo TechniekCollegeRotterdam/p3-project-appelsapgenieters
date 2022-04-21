@@ -26,7 +26,7 @@ exit();
 <?php
     require_once ("dbconnect.php"); 
     $query = $db->prepare("SELECT * FROM product    
-    INNER JOIN type ON product.typeid = type.idtype 
+    INNER JOIN type ON idtype = typeid
     WHERE idproduct = :proid");
     $query->bindValue(':proid', $_POST["idproduct"]);
     $query->execute();
@@ -45,8 +45,12 @@ exit();
         <br><br>
     
         <label for="typeid">Type id</label><br><br>
-        <?php ; ?>
-        <?php echo "<input type='text' name='typeid'  value='".$data['typeid']."' required>"   ?>
+        <?php 
+        foreach($result as $rij)
+        echo "<option type='text' name='typeid'  
+        value='".$data['typeid']."' required>"
+        echo "</option>";
+        ?>
         <br><br>
 
         <label for="stockquantity">Voorraad</label><br><br>
