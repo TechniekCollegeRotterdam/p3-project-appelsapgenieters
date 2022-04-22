@@ -25,7 +25,9 @@ exit();
             <br>
 <?php
     require_once ("dbconnect.php"); 
-    $query = $db->prepare("SELECT * FROM product WHERE idproduct = :proid");
+    $query = $db->prepare("SELECT * FROM product    
+    INNER JOIN type ON product.typeid = type.idtype 
+    WHERE idproduct = :proid");
     $query->bindValue(':proid', $_POST["idproduct"]);
     $query->execute();
     $data = $query->fetch(PDO::FETCH_ASSOC);
@@ -39,11 +41,12 @@ exit();
     <fieldset>
 
     <label for="idproduct">product id</label><br><br>
-        <input readonly type="text" name="idproduct"  placeholder="<?php echo $data['idproduct'] ?>">
+        <input readonly type="text" name="idproduct"  value='"<?php echo $data['idproduct'] ?>"'>
         <br><br>
     
         <label for="typeid">Type id</label><br><br>
-        <?php echo "<input type='text' name='typeid'  value='".$data['typeid']."' required>"; ?>
+        <?php ; ?>
+        <?php echo "<input type='text' name='typeid' min='1' max='8'  value='".$data['typeid']."' required>"   ?>
         <br><br>
 
         <label for="stockquantity">Voorraad</label><br><br>
@@ -69,7 +72,7 @@ exit();
     <br><br>
 
         <fieldset>
-        <input type="submit" class="submit" name="wijzigen" value="Wijzigen"></input>
+        <input type="submit" class="submit" name="wijzigen" value="wijzigen"/>
         </fieldset>
     </form>
 

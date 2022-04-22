@@ -55,7 +55,7 @@ exit();
                 echo "" . $data['stockquantity']."<input type='hidden' name='stockquantity' value =".$data["stockquantity"]."></td>";
                 echo "</td>";
                 echo "<td>";
-                echo "<p>€" . $data['imageref']."<input type='hidden' name='imageref' value =".$data["imageref"]."></td>";
+                echo "<p>" . $data['imageref']."<input type='hidden' name='imageref' value =".$data["imageref"]."></td>";
                 echo "</p>";
                 echo "</td>";
                 echo "<td>";
