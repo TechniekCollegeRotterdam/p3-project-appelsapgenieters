@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="company.css">  
-    <title>met gem prodprijs</title>
+    <title>Gemiddelde productprijs</title>
 </head>
-<body>
+<body> 
 <header>
 	<img src="images/Logo.jpg" alt="logo">
 		<!-- hieronder wordt het menu opgehaald. -->
@@ -25,10 +25,10 @@
  
     <main>
     <?php
-        // Verbinding maken met de database 
+        // Verbinding maken met de database.
         require_once("dbconnect.php");
 
-        // Geselecteerde gegevens ophalen uit de tabel type en gemiddelde productprijs
+        // Geselecteerde gegevens ophalen uit de tabel type en gemiddelde productprijs.
         $query = $db->prepare("SELECT idtype, type.name, AVG(price) as 'avgprice'
                         FROM type
                         INNER JOIN product ON idtype = typeid
@@ -41,7 +41,7 @@
         echo "<thead><th>Type nummer</th><th>Type naam</th><th>Gem. prijs product</th></thead>";
         echo "<tbody>";
 
-        // Alle gegevens uit client op het scherm tonen
+        // Alle gegevens uit client op het scherm.
         foreach ($resultq as $data) {
             echo "<tr>";
             echo "<td>".$data["idtype"]."</td>";

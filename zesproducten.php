@@ -3,50 +3,39 @@
 ?>
 
 <div class="container">
-	<div class="row">
-		<?php 
+    <div class="row">
+        <?php 
 		try 
 		{  
-			$query = $db->prepare("SELECT prodname, proddesc, imageref, price 
-			FROM product
-			WHERE idproduct < 7"); 
+			$query = $db->prepare("SELECT givenname, surname, streetadress
+			FROM client
+			WHERE idclient = idclient"); 
 			$query->execute();	
 			if($query->rowCount()>0) 
 			{
 					$result=$query->fetchAll(PDO::FETCH_ASSOC);
-					echo '<h3>Een voorbeeld van onze producten</h3>';
+					echo '<h3>Wijzigen</h3>';
 					echo '<table class="table table-bordered table-hover tkop">';
 					echo '<thead>';
-					echo '<th>Product</th>'; 
-					echo '<th>Omschrijving</th>'; 
-					echo '<th>Prijs</th>';
-					echo '<th>Afbeelding</th>'; 	
+					echo '<th>Voornaam</th>'; 
+					echo '<th>Achternaam</th>'; 
+					echo '<th>Adres</th>';	
 					echo '</thead>';	
 					foreach($result as $rij) 
 				{ 
 					echo '<tr>';
-					echo '<td>'.$rij['prodname'].'</td>'; 
-					echo '<td>'.$rij['proddesc'].'</td>'; 
-					echo '<td>'.$rij['price'].'</td>';					
+					echo '<td>'.$rij['givenname'].'</td>'; 
+					echo '<td>'.$rij['surname'].'</td>'; 
+					echo '<td>'.$rij['streetadress'].'</td>';					
 					?>
-					<td><img src="<?php echo $rij['imageref']?>" class="cover" width="150"></td>					
-					<?php
+        <?php
 					echo '</tr>';	
 				} 
 				echo '</table>';
 			}
 			else 
 			{
-			?>
-				<div class="container">
-					<div class="card bg-secondary text-white">
-						<div class="card-body">
-							Geen producten geselecteerd 
-						</div>
-					</div>
-				</div>
-
-			<?php
+				
 			}
 		} 
 		catch(PDOException $e) 
@@ -60,9 +49,3 @@
 			trigger_error($sMsg); 
 		} 
 		$db = null;
-	?>
-	
-	</div>
-
-</div>
-

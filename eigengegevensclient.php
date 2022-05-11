@@ -21,6 +21,8 @@
              include "navclient.php";
          } else
  			include "navbezoeker.html";
+            include "update.php";
+         
  		?>
  	</header>
      <?php

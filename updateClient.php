@@ -36,7 +36,7 @@
     <br>
     <!-- This is for the registerfield in html -->
     <h1>Update/Proces</h1>
-    <form method="POST" action="registratieverwerk.php">
+    <form method="POST" action="update.php">
         <fieldset>
             <legend><h2>Klantnummer</h2></legend>
             <input type="text" name="idClient"
@@ -45,7 +45,7 @@
         </fieldset>
 <fieldset>
     <label for="givenname">Voornaam*</label><br><br>
-    <input type="text" name="givenname" placeholder= required autofocus>
+    <input type="text" name="givenname" placeholder= givenname>
   
     <br><br>
 
@@ -136,10 +136,9 @@
         </fieldset>
 
         <fieldset>
-        <input type="submit" class="submit" name="registreer" value="registreren"></input>
+        <input type="submit" class="submit" name="update" value="updaten"></input>
         </fieldset>
     </form>
 
-    
 </body>
 </html>

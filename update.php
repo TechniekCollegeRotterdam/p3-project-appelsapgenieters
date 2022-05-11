@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verwerk</title>
+    <title>Update</title>
     <link rel="stylesheet" type="text/css" href="company.css">  
 </head>
 <body>
 <header>
 	<img src="images/Logo.jpg" alt="logo">
-		<!-- hieronder wordt het menu opgehaald. -->
-	</header>
-<!-- This is for the registersystem -->
+</header>
+
 <?php
 include 'navbezoeker.html';
 $errorfree = true;
@@ -77,11 +76,12 @@ if($errorfree)
 
         
 
-        $query = $db->prepare("INSERT INTO client(surname, givenname, middleinitial,
+        $query = $db->prepare("UPDATE client SET(surname, givenname, middleinitial,
          title, gender, streetadress, city, zipcode, countryid, emailadress, telephonenumber,
          birthday, occupation, passwrd, admn)
          VALUES (:surname, :givenname, :middleinitial, :title, :gender, :streetadress, :city,
-         :zipcode, :countryid, :emailadress, :telephonenumber, :birthday, :occupation, :passwrd, :admn)");
+         :zipcode, :countryid, :emailadress, :telephonenumber, :birthday, :occupation, :passwrd, :admn)
+         WHERE idclient = :idcl");
          $query->bindValue(':givenname', $gn);
          $query->bindValue(':surname', $sn);
          $query->bindValue(':middleinitial', $initl);
@@ -120,7 +120,3 @@ if($errorfree)
 </main>
 </body>
 </html>
-
-
-
-
